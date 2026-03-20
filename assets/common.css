@@ -51,17 +51,19 @@
     -moz-osx-font-smoothing: grayscale;
     font-size: var(--font-scale);
     font-family: var(--font-body);
+    text-rendering: optimizeLegibility;
   }
 
-  /* Grain texture */
+  /* Grain texture — lightweight CSS-only approach */
   body::after {
     content: '';
     position: fixed;
     inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-    opacity: 0.025;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAElBMVEUAAAAAAAAAAAAAAAAAAAAAAADgKxmiAAAABnRSTlMAESIzRFVm2a5nAAAAcklEQVQ4y9WSMQ6AMAxDHRj4/5eZqRILqWAnkC5t4tiJIYSI1YzVjK0ZWzO2ZmzN2JqxNWNrxtaMrRlbM7ZmbM3YmrE1Y2vG1oytGVsz9hsZ+42M/UbGfiNjv5Gx38jYb2TsNzL2Gxn7jYz9Rm7GBgzbJruSMAAAAABJRU5ErkJggg==");
+    opacity: 0.03;
     pointer-events: none;
     z-index: 9999;
+    will-change: opacity;
   }
 
 @media (max-width: 768px), (prefers-reduced-motion: reduce) {
@@ -130,7 +132,10 @@ body::after { opacity: 0.01; }
   }
 
   /* Card hover */
-  .card-hover { transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease; }
+  .card-hover {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    contain: layout style paint;
+  }
   .card-hover:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.08), 0 0 0 1px var(--site-border);
@@ -160,6 +165,7 @@ body::after { opacity: 0.01; }
   .stat-card {
     background: var(--gradient-surface);
     border: 1px solid var(--site-border);
+    contain: layout style;
   }
   .dark .stat-card {
     background: var(--gradient-surface-dark);
