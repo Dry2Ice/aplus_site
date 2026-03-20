@@ -1948,7 +1948,7 @@ return (
 </div>
 </header>
 
-<div className={`mobile-menu mobile-menu-bg fixed inset-0 z-30 flex flex-col items-center justify-center gap-8 md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+<div className={`mobile-menu fixed inset-0 z-30 flex flex-col items-center justify-center gap-8 md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} style={{background: isDark ? 'rgba(10, 10, 15, 0.98)' : 'rgba(240, 237, 230, 0.98)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)'}}>
 {content.navItems && content.navItems.map((item, i) => (
 <a key={i} href={item.href} onClick={() => { setIsMobileMenuOpen(false); setSelectedProductId(null); setCurrentView(item.view); }} className="font-display text-3xl font-black text-brand-dark dark:text-white uppercase tracking-tight hover:text-brand-purple dark:hover:text-brand-purple-light transition-colors" style={{animationDelay: `${i * 0.05}s`}}>{item.label}</a>
 ))}
