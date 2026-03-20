@@ -631,7 +631,7 @@ const initialSettings = loadInitialSiteSettings();
                     React.createElement("a", { href: `tel:${COMPANY_PHONE}`, className: "font-display text-2xl font-bold text-brand-dark dark:text-white hover:text-brand-purple dark:hover:text-brand-purple-light transition-colors tracking-tight" }, COMPANY_PHONE),
                     React.createElement("div", { className: "flex flex-wrap gap-4 md:gap-6 text-sm text-gray-400 font-medium" },
                         React.createElement("button", { onClick: () => openContact(content.footer.policy), className: "hover:text-brand-purple transition-colors" }, content.footer.policy),
-                        React.createElement("a", { href: "mailto:info@aplus.org.ru", className: "hover:text-brand-purple transition-colors" }, "info@aplus.org.ru"))))),
+                        React.createElement("a", { href: "mailto:info@aplus.org.ru", className: "hover:text-brand-purple transition-colors" }, "info@aplus.org.ru")))))),
         React.createElement(FloatingActions, { onOpenModal: () => openContact(content.ui.consultation), ui: content.ui, scrolled: scrolled }),
         React.createElement(ContactModal, { isOpen: contactOpen, onClose: () => setContactOpen(false), productContext: contactContext, ui: content.ui }),
         React.createElement(CookiesBanner, { ui: content.cookies })));
