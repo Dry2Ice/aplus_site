@@ -1,5 +1,6 @@
 # === Robots policy ===========================================================
 # Public content is indexable; service/admin/data areas are blocked.
+
 User-agent: *
 Allow: /
 Disallow: /admin/
@@ -8,8 +9,16 @@ Disallow: /data/
 Disallow: /config/
 Disallow: /scripts/
 Disallow: /tools/
+Disallow: /send-mail.php
+Disallow: /csrf-token.php
 
-# Block aggressive bots from heavy crawling
+# Allow search engines to index all product pages
+Allow: /batteries/
+Allow: /copters/
+Allow: /water/
+Allow: /assets/
+
+# Block aggressive crawlers that waste bandwidth
 User-agent: AhrefsBot
 Disallow: /
 
@@ -22,6 +31,25 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# Google and Yandex should crawl frequently — no crawl-delay for them
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+# General crawl-delay for other bots
 User-agent: *
 Crawl-delay: 10
 
