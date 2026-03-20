@@ -89,6 +89,17 @@ if (!basePath) return '#';
 const productSlug = slugify(product.slug || product.id || product.title);
 return `${basePath}${productSlug}/`;
 };
+const CATEGORY_BASE_PATHS = ['/copters/', '/batteries/', '/water/'];
+const routeSlugFromPath = (pathname) => {
+  if (!pathname) return null;
+  const trimmed = pathname.replace(/\/+$/, '');
+  for (const base of CATEGORY_BASE_PATHS) {
+    if (!trimmed.startsWith(base.replace(/\/+$/, ''))) continue;
+    const parts = trimmed.split('/').filter(Boolean);
+    if (parts.length >= 2) return parts[1];
+  }
+  return null;
+};
 const trackEvent = window.AplusCommon?.trackEvent || (() => {});
 // --- Shared constants -------------------------------------------------------
 const MARKETPLACE_LINKS = {
@@ -907,7 +918,7 @@ return (
 );
 };
 
-const ProductCard = ({ product, ui, detailUrl }) => (
+const ProductCard = ({ product, ui, onSelect }) => (
 <div className="group bg-brand-milky dark:bg-brand-dark-card rounded-2xl overflow-hidden flex flex-col card-hover border border-gray-100/80 dark:border-white/5 h-full animate-[fadeIn_0.5s_ease-out]">
 <div className="h-64 relative flex items-center justify-center overflow-hidden product-img-bg bg-brand-base dark:bg-brand-dark-surface">
 {product.sketchfabId ? (
@@ -925,7 +936,7 @@ const ProductCard = ({ product, ui, detailUrl }) => (
 <div className="p-6 flex flex-col flex-grow">
 <h3 className="font-display text-lg font-bold text-brand-dark dark:text-white mb-2 leading-tight">{product.title}</h3>
 <p className="text-sm text-gray-500 dark:text-gray-400 mb-5 line-clamp-2 flex-grow leading-relaxed font-sans">{product.description}</p>
-<a href={detailUrl} target="_blank" rel="noopener noreferrer" className="w-full py-3 px-5 rounded-xl font-bold text-sm transition-all duration-300 border border-gray-200 dark:border-white/10 text-brand-dark dark:text-white hover:bg-brand-purple hover:text-white hover:border-brand-purple dark:hover:bg-brand-purple dark:hover:border-brand-purple group-hover:bg-brand-dark group-hover:text-white group-hover:border-brand-dark dark:group-hover:bg-brand-purple dark:group-hover:border-brand-purple inline-flex items-center justify-center">{ui.more}</a>
+<button onClick={() => onSelect(product)} className="w-full py-3 px-5 rounded-xl font-bold text-sm transition-all duration-300 border border-gray-200 dark:border-white/10 text-brand-dark dark:text-white hover:bg-brand-purple hover:text-white hover:border-brand-purple dark:hover:bg-brand-purple dark:hover:border-brand-purple group-hover:bg-brand-dark group-hover:text-white group-hover:border-brand-dark dark:group-hover:bg-brand-purple dark:group-hover:border-brand-purple inline-flex items-center justify-center">{ui.more}</button>
 </div>
 </div>
 );
@@ -966,7 +977,7 @@ return (
 </div>
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 transition-all duration-500 min-h-[400px]">
-{filteredProducts.map((product) => (<ProductCard key={product.id} product={product} ui={content.ui} detailUrl={getProductDetailUrl(product)} />))}
+{filteredProducts.map((product) => (<ProductCard key={product.id} product={product} ui={content.ui} onSelect={onSelectProduct} />))}
 </div>
 </div>
 </section>
@@ -1634,7 +1645,7 @@ const initialSettings = loadInitialSiteSettings();
 const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 const [isCustomOrderModalOpen, setIsCustomOrderModalOpen] = useState(false);
 const openCustomOrderModal = () => { trackEvent('cta_click', { target: 'custom_order_modal' }); setIsCustomOrderModalOpen(true); };
-const [selectedProductId, setSelectedProductId] = useState(null);
+const [selectedProductId, setSelectedProductId] = useState(() => routeSlugFromPath(window.location.pathname));
 const [currentView, setCurrentView] = useState('home');
 const [contactContext, setContactContext] = useState(undefined);
 const [lang, setLang] = useState(initialSettings.lang);
@@ -1669,7 +1680,7 @@ const content = useMemo(() => ({
     return localizeCatalogItem(item, lang, 'energy', lang === 'ru' ? 'Аккумуляторы' : 'Batteries');
   }),
 }), [contentMap, lang, catalogItems]);
-const selectedProduct = useMemo(() => { if (!selectedProductId) return null; return content.products.find(p => p.id === selectedProductId); }, [selectedProductId, content]);
+const selectedProduct = useMemo(() => { if (!selectedProductId) return null; return content.products.find(p => p.id === selectedProductId || p.slug === selectedProductId); }, [selectedProductId, content]);
 
 useEffect(() => {
     const settings = { lang, isDark, isAccessibility };
@@ -1737,6 +1748,23 @@ useEffect(() => {
 const openContactModal = (context) => { trackEvent('cta_click', { target: 'contact_modal', context: context || 'general' }); setContactContext(context); setIsContactModalOpen(true); };
 const handleProductSelect = (product) => { setSelectedProductId(product.id); };
 const handleBack = () => { setSelectedProductId(null); };
+useEffect(() => {
+  const handleRouteChange = () => setSelectedProductId(routeSlugFromPath(window.location.pathname));
+  window.addEventListener('popstate', handleRouteChange);
+  return () => window.removeEventListener('popstate', handleRouteChange);
+}, []);
+useEffect(() => {
+  if (!selectedProduct) {
+    if (window.location.pathname !== '/') {
+      window.history.pushState({}, '', '/');
+    }
+    return;
+  }
+  const targetPath = getProductDetailUrl(selectedProduct);
+  if (targetPath && targetPath !== '#' && window.location.pathname !== targetPath) {
+    window.history.pushState({}, '', targetPath);
+  }
+}, [selectedProduct]);
 useEffect(() => {
   const applyIncomingSettings = (incoming) => {
     if (!incoming || typeof incoming !== 'object') return;
