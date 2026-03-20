@@ -1,0 +1,226 @@
+[
+    {
+        "id": "condor-15",
+        "category": "БПЛА",
+        "title": "Квадрокоптер «Кондор» 15\"",
+        "subtitle": "Модель 1 — Высокая точность",
+        "description": "Современный многоцелевой квадрокоптер. Обеспечивает воздушную и информационную безопасность. Грузоподъемность до 6 кг.",
+        "specs": [
+            "Полный цикл производства",
+            "Грузоподъемность: до 6 кг",
+            "Время полета: до 45 мин",
+            "Интеграция с тепловизорами"
+        ],
+        "fullDescription": "«Кондор» 15 дюймов — это флагманская модель для тех, кому важна точность и высокая грузоподъемность. Спроектирован и произведен в России для решения задач в сложных условиях. Идеально подходит для аэроразведки, наблюдения, транспортировки грузов и точечного сброса.\n\nДрон оснащен мощными бесколлекторными двигателями 3115 700 kv и работает от аккумуляторной сборки 12S (44.4 В), что обеспечивает стабильность полета даже при сильном ветре.",
+        "details": [
+            {
+                "label": "Диагональ",
+                "value": "15 дюймов (381 мм)"
+            },
+            {
+                "label": "Напряжение",
+                "value": "12S (44.4 В)"
+            },
+            {
+                "label": "Вес (без АКБ)",
+                "value": "3.4 кг"
+            },
+            {
+                "label": "Полетное время (без нагрузки)",
+                "value": "До 45 минут"
+            },
+            {
+                "label": "Макс. грузоподъемность",
+                "value": "До 6 кг"
+            }
+        ],
+        "features": [
+            "Ударопрочный, вибро- и климатостойкий корпус",
+            "Возможность установки тепловизоров",
+            "Быстрая подготовка к полету"
+        ],
+        "imageUrl": "https://optim.tildacdn.com/tild3334-6138-4562-a132-386231336166/-/resize/858x/-/format/webp/noroot.png.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "sketchfabId": "",
+        "subcategory": "Cargo",
+        "title_ru": "Квадрокоптер «Кондор» 15\"",
+        "subtitle_ru": "Модель 1 — Высокая точность",
+        "description_ru": "Современный многоцелевой квадрокоптер. Обеспечивает воздушную и информационную безопасность. Грузоподъемность до 6 кг.",
+        "specs_ru": [
+            "Полный цикл производства",
+            "Грузоподъемность: до 6 кг",
+            "Время полета: до 45 мин",
+            "Интеграция с тепловизорами"
+        ],
+        "features_ru": [
+            "Ударопрочный, вибро- и климатостойкий корпус",
+            "Возможность установки тепловизоров",
+            "Быстрая подготовка к полету"
+        ],
+        "details_ru": [
+            {
+                "label": "Диагональ",
+                "value": "15 дюймов (381 мм)"
+            },
+            {
+                "label": "Напряжение",
+                "value": "12S (44.4 В)"
+            },
+            {
+                "label": "Вес (без АКБ)",
+                "value": "3.4 кг"
+            },
+            {
+                "label": "Полетное время (без нагрузки)",
+                "value": "До 45 минут"
+            },
+            {
+                "label": "Макс. грузоподъемность",
+                "value": "До 6 кг"
+            }
+        ],
+        "title_en": "Quadcopter \"Condor\" 15\"",
+        "subtitle_en": "Model 1 - High Accuracy",
+        "description_en": "Modern multi-purpose quadcopter. Provides air and information security. Load capacity up to 6 kg.",
+        "specs_en": [
+            "Full production cycle",
+            "Load capacity: up to 6 kg",
+            "Flight time: up to 45 minutes",
+            "Integration with thermal imagers"
+        ],
+        "features_en": [
+            "Shock-resistant, vibration- and climate-resistant housing",
+            "Possibility of installing thermal imagers",
+            "Quick preparation for flight"
+        ],
+        "details_en": [
+            {
+                "label": "Diagonal",
+                "value": "15 inches (381 mm)"
+            },
+            {
+                "label": "Voltage",
+                "value": "12S (44.4V)"
+            },
+            {
+                "label": "Weight (without battery)",
+                "value": "3.4 kg"
+            },
+            {
+                "label": "Flight time (no load)",
+                "value": "Up to 45 minutes"
+            },
+            {
+                "label": "Max. load capacity",
+                "value": "Up to 6 kg"
+            }
+        ],
+        "slug": "condor-15",
+        "fullDescription_en": "The 15-inch Condor is the flagship model for those who value precision and high load capacity. Designed and manufactured in Russia to solve problems in difficult conditions. Ideal for aerial reconnaissance, surveillance, cargo transportation and point release applications.\n\nThe drone is equipped with powerful 3115 700 kv brushless motors and is powered by a 12S (44.4 V) battery assembly, which ensures flight stability even in strong winds.",
+        "fullDescription_ru": "«Кондор» 15 дюймов — это флагманская модель для тех, кому важна точность и высокая грузоподъемность. Спроектирован и произведен в России для решения задач в сложных условиях. Идеально подходит для аэроразведки, наблюдения, транспортировки грузов и точечного сброса.\n\nДрон оснащен мощными бесколлекторными двигателями 3115 700 kv и работает от аккумуляторной сборки 12S (44.4 В), что обеспечивает стабильность полета даже при сильном ветре."
+    },
+    {
+        "id": "condor-10",
+        "category": "БПЛА",
+        "title": "Квадрокоптер «Кондор» 10\"",
+        "subtitle": "Модель 2 — Скорость и Маневр",
+        "description": "Маневренная платформа с увеличенным временем полета. Корпус из ударопрочных материалов. Подходит для аэроразведки.",
+        "specs": [
+            "Полетное время: до 41 мин",
+            "Дальность: высокая устойчивость",
+            "Ударопрочный корпус",
+            "Напряжение 8S"
+        ],
+        "fullDescription": "«Кондор» 10 дюймов (Модель 2) — это идеальный баланс между маневренностью, скоростью и автономностью. Благодаря использованию питания 8S (29.6 В), дрон обеспечивает высокую токоотдачу и мощность, оставаясь при этом экономичным.",
+        "details": [
+            {
+                "label": "Диагональ",
+                "value": "10 дюймов"
+            },
+            {
+                "label": "Напряжение",
+                "value": "8S (29.6 В)"
+            },
+            {
+                "label": "Полетное время",
+                "value": "До 41 мин"
+            }
+        ],
+        "features": [
+            "Увеличенное время полета",
+            "Стабильность при высоких нагрузках",
+            "Надежность карбоновой конструкции"
+        ],
+        "imageUrl": "https://static.tildacdn.com/tild3930-6535-4137-a538-306234633734/____1-Photoroom.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "sketchfabId": "",
+        "subcategory": "Scout",
+        "title_ru": "Квадрокоптер «Кондор» 10\"",
+        "subtitle_ru": "Модель 2 — Скорость и Маневр",
+        "description_ru": "Маневренная платформа с увеличенным временем полета. Корпус из ударопрочных материалов. Подходит для аэроразведки.",
+        "specs_ru": [
+            "Полетное время: до 41 мин",
+            "Дальность: высокая устойчивость",
+            "Ударопрочный корпус",
+            "Напряжение 8S"
+        ],
+        "features_ru": [
+            "Увеличенное время полета",
+            "Стабильность при высоких нагрузках",
+            "Надежность карбоновой конструкции"
+        ],
+        "details_ru": [
+            {
+                "label": "Диагональ",
+                "value": "10 дюймов"
+            },
+            {
+                "label": "Напряжение",
+                "value": "8S (29.6 В)"
+            },
+            {
+                "label": "Полетное время",
+                "value": "До 41 мин"
+            }
+        ],
+        "title_en": "Quadcopter \"Condor\" 10\"",
+        "subtitle_en": "Model 2 - Speed ​​and Maneuver",
+        "description_en": "Maneuverable platform with extended flight time. Housing made of impact-resistant materials. Suitable for aerial reconnaissance.",
+        "specs_en": [
+            "Flight time: up to 41 min",
+            "Range: high stability",
+            "Shockproof housing",
+            "Voltage 8S"
+        ],
+        "features_en": [
+            "Extended flight time",
+            "Stability under high loads",
+            "Reliability of carbon construction"
+        ],
+        "details_en": [
+            {
+                "label": "Diagonal",
+                "value": "10 inches"
+            },
+            {
+                "label": "Voltage",
+                "value": "8S (29.6V)"
+            },
+            {
+                "label": "Flight time",
+                "value": "Up to 41 min"
+            }
+        ],
+        "slug": "condor-10",
+        "fullDescription_en": "The 10\" Condor (Model 2) is the perfect balance between agility, speed and autonomy. Using 8S (29.6V) power, the drone provides high current output and power while remaining economical.",
+        "fullDescription_ru": "«Кондор» 10 дюймов (Модель 2) — это идеальный баланс между маневренностью, скоростью и автономностью. Благодаря использованию питания 8S (29.6 В), дрон обеспечивает высокую токоотдачу и мощность, оставаясь при этом экономичным."
+    }
+]

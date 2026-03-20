@@ -1,0 +1,114 @@
+[
+    {
+        "id": "water-system",
+        "category": "Очистка воды",
+        "title": "Мобильная система очистки",
+        "subtitle": "Автономный комплекс",
+        "description": "Компактная станция для глубокой фильтрации воды из природных источников. Незаменима в экспедициях.",
+        "specs": [
+            "Очистка: вирусы, химия",
+            "Фильтрация: обратный осмос",
+            "Производительность: до 1,5 л/мин",
+            "Развертывание: < 5 минут"
+        ],
+        "fullDescription": "Мобильная система очистки воды «А Плюс» — это компактный автономный комплекс для глубокой фильтрации воды из любых природных и сточных источников (реки, озера, болота). Система удаляет вирусы, бактерии, тяжелые металлы, химические загрязнители и неприятные запахи. \n\nИдеально подходит для полевых лагерей, экспедиций и вахтовых поселков.",
+        "details": [
+            {
+                "label": "Производительность",
+                "value": "до 1.5 л/мин"
+            },
+            {
+                "label": "Степень очистки",
+                "value": "до 0.0001 мкм"
+            },
+            {
+                "label": "Вес",
+                "value": "15-20 кг"
+            },
+            {
+                "label": "Питание",
+                "value": "12В / 220В"
+            },
+            {
+                "label": "Ресурс мембраны",
+                "value": "до 3000 л"
+            }
+        ],
+        "features": [],
+        "imageUrl": "https://optim.tildacdn.com/tild3564-3436-4538-b664-366536346635/-/cover/540x456/center/center/-/format/webp/Airbrush-image-exten.png.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "sketchfabId": "",
+        "subcategory": "Mobile system",
+        "title_ru": "Мобильная система очистки",
+        "subtitle_ru": "Автономный комплекс",
+        "description_ru": "Компактная станция для глубокой фильтрации воды из природных источников. Незаменима в экспедициях.",
+        "specs_ru": [
+            "Очистка: вирусы, химия",
+            "Фильтрация: обратный осмос",
+            "Производительность: до 1,5 л/мин",
+            "Развертывание: < 5 минут"
+        ],
+        "features_ru": [],
+        "details_ru": [
+            {
+                "label": "Производительность",
+                "value": "до 1.5 л/мин"
+            },
+            {
+                "label": "Степень очистки",
+                "value": "до 0.0001 мкм"
+            },
+            {
+                "label": "Вес",
+                "value": "15-20 кг"
+            },
+            {
+                "label": "Питание",
+                "value": "12В / 220В"
+            },
+            {
+                "label": "Ресурс мембраны",
+                "value": "до 3000 л"
+            }
+        ],
+        "title_en": "Mobile cleaning system",
+        "subtitle_en": "Autonomous complex",
+        "description_en": "Compact station for deep filtration of water from natural sources. Indispensable on expeditions.",
+        "specs_en": [
+            "Cleaning: viruses, chemistry",
+            "Filtration: reverse osmosis",
+            "Capacity: up to 1.5 l/min",
+            "Deployment: <5 minutes"
+        ],
+        "fullDescription_en": "The mobile water purification system “A Plus” is a compact, autonomous complex for deep filtration of water from any natural and waste sources (rivers, lakes, swamps). The system removes viruses, bacteria, heavy metals, chemical pollutants and unpleasant odors. \n\nIdeal for field camps, expeditions and camps.",
+        "features_en": [],
+        "details_en": [
+            {
+                "label": "Productivity",
+                "value": "up to 1.5 l/min"
+            },
+            {
+                "label": "Purification degree",
+                "value": "up to 0.0001 microns"
+            },
+            {
+                "label": "Weight",
+                "value": "15-20 kg"
+            },
+            {
+                "label": "Power",
+                "value": "12V / 220V"
+            },
+            {
+                "label": "Membrane life",
+                "value": "up to 3000 l"
+            }
+        ],
+        "fullDescription_ru": "Мобильная система очистки воды «А Плюс» — это компактный автономный комплекс для глубокой фильтрации воды из любых природных и сточных источников (реки, озера, болота). Система удаляет вирусы, бактерии, тяжелые металлы, химические загрязнители и неприятные запахи. \n\nИдеально подходит для полевых лагерей, экспедиций и вахтовых поселков.",
+        "slug": "water-system"
+    }
+]

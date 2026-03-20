@@ -1,0 +1,3768 @@
+[
+    {
+        "id": "ai1625",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "6S2P 5200 mAh",
+        "subtitle": "Артикул AI1625",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 5200 мАч. Вес 0.6 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.26.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 5200 мАч",
+            "Вес: 0.6 кг",
+            "Размеры: 110.5 x 37.5 x 76.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "110.5 x 37.5 x 76.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.6 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "5.2 / 40.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (120 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (65 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "64f522f6111a4769a37ba4483071ab28",
+        "imageUrl": "https://radika1.link/2025/12/23/AI26254a39619cec406a6c.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 2,
+        "_i_nom": 5.2000000000000002,
+        "_i_max": 40,
+        "_cap": 5200,
+        "_w": 0.59999999999999998,
+        "title_ru": "6S2P 5200 mAh",
+        "subtitle_ru": "Артикул AI1625",
+        "description_ru": "Аккумуляторная сборка Li-Ion. Емкость 5200 мАч. Вес 0.6 кг.",
+        "specs_ru": [
+            "Li-Ion Элементы",
+            "Емкость: 5200 мАч",
+            "Вес: 0.6 кг",
+            "Размеры: 110.5 x 37.5 x 76.0 мм"
+        ],
+        "features_ru": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "details_ru": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "110.5 x 37.5 x 76.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.6 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "5.2 / 40.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (120 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (65 мм)"
+            }
+        ],
+        "title_en": "6S2P 5200 mAh",
+        "subtitle_en": "Article AI1625",
+        "description_en": "Li-Ion battery assembly. Capacity 5200 mAh. Weight 0.6 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 5200 mAh",
+            "Weight: 0.6 kg",
+            "Dimensions: 110.5 x 37.5 x 76.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "110.5 x 37.5 x 76.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.6kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "5.2 / 40.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (120 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (65mm)"
+            }
+        ],
+        "slug": "ai1625",
+        "fullDescription_ru": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.26.01",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.26.01"
+    },
+    {
+        "id": "ai2624",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "6S2P 10000 mAh",
+        "subtitle": "Артикул AI2624",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 10000 мАч. Вес 0.90 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.23.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 10000 мАч",
+            "Вес: 0.90 кг",
+            "Размеры: 130.0 x 43.0 x 79.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "130.0 x 43.0 x 79.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.90 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "10.0 / 50.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (120 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (55 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "c1d64f344d1747ef8d32b58a215da3a1",
+        "imageUrl": "https://s2.radikal.cloud/2025/12/23/AI26247701a72c603c6927.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 2,
+        "_i_nom": 10,
+        "_i_max": 50,
+        "_cap": 10000,
+        "_w": 0.90000000000000002,
+        "title_en": "6S2P 10000 mAh",
+        "subtitle_en": "Article AI2624",
+        "description_en": "Li-Ion battery assembly. Capacity 10000 mAh. Weight 0.90 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 10000mAh",
+            "Weight: 0.90 kg",
+            "Dimensions: 130.0 x 43.0 x 79.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "130.0 x 43.0 x 79.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.90 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "10.0 / 50.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (120 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (55mm)"
+            }
+        ],
+        "title_ru": "6S2P 10000 mAh",
+        "subtitle_ru": "Артикул AI2624",
+        "description_ru": "Аккумуляторная сборка Li-Ion. Емкость 10000 мАч. Вес 0.90 кг.",
+        "specs_ru": [
+            "Li-Ion Элементы",
+            "Емкость: 10000 мАч",
+            "Вес: 0.90 кг",
+            "Размеры: 130.0 x 43.0 x 79.0 мм"
+        ],
+        "features_ru": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "details_ru": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "130.0 x 43.0 x 79.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.90 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "10.0 / 50.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (120 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (55 мм)"
+            }
+        ],
+        "slug": "ai2624",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.23.01"
+    },
+    {
+        "id": "ai2831b",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "8S3P 15000 mAh",
+        "subtitle": "Артикул AI2831B",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 15000 мАч. Вес 1.83 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.22.02 BMS",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 15000 мАч",
+            "Вес: 1.83 кг",
+            "Размеры: 172.0 x 64.5 x 83.5 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "172.0 x 64.5 x 83.5 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.83 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "20.0 - 33.6 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT60-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (155 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "-"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "f8c0f12ac0c44e668e82048ad68e11e6",
+        "imageUrl": "https://radika1.link/2025/12/23/AI2831Bcc1655d316a3d3f7.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "33.6",
+        "_conn": "XT60-F",
+        "_bms": true,
+        "_s": 8,
+        "_p": 3,
+        "_i_nom": 15,
+        "_i_max": 75,
+        "_cap": 15000,
+        "_w": 1.8300000000000001,
+        "title_en": "8S3P 15000 mAh",
+        "subtitle_en": "Article AI2831B",
+        "description_en": "Li-Ion battery assembly. Capacity 15000 mAh. Weight 1.83 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 15000 mAh",
+            "Weight: 1.83 kg",
+            "Dimensions: 172.0 x 64.5 x 83.5 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "172.0 x 64.5 x 83.5 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.83 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "20.0 - 33.6 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT60-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (155 mm)"
+            },
+            {
+                "label": "Balancer connector",
+                "value": "-"
+            }
+        ],
+        "slug": "ai2831b",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.22.02 BMS"
+    },
+    {
+        "id": "ai2630",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "6S3P 15000 mAh",
+        "subtitle": "Артикул AI2630",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 15000 мАч. Вес 1.33 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.17.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 15000 мАч",
+            "Вес: 1.33 кг",
+            "Размеры: 160.0 x 65.0 x 66.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "160.0 x 65.0 x 66.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.33 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (110 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (35 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "c03b5c83024c4ee2ac8683bc301cfebb",
+        "imageUrl": "https://s1.radikal.cloud/2025/12/23/AI263088f6cd4eb1d8d2cb.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 3,
+        "_i_nom": 15,
+        "_i_max": 75,
+        "_cap": 15000,
+        "_w": 1.3300000000000001,
+        "title_en": "6S3P 15000 mAh",
+        "subtitle_en": "Article AI2630",
+        "description_en": "Li-Ion battery assembly. Capacity 15000 mAh. Weight 1.33 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 15000 mAh",
+            "Weight: 1.33 kg",
+            "Dimensions: 160.0 x 65.0 x 66.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "160.0 x 65.0 x 66.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.33 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (110 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (35mm)"
+            }
+        ],
+        "slug": "ai2630",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.17.01"
+    },
+    {
+        "id": "ai2631",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "6S3P 15000 mAh",
+        "subtitle": "Артикул AI2631",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 15000 мАч. Вес 1.38 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.18.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 15000 мАч",
+            "Вес: 1.38 кг",
+            "Размеры: 128.0 x 65.0 x 81.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "128.0 x 65.0 x 81.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.38 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (100 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (95 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "49b380458a69450685ae3401d418ee36",
+        "imageUrl": "https://s3.radikal.cloud/2025/12/23/AI2631e7a2dc683ab491c0.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 3,
+        "_i_nom": 15,
+        "_i_max": 75,
+        "_cap": 15000,
+        "_w": 1.3799999999999999,
+        "title_en": "6S3P 15000 mAh",
+        "subtitle_en": "Article AI2631",
+        "description_en": "Li-Ion battery assembly. Capacity 15000 mAh. Weight 1.38 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 15000 mAh",
+            "Weight: 1.38 kg",
+            "Dimensions: 128.0 x 65.0 x 81.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "128.0 x 65.0 x 81.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.38 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (100 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (95mm)"
+            }
+        ],
+        "slug": "ai2631",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.18.01"
+    },
+    {
+        "id": "ai2830",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "8S3P 15000 mAh",
+        "subtitle": "Артикул AI2830",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 15000 мАч. Вес 1.84 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.22.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 15000 мАч",
+            "Вес: 1.84 кг",
+            "Размеры: 173.0 x 65.0 x 83.5 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "173.0 x 65.0 x 83.5 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.84 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "20.0 - 33.6 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT60-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (100 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 9P-F (55 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "a4c70d11802a4327af138ac51ee58fda",
+        "imageUrl": "https://radika1.link/2025/12/23/AI2830902536d1f6d4ad8f.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "29.6",
+        "_conn": "XT60-F",
+        "_bms": false,
+        "_s": 8,
+        "_p": 3,
+        "_i_nom": 15,
+        "_i_max": 75,
+        "_cap": 15000,
+        "_w": 1.8400000000000001,
+        "title_en": "8S3P 15000 mAh",
+        "subtitle_en": "Article AI2830",
+        "description_en": "Li-Ion battery assembly. Capacity 15000 mAh. Weight 1.84 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 15000 mAh",
+            "Weight: 1.84 kg",
+            "Dimensions: 173.0 x 65.0 x 83.5 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "173.0 x 65.0 x 83.5 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.84 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "20.0 - 33.6 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT60-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (100 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 9P-F (55mm)"
+            }
+        ],
+        "slug": "ai2830",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.22.01"
+    },
+    {
+        "id": "ai2612",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "6S1P 5000 mAh",
+        "subtitle": "Артикул AI2612",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 5000 мАч. Вес 0.47 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.13.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 5000 мАч",
+            "Вес: 0.47 кг",
+            "Размеры: 130.0 x 23.0 x 81.5 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "130.0 x 23.0 x 81.5 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.47 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "5.0 / 25.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (100 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (60 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "31883493650849b0b8254d5b0d41697e",
+        "imageUrl": "https://radika1.link/2025/12/23/AI2612770a457fa1a68bb4.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 1,
+        "_i_nom": 5,
+        "_i_max": 25,
+        "_cap": 5000,
+        "_w": 0.46999999999999997,
+        "title_en": "6S1P 5000 mAh",
+        "subtitle_en": "Article AI2612",
+        "description_en": "Li-Ion battery assembly. Capacity 5000 mAh. Weight 0.47 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 5000 mAh",
+            "Weight: 0.47 kg",
+            "Dimensions: 130.0 x 23.0 x 81.5 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "130.0 x 23.0 x 81.5 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.47 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "5.0 / 25.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (100 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (60mm)"
+            }
+        ],
+        "slug": "ai2612",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.13.01"
+    },
+    {
+        "id": "ai2611",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "6S1P 5000 mAh",
+        "subtitle": "Артикул AI2611",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 5000 мАч. Вес 0.45 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.12.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 5000 мАч",
+            "Вес: 0.45 кг",
+            "Размеры: 78.0 x 44.0 x 65.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "78.0 x 44.0 x 65.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.45 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "5.0 / 25.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (125 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (60 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "437de27eadbf4d3b886da41789566c9d",
+        "imageUrl": "https://s3.radikal.cloud/2025/12/23/AI26111ac16518d0c3d8d1.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 1,
+        "_i_nom": 5,
+        "_i_max": 25,
+        "_cap": 5000,
+        "_w": 0.45000000000000001,
+        "title_en": "6S1P 5000 mAh",
+        "subtitle_en": "Article AI2611",
+        "description_en": "Li-Ion battery assembly. Capacity 5000 mAh. Weight 0.45 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 5000 mAh",
+            "Weight: 0.45 kg",
+            "Dimensions: 78.0 x 44.0 x 65.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "78.0 x 44.0 x 65.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.45 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "5.0 / 25.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (125 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (60mm)"
+            }
+        ],
+        "slug": "ai2611",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.12.01"
+    },
+    {
+        "id": "ai2610",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "6S1P 5000 mAh",
+        "subtitle": "Артикул AI2610",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 5000 мАч. Вес 0.48 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.11.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 5000 мАч",
+            "Вес: 0.48 кг",
+            "Размеры: 156.0 x 44.5 x 42.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "156.0 x 44.5 x 42.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.48 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "5.0 / 25.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (110 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (45 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "93fa4bce7f894d8fa9b82d4e87f90cbf",
+        "imageUrl": "https://radika1.link/2025/12/23/AI26102e6d4a68b3659876.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 1,
+        "_i_nom": 5,
+        "_i_max": 25,
+        "_cap": 5000,
+        "_w": 0.47999999999999998,
+        "title_en": "6S1P 5000 mAh",
+        "subtitle_en": "Article AI2610",
+        "description_en": "Li-Ion battery assembly. Capacity 5000 mAh. Weight 0.48 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 5000 mAh",
+            "Weight: 0.48 kg",
+            "Dimensions: 156.0 x 44.5 x 42.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "156.0 x 44.5 x 42.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.48 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "5.0 / 25.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (110 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (45mm)"
+            }
+        ],
+        "slug": "ai2610",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.11.01"
+    },
+    {
+        "id": "ai2623",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "6S2P 10000 mAh",
+        "subtitle": "Артикул AI2623",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 10000 мАч. Вес 0.90 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.21.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 10000 мАч",
+            "Вес: 0.90 кг",
+            "Размеры: 150.0 x 44.5 x 66.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "150.0 x 44.5 x 66.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.90 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "10.0 / 50.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (130 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (75 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "200b78401a3347768afe36784093abaf",
+        "imageUrl": "https://s3.radikal.cloud/2025/12/23/AI26235ba011f8650bdb22.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 2,
+        "_i_nom": 10,
+        "_i_max": 50,
+        "_cap": 10000,
+        "_w": 0.90000000000000002,
+        "title_en": "6S2P 10000 mAh",
+        "subtitle_en": "Article AI2623",
+        "description_en": "Li-Ion battery assembly. Capacity 10000 mAh. Weight 0.90 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 10000mAh",
+            "Weight: 0.90 kg",
+            "Dimensions: 150.0 x 44.5 x 66.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "150.0 x 44.5 x 66.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.90 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "10.0 / 50.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (130 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (75mm)"
+            }
+        ],
+        "slug": "ai2623",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.21.01",
+        "title_ru": "6S2P 10000 mAh",
+        "subtitle_ru": "Артикул AI2623",
+        "description_ru": "Аккумуляторная сборка Li-Ion. Емкость 10000 мАч. Вес 0.90 кг.",
+        "fullDescription_ru": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.21.01",
+        "specs_ru": [
+            "Li-Ion Элементы",
+            "Емкость: 10000 мАч",
+            "Вес: 0.90 кг",
+            "Размеры: 150.0 x 44.5 x 66.0 мм"
+        ],
+        "features_ru": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "details_ru": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "150.0 x 44.5 x 66.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.90 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.2 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "10.0 / 50.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (130 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (75 мм)"
+            }
+        ]
+    },
+    {
+        "id": "ai2860",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "8S6P 30000 mAh",
+        "subtitle": "Артикул AI2860",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 30000 мАч. Вес 3.45 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.24.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 30000 мАч",
+            "Вес: 3.45 кг",
+            "Размеры: 172.5 x 77.5 x 128.5 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "172.5 x 77.5 x 128.5 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "3.45 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "20.0 - 33.6 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "30.0 / 150.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (160 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 5P-F x2 (45 мм)"
+            },
+            {
+                "label": "Разъем зарядки",
+                "value": "XT60-F"
+            },
+            {
+                "label": "Провода зарядки",
+                "value": "14AWG x2 (95 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "c9b9845e1050403c9ffe396de36b7a90",
+        "imageUrl": "https://s2.radikal.cloud/2025/12/23/AI286034117e4a58d4b8a9.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "29.6",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 8,
+        "_p": 6,
+        "_i_nom": 30,
+        "_i_max": 150,
+        "_cap": 30000,
+        "_w": 3.4500000000000002,
+        "title_en": "8S6P 30000 mAh",
+        "subtitle_en": "Article AI2860",
+        "description_en": "Li-Ion battery assembly. Capacity 30000 mAh. Weight 3.45 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 30000mAh",
+            "Weight: 3.45 kg",
+            "Dimensions: 172.5 x 77.5 x 128.5 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "172.5 x 77.5 x 128.5 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "3.45 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "20.0 - 33.6 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "30.0 / 150.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (160 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 5P-F x2 (45mm)"
+            },
+            {
+                "label": "Charging connector",
+                "value": "XT60-F"
+            },
+            {
+                "label": "Charging Wires",
+                "value": "14AWG x2 (95mm)"
+            }
+        ],
+        "slug": "ai2860",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.24.01"
+    },
+    {
+        "id": "ai1626b",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "6S2P 5200 mAh",
+        "subtitle": "Артикул AI1626B",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 5200 мАч. Вес 0.6 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.26.02 BMS",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 5200 мАч",
+            "Вес: 0.6 кг",
+            "Размеры: 110.5 x 38.0 x 76.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "110.5 x 38.0 x 76.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.6 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "5.2 / 40.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (125 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "-"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "edd1c87cbeb647bb90de578d61f7734e",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": true,
+        "_s": 6,
+        "_p": 2,
+        "_i_nom": 5.2000000000000002,
+        "_i_max": 40,
+        "_cap": 5200,
+        "_w": 0.59999999999999998,
+        "title_en": "6S2P 5200 mAh",
+        "subtitle_en": "Article AI1626B",
+        "description_en": "Li-Ion battery assembly. Capacity 5200 mAh. Weight 0.6 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 5200 mAh",
+            "Weight: 0.6 kg",
+            "Dimensions: 110.5 x 38.0 x 76.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "110.5 x 38.0 x 76.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.6kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "5.2 / 40.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (125 mm)"
+            },
+            {
+                "label": "Balancer connector",
+                "value": "-"
+            }
+        ],
+        "slug": "ai1626b",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.26.02 BMS"
+    },
+    {
+        "id": "ai23301",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "3S3P 15000 mAh",
+        "subtitle": "Артикул AI23301",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 15000 мАч. Вес 0.68 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.38.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 15000 мАч",
+            "Вес: 0.68 кг",
+            "Размеры: 66.0 x 65.0 x 77.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "66.0 x 65.0 x 77.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.68 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "7.5 - 12.75 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (85 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 4P-F (70 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "013c07ea91544c87adada327ee44d2d2",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "11.1",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 3,
+        "_p": 3,
+        "_i_nom": 15,
+        "_i_max": 75,
+        "_cap": 15000,
+        "_w": 0.68000000000000005,
+        "title_en": "3S3P 15000 mAh",
+        "subtitle_en": "Article AI23301",
+        "description_en": "Li-Ion battery assembly. Capacity 15000 mAh. Weight 0.68 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 15000 mAh",
+            "Weight: 0.68 kg",
+            "Dimensions: 66.0 x 65.0 x 77.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "66.0 x 65.0 x 77.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.68 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "7.5 - 12.75 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (85 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 4P-F (70mm)"
+            }
+        ],
+        "slug": "ai23301",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.38.01"
+    },
+    {
+        "id": "ai13201",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "3S2P 5200 mAh",
+        "subtitle": "Артикул AI13201",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 5200 мАч. Вес 0.3 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.45.01",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 5200 мАч",
+            "Вес: 0.3 кг",
+            "Размеры: 110.5 x 20.0 x 67.5 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "110.5 x 20.0 x 67.5 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.3 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "8.2 - 12.75 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "5.2 / 40.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "-"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "-"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "65 мм"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "aa9ebd8a8a9d494c816d8507461f13c7",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "11.1",
+        "_conn": "-",
+        "_bms": false,
+        "_s": 3,
+        "_p": 2,
+        "_i_nom": 5.2000000000000002,
+        "_i_max": 40,
+        "_cap": 5200,
+        "_w": 0.29999999999999999,
+        "title_en": "3S2P 5200 mAh",
+        "subtitle_en": "Article AI13201",
+        "description_en": "Li-Ion battery assembly. Capacity 5200 mAh. Weight 0.3 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 5200 mAh",
+            "Weight: 0.3 kg",
+            "Dimensions: 110.5 x 20.0 x 67.5 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "110.5 x 20.0 x 67.5 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.3kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "8.2 - 12.75 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "5.2 / 40.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "-"
+            },
+            {
+                "label": "Power wires",
+                "value": "-"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "65mm"
+            }
+        ],
+        "slug": "ai13201",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.45.01"
+    },
+    {
+        "id": "ai13202b",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion",
+        "title": "3S2P 5200 mAh",
+        "subtitle": "Артикул AI13202B",
+        "description": "Аккумуляторная сборка Li-Ion. Емкость 5200 мАч. Вес 0.31 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion\nМодель: 1.46.01 BMS",
+        "specs": [
+            "Li-Ion Элементы",
+            "Емкость: 5200 мАч",
+            "Вес: 0.31 кг",
+            "Размеры: 116.0 x 21.0 x 68.5 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "116.0 x 21.0 x 68.5 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.31 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "8.2 - 12.75 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "5.2 / 40.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT60-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (110 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "-"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "636c43788b3149669b2e66cef4bd74ca",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion",
+        "_v_nom": "11.1",
+        "_conn": "XT60-F",
+        "_bms": true,
+        "_s": 3,
+        "_p": 2,
+        "_i_nom": 5.2000000000000002,
+        "_i_max": 40,
+        "_cap": 5200,
+        "_w": 0.31,
+        "title_en": "3S2P 5200 mAh",
+        "subtitle_en": "Article AI13202B",
+        "description_en": "Li-Ion battery assembly. Capacity 5200 mAh. Weight 0.31 kg.",
+        "specs_en": [
+            "Li-Ion Cells",
+            "Capacity: 5200 mAh",
+            "Weight: 0.31 kg",
+            "Dimensions: 116.0 x 21.0 x 68.5 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "116.0 x 21.0 x 68.5 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.31 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "8.2 - 12.75 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "5.2 / 40.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT60-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (110 mm)"
+            },
+            {
+                "label": "Balancer connector",
+                "value": "-"
+            }
+        ],
+        "slug": "ai13202b",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion\nModel: 1.46.01 BMS"
+    },
+    {
+        "id": "ap2820",
+        "category": "Аккумуляторы",
+        "subcategory": "li-po",
+        "title": "8S2P 9000 mAh",
+        "subtitle": "Артикул AP2820",
+        "description": "Аккумуляторная сборка Li-Po. Емкость 9000 мАч. Вес 1.19 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Po\nМодель: 1.25.01",
+        "specs": [
+            "Li-Po Элементы",
+            "Емкость: 9000 мАч",
+            "Вес: 1.19 кг",
+            "Размеры: 140.0 x 44.1 x 90.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "140.0 x 44.1 x 90.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.19 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "20.0 - 34.0 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "9.0 / 45.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (65 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 9P-F (115 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "a2b8370bbcc54317b5f4058bfd79ff84",
+        "imageUrl": "https://s2.radikal.cloud/2025/12/23/AP28204d2ea974edb3dc7a.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Po",
+        "_v_nom": "29.6",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 8,
+        "_p": 2,
+        "_i_nom": 9,
+        "_i_max": 45,
+        "_cap": 9000,
+        "_w": 1.1899999999999999,
+        "title_en": "8S2P 9000 mAh",
+        "subtitle_en": "Article AP2820",
+        "description_en": "Li-Po battery assembly. Capacity 9000 mAh. Weight 1.19 kg.",
+        "specs_en": [
+            "Li-Po Cells",
+            "Capacity: 9000 mAh",
+            "Weight: 1.19 kg",
+            "Dimensions: 140.0 x 44.1 x 90.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "140.0 x 44.1 x 90.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.19 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "20.0 - 34.0 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "9.0 / 45.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (65 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 9P-F (115mm)"
+            }
+        ],
+        "slug": "ap2820",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Po\nModel: 1.25.01"
+    },
+    {
+        "id": "ap2621",
+        "category": "Аккумуляторы",
+        "subcategory": "li-po",
+        "title": "6S2P 9000 mAh",
+        "subtitle": "Артикул AP2621",
+        "description": "Аккумуляторная сборка Li-Po. Емкость 9000 мАч. Вес 1.25 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Po\nМодель: 1.15.01",
+        "specs": [
+            "Li-Po Элементы",
+            "Емкость: 9000 мАч",
+            "Вес: 1.25 кг",
+            "Размеры: 170.0 x 58.0 x 60.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "170.0 x 58.0 x 60.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.25 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "9.0 / 45.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (100 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (55 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "639560f1aa60409180f0edf4977916ca",
+        "imageUrl": "https://s3.radikal.cloud/2025/12/23/AP26218abca40129f7b2bc.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Po",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 2,
+        "_i_nom": 9,
+        "_i_max": 45,
+        "_cap": 9000,
+        "_w": 1.25,
+        "title_en": "6S2P 9000 mAh",
+        "subtitle_en": "Article AP2621",
+        "description_en": "Li-Po battery assembly. Capacity 9000 mAh. Weight 1.25 kg.",
+        "specs_en": [
+            "Li-Po Cells",
+            "Capacity: 9000 mAh",
+            "Weight: 1.25 kg",
+            "Dimensions: 170.0 x 58.0 x 60.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "170.0 x 58.0 x 60.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.25 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "9.0 / 45.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (100 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (55mm)"
+            }
+        ],
+        "slug": "ap2621",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Po\nModel: 1.15.01"
+    },
+    {
+        "id": "ap2622",
+        "category": "Аккумуляторы",
+        "subcategory": "li-po",
+        "title": "6S2P 10000 mAh",
+        "subtitle": "Артикул AP2622",
+        "description": "Аккумуляторная сборка Li-Po. Емкость 10000 мАч. Вес 1.35 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Po\nМодель: 1.16.01",
+        "specs": [
+            "Li-Po Элементы",
+            "Емкость: 10000 мАч",
+            "Вес: 1.35 кг",
+            "Размеры: 175.0 x 57.0 x 64.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "175.0 x 57.0 x 64.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.35 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "10.0 / 50.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (100 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (55 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "de5296cedf38440ea1b17c7f6a0049ed",
+        "imageUrl": "https://s3.radikal.cloud/2025/12/23/AP26218abca40129f7b2bc.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Po",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 2,
+        "_i_nom": 10,
+        "_i_max": 50,
+        "_cap": 10000,
+        "_w": 1.3500000000000001,
+        "title_en": "6S2P 10000 mAh",
+        "subtitle_en": "Article AP2622",
+        "description_en": "Li-Po battery assembly. Capacity 10000 mAh. Weight 1.35 kg.",
+        "specs_en": [
+            "Li-Po Cells",
+            "Capacity: 10000mAh",
+            "Weight: 1.35 kg",
+            "Dimensions: 175.0 x 57.0 x 64.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "175.0 x 57.0 x 64.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.35 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "10.0 / 50.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (100 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (55mm)"
+            }
+        ],
+        "slug": "ap2622",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Po\nModel: 1.16.01"
+    },
+    {
+        "id": "ap2620",
+        "category": "Аккумуляторы",
+        "subcategory": "li-po",
+        "title": "6S2P 8000 mAh",
+        "subtitle": "Артикул AP2620",
+        "description": "Аккумуляторная сборка Li-Po. Емкость 8000 мАч. Вес 1.15 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Po\nМодель: 1.14.01",
+        "specs": [
+            "Li-Po Элементы",
+            "Емкость: 8000 мАч",
+            "Вес: 1.15 кг",
+            "Размеры: 171.0 x 54.0 x 60.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "171.0 x 54.0 x 60.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.15 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "8.0 / 40.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (100 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (55 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "f01e8a6d0a6d42668e8d6d8fdfc9d2d7",
+        "imageUrl": "https://s3.radikal.cloud/2025/12/23/AP26218abca40129f7b2bc.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Po",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 2,
+        "_i_nom": 8,
+        "_i_max": 40,
+        "_cap": 8000,
+        "_w": 1.1499999999999999,
+        "title_en": "6S2P 8000 mAh",
+        "subtitle_en": "Article AP2620",
+        "description_en": "Li-Po battery assembly. Capacity 8000 mAh. Weight 1.15 kg.",
+        "specs_en": [
+            "Li-Po Cells",
+            "Capacity: 8000 mAh",
+            "Weight: 1.15 kg",
+            "Dimensions: 171.0 x 54.0 x 60.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "171.0 x 54.0 x 60.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.15 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "8.0 / 40.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (100 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (55mm)"
+            }
+        ],
+        "slug": "ap2620",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Po\nModel: 1.14.01"
+    },
+    {
+        "id": "ap04201",
+        "category": "Аккумуляторы",
+        "subcategory": "li-po",
+        "title": "4S2P 8000 mAh",
+        "subtitle": "Артикул AP04201",
+        "description": "Аккумуляторная сборка Li-Po. Емкость 8000 мАч. Вес 0.78 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Po\nМодель: 1.37.01",
+        "specs": [
+            "Li-Po Элементы",
+            "Емкость: 8000 мАч",
+            "Вес: 0.78 кг",
+            "Размеры: 171.0 x 35.5 x 60.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "171.0 x 35.5 x 60.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.78 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "10.0 - 17.0 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "8.0 / 40.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "14AWG (100 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (55 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "1862116b24ca46539ab0f431dcfc96ff",
+        "imageUrl": "https://s3.radikal.cloud/2025/12/23/AP26218abca40129f7b2bc.webp",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Po",
+        "_v_nom": "14.8",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 4,
+        "_p": 2,
+        "_i_nom": 8,
+        "_i_max": 40,
+        "_cap": 8000,
+        "_w": 0.78000000000000003,
+        "title_en": "4S2P 8000 mAh",
+        "subtitle_en": "Article AP04201",
+        "description_en": "Li-Po battery assembly. Capacity 8000 mAh. Weight 0.78 kg.",
+        "specs_en": [
+            "Li-Po Cells",
+            "Capacity: 8000 mAh",
+            "Weight: 0.78 kg",
+            "Dimensions: 171.0 x 35.5 x 60.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "171.0 x 35.5 x 60.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.78 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "10.0 - 17.0 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "8.0 / 40.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "14AWG (100 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (55mm)"
+            }
+        ],
+        "slug": "ap04201",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Po\nModel: 1.37.01"
+    },
+    {
+        "id": "ap03301",
+        "category": "Аккумуляторы",
+        "subcategory": "li-po",
+        "title": "3S3P 15000 mAh",
+        "subtitle": "Артикул AP03301",
+        "description": "Аккумуляторная сборка Li-Po. Емкость 15000 мАч. Вес 1.07 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Po\nМодель: 1.40.01",
+        "specs": [
+            "Li-Po Элементы",
+            "Емкость: 15000 мАч",
+            "Вес: 1.07 кг",
+            "Размеры: 66.0 x 42.5 x 175.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "66.0 x 42.5 x 175.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.07 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "7.5 - 12.75 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (200 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 4P-F (80 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "79cccc01a5bd47ce81b997faa897dd01",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Po",
+        "_v_nom": "11.1",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 3,
+        "_p": 3,
+        "_i_nom": 15,
+        "_i_max": 75,
+        "_cap": 15000,
+        "_w": 1.0700000000000001,
+        "title_en": "3S3P 15000 mAh",
+        "subtitle_en": "Article AP03301",
+        "description_en": "Li-Po battery assembly. Capacity 15000 mAh. Weight 1.07 kg.",
+        "specs_en": [
+            "Li-Po Cells",
+            "Capacity: 15000 mAh",
+            "Weight: 1.07 kg",
+            "Dimensions: 66.0 x 42.5 x 175.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "66.0 x 42.5 x 175.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.07 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "7.5 - 12.75 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (200 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 4P-F (80mm)"
+            }
+        ],
+        "slug": "ap03301",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Po\nModel: 1.40.01"
+    },
+    {
+        "id": "ap06301",
+        "category": "Аккумуляторы",
+        "subcategory": "li-po",
+        "title": "6S3P 15000 mAh",
+        "subtitle": "Артикул AP06301",
+        "description": "Аккумуляторная сборка Li-Po. Емкость 15000 мАч. Вес 2.04 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Po\nМодель: 1.41.01",
+        "specs": [
+            "Li-Po Элементы",
+            "Емкость: 15000 мАч",
+            "Вес: 2.04 кг",
+            "Размеры: 82.0 x 66.0 x 172.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "82.0 x 66.0 x 172.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "2.04 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (180 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (55 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "d806fcace0434d10a5836eb0b8e050d3",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Po",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 3,
+        "_i_nom": 15,
+        "_i_max": 75,
+        "_cap": 15000,
+        "_w": 2.04,
+        "title_en": "6S3P 15000 mAh",
+        "subtitle_en": "Article AP06301",
+        "description_en": "Li-Po battery assembly. Capacity 15000 mAh. Weight 2.04 kg.",
+        "specs_en": [
+            "Li-Po Cells",
+            "Capacity: 15000 mAh",
+            "Weight: 2.04 kg",
+            "Dimensions: 82.0 x 66.0 x 172.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "82.0 x 66.0 x 172.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "2.04 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (180 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (55mm)"
+            }
+        ],
+        "slug": "ap06301",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Po\nModel: 1.41.01"
+    },
+    {
+        "id": "ap06101",
+        "category": "Аккумуляторы",
+        "subcategory": "li-po",
+        "title": "6S1P 7500 mAh",
+        "subtitle": "Артикул AP06101",
+        "description": "Аккумуляторная сборка Li-Po. Емкость 7500 мАч. Вес 0.89 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Po\nМодель: 1.42.01",
+        "specs": [
+            "Li-Po Элементы",
+            "Емкость: 7500 мАч",
+            "Вес: 0.89 кг",
+            "Размеры: 143.5 x 32.5 x 92.1 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "143.5 x 32.5 x 92.1 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "0.89 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "7.5 / 37.5 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (190 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (65 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "21dea72d693549a4ae1d19f4525881ab",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Po",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 1,
+        "_i_nom": 7.5,
+        "_i_max": 37.5,
+        "_cap": 7500,
+        "_w": 0.89000000000000001,
+        "title_en": "6S1P 7500 mAh",
+        "subtitle_en": "Article AP06101",
+        "description_en": "Li-Po battery assembly. Capacity 7500 mAh. Weight 0.89 kg.",
+        "specs_en": [
+            "Li-Po Cells",
+            "Capacity: 7500 mAh",
+            "Weight: 0.89 kg",
+            "Dimensions: 143.5 x 32.5 x 92.1 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "143.5 x 32.5 x 92.1 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "0.89 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "7.5 / 37.5 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (190 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (65mm)"
+            }
+        ],
+        "slug": "ap06101",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Po\nModel: 1.42.01"
+    },
+    {
+        "id": "ap06201",
+        "category": "Аккумуляторы",
+        "subcategory": "li-po",
+        "title": "6S2P 15000 mAh",
+        "subtitle": "Артикул AP06201",
+        "description": "Аккумуляторная сборка Li-Po. Емкость 15000 мАч. Вес 1.71 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Po\nМодель: 1.43.01",
+        "specs": [
+            "Li-Po Элементы",
+            "Емкость: 15000 мАч",
+            "Вес: 1.71 кг",
+            "Размеры: 147.0 x 62.0 x 92.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "147.0 x 62.0 x 92.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.71 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (185 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (55 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "d0f231aeacb64211aba1c3d73593b5f3",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Po",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 2,
+        "_i_nom": 15,
+        "_i_max": 75,
+        "_cap": 15000,
+        "_w": 1.71,
+        "title_en": "6S2P 15000 mAh",
+        "subtitle_en": "Article AP06201",
+        "description_en": "Li-Po battery assembly. Capacity 15000 mAh. Weight 1.71 kg.",
+        "specs_en": [
+            "Li-Po Cells",
+            "Capacity: 15000 mAh",
+            "Weight: 1.71 kg",
+            "Dimensions: 147.0 x 62.0 x 92.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "147.0 x 62.0 x 92.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.71 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "15.0 / 75.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (185 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (55mm)"
+            }
+        ],
+        "slug": "ap06201",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Po\nModel: 1.43.01"
+    },
+    {
+        "id": "as81161",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion semi-solid",
+        "title": "8S1P 16000 mAh",
+        "subtitle": "Артикул AS81161",
+        "description": "Аккумуляторная сборка Li-Ion Semi-Solid. Емкость 16000 мАч. Вес 1.66 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion Semi-Solid\nМодель: 1.28.01",
+        "specs": [
+            "Li-Ion Semi-Solid Элементы",
+            "Емкость: 16000 мАч",
+            "Вес: 1.66 кг",
+            "Размеры: 156.5 x 53.5 x 96.5 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "156.5 x 53.5 x 96.5 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.66 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "20.0 - 34.0 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (191 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 9P-F (87 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "745034cd079d4cb2b4abcdcf829ee40a",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion Semi-Solid",
+        "_v_nom": "29.6",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 8,
+        "_p": 1,
+        "_i_nom": 60,
+        "_i_max": 100,
+        "_cap": 16000,
+        "_w": 1.6599999999999999,
+        "title_en": "8S1P 16000 mAh",
+        "subtitle_en": "Article AS81161",
+        "description_en": "Li-Ion Semi-Solid battery assembly. Capacity 16000 mAh. Weight 1.66 kg.",
+        "specs_en": [
+            "Li-Ion Semi-Solid Cells",
+            "Capacity: 16000 mAh",
+            "Weight: 1.66 kg",
+            "Dimensions: 156.5 x 53.5 x 96.5 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "156.5 x 53.5 x 96.5 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.66 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "20.0 - 34.0 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power Wires",
+                "value": "10AWG (191 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 9P-F (87mm)"
+            }
+        ],
+        "slug": "as81161",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion Semi-Solid\nModel: 1.28.01"
+    },
+    {
+        "id": "as81201",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion semi-solid",
+        "title": "8S1P 20000 mAh",
+        "subtitle": "Артикул AS81201",
+        "description": "Аккумуляторная сборка Li-Ion Semi-Solid. Емкость 20000 мАч. Вес 2.03 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion Semi-Solid\nМодель: 1.29.01",
+        "specs": [
+            "Li-Ion Semi-Solid Элементы",
+            "Емкость: 20000 мАч",
+            "Вес: 2.03 кг",
+            "Размеры: 154.5 x 69.5 x 96.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "154.5 x 69.5 x 96.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "2.03 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "20.0 - 34.0 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (185 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 9P-F (112 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "ecdd6e4ae9f94d2782cb030f8db6548e",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion Semi-Solid",
+        "_v_nom": "29.6",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 8,
+        "_p": 1,
+        "_i_nom": 60,
+        "_i_max": 100,
+        "_cap": 20000,
+        "_w": 2.0299999999999998,
+        "title_en": "8S1P 20000 mAh",
+        "subtitle_en": "Article AS81201",
+        "description_en": "Li-Ion Semi-Solid battery assembly. Capacity 20000 mAh. Weight 2.03 kg.",
+        "specs_en": [
+            "Li-Ion Semi-Solid Cells",
+            "Capacity: 20000mAh",
+            "Weight: 2.03 kg",
+            "Dimensions: 154.5 x 69.5 x 96.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "154.5 x 69.5 x 96.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "2.03 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "20.0 - 34.0 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (185 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 9P-F (112mm)"
+            }
+        ],
+        "slug": "as81201",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion Semi-Solid\nModel: 1.29.01"
+    },
+    {
+        "id": "as81241",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion semi-solid",
+        "title": "8S1P 24000 mAh",
+        "subtitle": "Артикул AS81241",
+        "description": "Аккумуляторная сборка Li-Ion Semi-Solid. Емкость 24000 мАч. Вес 2.35 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion Semi-Solid\nМодель: 1.30.01",
+        "specs": [
+            "Li-Ion Semi-Solid Элементы",
+            "Емкость: 24000 мАч",
+            "Вес: 2.35 кг",
+            "Размеры: 156.0 x 76.5 x 96.5 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "156.0 x 76.5 x 96.5 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "2.35 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "20.0 - 34.0 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (191 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 9P-F (88 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "147ab1d4090a4b6cab574f8ef17297eb",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion Semi-Solid",
+        "_v_nom": "29.6",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 8,
+        "_p": 1,
+        "_i_nom": 60,
+        "_i_max": 100,
+        "_cap": 24000,
+        "_w": 2.3500000000000001,
+        "title_en": "8S1P 24000 mAh",
+        "subtitle_en": "Article AS81241",
+        "description_en": "Li-Ion Semi-Solid battery assembly. Capacity 24000 mAh. Weight 2.35 kg.",
+        "specs_en": [
+            "Li-Ion Semi-Solid Cells",
+            "Capacity: 24000 mAh",
+            "Weight: 2.35 kg",
+            "Dimensions: 156.0 x 76.5 x 96.5 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "156.0 x 76.5 x 96.5 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "2.35 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "20.0 - 34.0 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power Wires",
+                "value": "10AWG (191 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 9P-F (88mm)"
+            }
+        ],
+        "slug": "as81241",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion Semi-Solid\nModel: 1.30.01"
+    },
+    {
+        "id": "as61241",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion semi-solid",
+        "title": "6S1P 24000 mAh",
+        "subtitle": "Артикул AS61241",
+        "description": "Аккумуляторная сборка Li-Ion Semi-Solid. Емкость 24000 мАч. Вес 1.82 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion Semi-Solid\nМодель: 1.31.01",
+        "specs": [
+            "Li-Ion Semi-Solid Элементы",
+            "Емкость: 24000 мАч",
+            "Вес: 1.82 кг",
+            "Размеры: 156.0 x 58.0 x 97.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "156.0 x 58.0 x 97.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.82 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (195 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (112 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "e8deab9933fd4fa1b240c646624b81cd",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion Semi-Solid",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 1,
+        "_i_nom": 60,
+        "_i_max": 100,
+        "_cap": 24000,
+        "_w": 1.8200000000000001,
+        "title_en": "6S1P 24000 mAh",
+        "subtitle_en": "Article AS61241",
+        "description_en": "Li-Ion Semi-Solid battery assembly. Capacity 24000 mAh. Weight 1.82 kg.",
+        "specs_en": [
+            "Li-Ion Semi-Solid Cells",
+            "Capacity: 24000 mAh",
+            "Weight: 1.82 kg",
+            "Dimensions: 156.0 x 58.0 x 97.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "156.0 x 58.0 x 97.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.82 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (195 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (112mm)"
+            }
+        ],
+        "slug": "as61241",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion Semi-Solid\nModel: 1.31.01"
+    },
+    {
+        "id": "as61201",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion semi-solid",
+        "title": "6S1P 20000 mAh",
+        "subtitle": "Артикул AS61201",
+        "description": "Аккумуляторная сборка Li-Ion Semi-Solid. Емкость 20000 мАч. Вес 1.55 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion Semi-Solid\nМодель: 1.32.01",
+        "specs": [
+            "Li-Ion Semi-Solid Элементы",
+            "Емкость: 20000 мАч",
+            "Вес: 1.55 кг",
+            "Размеры: 156.0 x 48.0 x 97.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "156.0 x 48.0 x 97.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.55 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (195 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (112 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "7d2011231f4a4355932dd95929747927",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion Semi-Solid",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 1,
+        "_i_nom": 60,
+        "_i_max": 100,
+        "_cap": 20000,
+        "_w": 1.55,
+        "title_en": "6S1P 20000 mAh",
+        "subtitle_en": "Article AS61201",
+        "description_en": "Li-Ion Semi-Solid battery assembly. Capacity 20000 mAh. Weight 1.55 kg.",
+        "specs_en": [
+            "Li-Ion Semi-Solid Cells",
+            "Capacity: 20000mAh",
+            "Weight: 1.55 kg",
+            "Dimensions: 156.0 x 48.0 x 97.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "156.0 x 48.0 x 97.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.55 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (195 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (112mm)"
+            }
+        ],
+        "slug": "as61201",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion Semi-Solid\nModel: 1.32.01"
+    },
+    {
+        "id": "as61161",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion semi-solid",
+        "title": "6S1P 16000 mAh",
+        "subtitle": "Артикул AS61161",
+        "description": "Аккумуляторная сборка Li-Ion Semi-Solid. Емкость 16000 мАч. Вес 1.28 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion Semi-Solid\nМодель: 1.33.01",
+        "specs": [
+            "Li-Ion Semi-Solid Элементы",
+            "Емкость: 16000 мАч",
+            "Вес: 1.28 кг",
+            "Размеры: 156.0 x 40.0 x 97.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "156.0 x 40.0 x 97.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "1.28 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (195 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (112 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "77f53ba2ae86416e95490ec8980d693b",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion Semi-Solid",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 1,
+        "_i_nom": 60,
+        "_i_max": 100,
+        "_cap": 16000,
+        "_w": 1.28,
+        "title_en": "6S1P 16000 mAh",
+        "subtitle_en": "Article AS61161",
+        "description_en": "Li-Ion Semi-Solid battery assembly. Capacity 16000 mAh. Weight 1.28 kg.",
+        "specs_en": [
+            "Li-Ion Semi-Solid Cells",
+            "Capacity: 16000 mAh",
+            "Weight: 1.28 kg",
+            "Dimensions: 156.0 x 40.0 x 97.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "156.0 x 40.0 x 97.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "1.28 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "60.0 / 100.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (195 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (112mm)"
+            }
+        ],
+        "slug": "as61161",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion Semi-Solid\nModel: 1.33.01"
+    },
+    {
+        "id": "as62161",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion semi-solid",
+        "title": "6S2P 32000 mAh",
+        "subtitle": "Артикул AS62161",
+        "description": "Аккумуляторная сборка Li-Ion Semi-Solid. Емкость 32000 мАч. Вес 2.44 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion Semi-Solid\nМодель: 1.34.01",
+        "specs": [
+            "Li-Ion Semi-Solid Элементы",
+            "Емкость: 32000 мАч",
+            "Вес: 2.44 кг",
+            "Размеры: 154.5 x 78.5 x 91.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "154.5 x 78.5 x 91.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "2.44 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "120.0 / 200.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (195 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 7P-F (90 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "9891b406d78d42cd83c562ccc4728959",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion Semi-Solid",
+        "_v_nom": "22.2",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 6,
+        "_p": 2,
+        "_i_nom": 120,
+        "_i_max": 200,
+        "_cap": 32000,
+        "_w": 2.4399999999999999,
+        "title_en": "6S2P 32000 mAh",
+        "subtitle_en": "Article AS62161",
+        "description_en": "Li-Ion Semi-Solid battery assembly. Capacity 32000 mAh. Weight 2.44 kg.",
+        "specs_en": [
+            "Li-Ion Semi-Solid Cells",
+            "Capacity: 32000 mAh",
+            "Weight: 2.44 kg",
+            "Dimensions: 154.5 x 78.5 x 91.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "154.5 x 78.5 x 91.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "2.44 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "15.0 - 25.5 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "120.0 / 200.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power wires",
+                "value": "10AWG (195 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 7P-F (90mm)"
+            }
+        ],
+        "slug": "as62161",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion Semi-Solid\nModel: 1.34.01"
+    },
+    {
+        "id": "as82161",
+        "category": "Аккумуляторы",
+        "subcategory": "li-ion semi-solid",
+        "title": "8S2P 32000 mAh",
+        "subtitle": "Артикул AS82161",
+        "description": "Аккумуляторная сборка Li-Ion Semi-Solid. Емкость 32000 мАч. Вес 3.18 кг.",
+        "fullDescription": "Сертификат соответствия\nРОСС RU Д-RU.PA01.B.21885/24 от 21.06.2024\nРОСС RU Д-RU.PA01.B.23132/24 от 21.06.2024\nТип: Li-Ion Semi-Solid\nМодель: 1.35.01",
+        "specs": [
+            "Li-Ion Semi-Solid Элементы",
+            "Емкость: 32000 мАч",
+            "Вес: 3.18 кг",
+            "Размеры: 155.5 x 96.5 x 103.0 мм"
+        ],
+        "details": [
+            {
+                "label": "Размеры (ДхШхВ)",
+                "value": "155.5 x 96.5 x 103.0 mm"
+            },
+            {
+                "label": "Вес",
+                "value": "3.18 kg"
+            },
+            {
+                "label": "Напряжение (мин-макс)",
+                "value": "20.0 - 34.0 V"
+            },
+            {
+                "label": "Ток (ном/макс)",
+                "value": "120.0 / 200.0 A"
+            },
+            {
+                "label": "Разъем силовой",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Провода силовые",
+                "value": "10AWG (191 мм)"
+            },
+            {
+                "label": "Разъем балансира",
+                "value": "JST 9P-F (115 мм)"
+            }
+        ],
+        "features": [
+            "Ударопрочная сборка",
+            "Термоусадочная изоляция",
+            "Контроль качества (ГОСТ)"
+        ],
+        "sketchfabId": "7d517ff2588047239f1cb50aa6351b86",
+        "imageUrl": "https://static.tildacdn.com/tild3364-3031-4162-b861-383362393530/e7f902f3-ca36-4d43-a.png",
+        "marketplaces": {
+            "ozon": "",
+            "wb": "",
+            "yandex": ""
+        },
+        "_type": "Li-Ion Semi-Solid",
+        "_v_nom": "29.6",
+        "_conn": "XT90-F",
+        "_bms": false,
+        "_s": 8,
+        "_p": 2,
+        "_i_nom": 120,
+        "_i_max": 200,
+        "_cap": 32000,
+        "_w": 3.1800000000000002,
+        "title_en": "8S2P 32000 mAh",
+        "subtitle_en": "Article AS82161",
+        "description_en": "Li-Ion Semi-Solid battery assembly. Capacity 32000 mAh. Weight 3.18 kg.",
+        "specs_en": [
+            "Li-Ion Semi-Solid Cells",
+            "Capacity: 32000 mAh",
+            "Weight: 3.18 kg",
+            "Dimensions: 155.5 x 96.5 x 103.0 mm"
+        ],
+        "features_en": [
+            "Shockproof build",
+            "Heat shrink insulation",
+            "Quality control (GOST)"
+        ],
+        "details_en": [
+            {
+                "label": "Dimensions (LxWxH)",
+                "value": "155.5 x 96.5 x 103.0 mm"
+            },
+            {
+                "label": "Weight",
+                "value": "3.18 kg"
+            },
+            {
+                "label": "Voltage (min-max)",
+                "value": "20.0 - 34.0 V"
+            },
+            {
+                "label": "Current (nom/max)",
+                "value": "120.0 / 200.0 A"
+            },
+            {
+                "label": "Power connector",
+                "value": "XT90-F"
+            },
+            {
+                "label": "Power Wires",
+                "value": "10AWG (191 mm)"
+            },
+            {
+                "label": "Balancer Connector",
+                "value": "JST 9P-F (115mm)"
+            }
+        ],
+        "slug": "as82161",
+        "fullDescription_en": "Certificate of Conformity\nROSS RU D-RU.PA01.B.21885/24 from 06.21.2024\nROSS RU D-RU.PA01.B.23132/24 from 06.21.2024\nType: Li-Ion Semi-Solid\nModel: 1.35.01"
+    }
+]

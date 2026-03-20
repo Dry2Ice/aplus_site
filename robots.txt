@@ -1,0 +1,28 @@
+# === Robots policy ===========================================================
+# Public content is indexable; service/admin/data areas are blocked.
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /data/
+Disallow: /config/
+Disallow: /scripts/
+Disallow: /tools/
+
+# Block aggressive bots from heavy crawling
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+Crawl-delay: 10
+
+Host: https://aplus-charisma.ru
+Sitemap: https://aplus-charisma.ru/sitemap.xml

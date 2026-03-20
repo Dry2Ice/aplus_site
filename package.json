@@ -1,0 +1,19 @@
+{
+  "name": "aplus-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 tools/build_dist.py",
+    "lint": "npm run lint:js && npm run lint:html && npm run lint:css",
+    "lint:js": "node tools/lint_js.mjs",
+    "lint:html": "htmlhint \"*.html\" \"admin/*.html\" \"batteries/*.html\" \"copters/*.html\" \"water/*.html\"",
+    "lint:css": "stylelint \"assets/**/*.css\"",
+    "validate": "npm run lint && python3 scripts/validate_catalog.py",
+    "test": "python3 -m py_compile tools/build_dist.py"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.16.0",
+    "stylelint-config-standard": "^37.0.0"
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>404 — Страница не найдена | А Плюс</title>
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#6523b1" />
+<link rel="canonical" href="https://aplus-charisma.ru/" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Shared public-page contract: tokens/components live in /assets/common.css and runtime theme + Tailwind sync live in /assets/common.js. Keep local <style> blocks page-exclusive only. -->
+<link rel="stylesheet" href="/assets/common.css" />
+<script defer src="/assets/common.js"></script>
+<style>
+  /* 404 page composition only; do not redefine shared components here. */
+  .error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .error-shell { text-align: center; max-width: 600px; }
+  .error-code {
+    font-family: var(--font-display);
+    font-size: clamp(6rem, 20vw, 12rem);
+    font-weight: 900;
+    line-height: 1;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+  .error-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+  .error-copy { color: var(--site-text); opacity: 0.68; font-size: 1rem; line-height: 1.6; margin-bottom: 2rem; }
+  .dark .error-copy { color: var(--site-text-dark); opacity: 0.78; }
+  .error-actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+  .error-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 2rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .error-action-primary { color: white; }
+  .error-action-secondary {
+    border: 2px solid var(--purple);
+    color: var(--purple);
+    transition: all 0.2s;
+  }
+  .error-action-secondary:hover { background: var(--purple); color: white; }
+  .dark .error-action-secondary { border-color: var(--purple-dark); color: var(--purple-dark); }
+  .error-nav { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 2rem; }
+  .error-nav-link {
+    color: var(--site-text);
+    opacity: 0.68;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: color 0.2s, background 0.2s;
+  }
+  .error-nav-link:hover { color: var(--purple); background: rgb(var(--purple-rgb) / 0.08); opacity: 1; }
+  .dark .error-nav-link { color: var(--site-text-dark); opacity: 0.78; }
+  .dark .error-nav-link:hover { color: var(--purple-dark); background: rgb(var(--purple-soft-rgb) / 0.18); opacity: 1; }
+</style>
+</head>
+<body class="site-theme error-page">
+<main class="error-shell">
+  <div class="error-code">404</div>
+  <h1 class="error-title">Страница не найдена</h1>
+  <p class="error-copy">Запрошенная страница не существует или была перемещена.<br>Воспользуйтесь навигацией ниже.</p>
+  <div class="error-actions">
+    <a href="/" class="btn-primary error-action error-action-primary">← На главную</a>
+    <a href="tel:+74957307070" class="error-action error-action-secondary">📞 +7 495 730 70 70</a>
+  </div>
+  <nav class="error-nav" aria-label="Разделы сайта">
+    <a href="/copters/" class="error-nav-link">🚁 БПЛА</a>
+    <a href="/batteries/" class="error-nav-link">🔋 Аккумуляторы</a>
+    <a href="/water/" class="error-nav-link">💧 Очистка воды</a>
+  </nav>
+</main>
+</body>
+</html>

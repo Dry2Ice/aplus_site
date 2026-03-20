@@ -1,0 +1,1807 @@
+<!doctype html>
+<html lang="ru" class="scroll-smooth">
+<head>
+<!-- === SEO meta and page identity ========================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Plus - Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    // === Tailwind UI theme configuration =====================================
+tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Onest', 'sans-serif'],
+            display: ['Unbounded', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              purple: '#4c019c',
+              'purple-light': '#6523b1',
+              'purple-soft': '#bd9cf7',
+              dark: '#11071e',
+              card: '#1d1233',
+              text: '#F7F3FF'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <!-- === Global visual system styles ========================================= -->
+<style>
+    .field{width:100%;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);border-radius:.75rem;padding:.75rem 1rem;outline:none;}
+    .field:focus{border-color:#4c019c;box-shadow:0 0 0 3px rgba(101,35,177,.18);}
+    .color-picker{padding:.35rem;min-width:4.25rem;cursor:pointer;}
+    .color-picker::-webkit-color-swatch-wrapper{padding:0;}
+    .color-picker::-webkit-color-swatch{border:none;border-radius:.6rem;}
+    .color-picker::-moz-color-swatch{border:none;border-radius:.6rem;}
+    .palette-chip{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:999px;padding:.55rem .9rem;font-size:.75rem;font-weight:600;transition:.2s;}
+    .palette-chip:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);}
+    .swatch-dot{width:.9rem;height:.9rem;border-radius:999px;border:1px solid rgba(255,255,255,.22);box-shadow:0 0 0 1px rgba(0,0,0,.15) inset;}
+    .preview-card{border:1px solid rgba(255,255,255,.08);border-radius:1.25rem;padding:1rem;overflow:hidden;position:relative;}
+    .preview-card::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 45%);}
+    .guide-overlay{position:fixed;inset:0;background:rgba(5,5,10,.72);z-index:60;}
+    .guide-spotlight{position:fixed;z-index:65;pointer-events:none;border-radius:.85rem;box-shadow:0 0 0 9999px rgba(5,5,10,.72);transition:all .2s ease;}
+    .guide-highlight{position:relative;z-index:70;box-shadow:0 0 0 2px #4c019c,0 0 0 8px rgba(101,35,177,.22);border-radius:.85rem;}
+    .guide-tooltip{position:fixed;z-index:80;max-width:330px;border:1px solid rgba(255,255,255,.16);background:rgba(17,17,24,.97);backdrop-filter:blur(12px);border-radius:1rem;padding:1rem;box-shadow:0 20px 45px rgba(0,0,0,.5);}
+  </style>
+</head>
+<body class="bg-brand-dark text-brand-text min-h-screen font-sans">
+  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(76,1,156,0.26),transparent_35%),radial-gradient(circle_at_55%_35%,rgba(101,35,177,0.2),transparent_38%),radial-gradient(circle_at_80%_90%,rgba(189,156,247,0.18),transparent_42%)]"></div>
+  <button id="guideBtn" class="hidden fixed top-5 right-5 z-50 h-11 w-11 rounded-full border border-white/20 bg-brand-purple text-lg font-bold text-white shadow-lg shadow-brand-purple/40 hover:opacity-90" title="Показать гайд">i</button>
+  <main class="max-w-[1500px] mx-auto p-4 md:p-8 space-y-5">
+    <header class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-5 md:p-7">
+      <p class="text-xs uppercase tracking-[0.2em] text-white/60 mb-2">A Plus Secure CMS</p>
+      <h1 class="font-display text-2xl md:text-3xl">Админ-панель</h1>
+    </header>
+
+    <section id="login" class="max-w-xl rounded-3xl border border-white/10 bg-brand-card/80 backdrop-blur-xl p-5 md:p-7">
+      <h2 class="text-xl font-semibold mb-4">Вход в защищённую панель</h2>
+      <div class="grid gap-3">
+        <input id="accessCode" type="text" placeholder="Код доступа" class="field" />
+        <input id="password" type="password" placeholder="Пароль" class="field" />
+        <button id="loginBtn" class="rounded-xl bg-gradient-to-r from-brand-purple to-violet-500 py-3 font-semibold hover:opacity-90">Войти</button>
+      </div>
+      <p id="loginError" class="text-rose-300 mt-3 text-sm"></p>
+    </section>
+
+    <section id="app" class="hidden space-y-4">
+      <div id="adminTabs" class="inline-flex rounded-2xl border border-white/15 bg-white/5 p-1 text-sm">
+        <button id="tabProductsBtn" class="rounded-xl px-4 py-2 font-semibold">Товары</button>
+        <button id="tabHomeBtn" class="rounded-xl px-4 py-2 font-semibold">Текст</button>
+        <button id="tabDesignBtn" class="rounded-xl px-4 py-2 font-semibold">Дизайн и доступность</button>
+      </div>
+
+      <div id="productsPanel" class="grid xl:grid-cols-[320px_1fr_360px] gap-4 md:gap-6">
+        <aside class="rounded-3xl border border-white/10 bg-brand-card/80 backdrop-blur-xl p-4">
+          <div class="flex gap-2 mb-3">
+            <select id="categorySelect" class="w-full rounded-xl border border-white/15 bg-white/5 px-3 py-2">
+              <option value="batteries">Аккумуляторы</option>
+              <option value="copters">БПЛА</option>
+              <option value="water">Очистка воды</option>
+            </select>
+            <button id="logoutBtn" class="rounded-xl px-3 py-2 bg-white/10 hover:bg-white/20">Выход</button>
+          </div>
+
+          <input id="searchInput" type="text" placeholder="Поиск по товарам" class="w-full rounded-xl border border-white/15 bg-white/5 px-3 py-2 mb-3" />
+
+          <div class="grid grid-cols-2 gap-2 mb-3 text-sm">
+            <button id="addBtn" class="rounded-xl bg-brand-purple py-2 font-semibold">+ Товар</button>
+            <button id="duplicateBtn" class="rounded-xl bg-indigo-500/90 py-2">Дубль</button>
+            <button id="upBtn" class="rounded-xl bg-white/10 py-2">Выше</button>
+            <button id="downBtn" class="rounded-xl bg-white/10 py-2">Ниже</button>
+            <button id="deleteBtn" class="col-span-2 rounded-xl bg-rose-500/80 py-2">Удалить</button>
+          </div>
+
+          <div id="list" class="space-y-2 max-h-[62vh] overflow-auto pr-1"></div>
+        </aside>
+
+        <section class="rounded-3xl border border-white/10 bg-brand-card/80 backdrop-blur-xl p-4 md:p-6">
+          <div class="flex flex-wrap gap-2 justify-between mb-4">
+            <h2 class="text-xl font-semibold">Карточка товара</h2>
+            <div class="flex flex-wrap gap-2 text-sm">
+              <div id="langSwitch" class="inline-flex rounded-xl border border-white/15 bg-white/5 p-1">
+                <button id="langRuBtn" class="rounded-lg px-3 py-2">RU</button>
+                <button id="langEnBtn" class="rounded-lg px-3 py-2">EN</button>
+              </div>
+              <button id="autoTranslateBtn" class="rounded-xl bg-violet-600 px-4 py-2 font-semibold">Перевести в EN</button>
+              <button id="saveCardBtn" class="rounded-xl bg-blue-600 px-4 py-2 font-semibold">Сохранить карточку</button>
+              <button id="saveAllBtn" class="rounded-xl bg-emerald-600 px-4 py-2 font-semibold">Опубликовать категорию</button>
+              <button id="exportBtn" class="rounded-xl bg-white/10 px-4 py-2">Экспорт</button>
+            </div>
+          </div>
+
+          <p id="langHint" class="text-xs text-white/65 mb-3">Сейчас редактируется: русская версия.</p>
+
+          <div id="translateProgressWrap" class="mb-4 hidden">
+            <div class="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+              <div id="translateProgressBar" class="h-full w-0 rounded-full bg-violet-500 transition-[width] duration-200"></div>
+            </div>
+            <p id="translateProgressText" class="mt-1 text-xs text-white/70">Перевод…</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-3">
+            <input id="f_id" placeholder="ID (slug)" class="field" />
+            <input id="f_subcategory" placeholder="Подкатегория" class="field" />
+            <input id="f_title" placeholder="Название" class="field" />
+            <input id="f_subtitle" placeholder="Подзаголовок" class="field" />
+            <input id="f_imageUrl" placeholder="URL изображения" class="field md:col-span-2" />
+            <input id="f_sketchfabId" placeholder="Sketchfab ID (без URL)" class="field md:col-span-2" />
+            <textarea id="f_description" placeholder="Описание карточки на странице товара (под названием)" class="field md:col-span-2 min-h-[90px]"></textarea>
+            <textarea id="f_fullDescription" placeholder="Полное описание на странице товара (блок под карточкой)" class="field md:col-span-2 min-h-[120px]"></textarea>
+            <textarea id="f_specs" placeholder="Характеристики (каждая с новой строки)" class="field min-h-[120px]"></textarea>
+            <textarea id="f_features" placeholder="Преимущества (каждая с новой строки)" class="field min-h-[120px]"></textarea>
+            <textarea id="f_details" placeholder="Детали в формате: Название: Значение" class="field md:col-span-2 min-h-[120px]"></textarea>
+            <input id="f_market_ozon" placeholder="Ссылка OZON" class="field" />
+            <input id="f_market_wb" placeholder="Ссылка Wildberries" class="field" />
+            <input id="f_market_yandex" placeholder="Ссылка Яндекс Маркет" class="field" />
+          </div>
+
+          <div class="mt-4 p-4 rounded-2xl border border-white/10 bg-black/20 space-y-3">
+            <p class="font-semibold">Загрузка изображения</p>
+            <div class="flex flex-wrap items-center gap-2">
+              <input type="file" id="imageInput" accept="image/*" class="text-sm" />
+              <button id="uploadBtn" class="rounded-xl bg-amber-500 px-4 py-2 font-semibold">Загрузить</button>
+              <span id="uploadResult" class="text-sm text-white/70"></span>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <p class="font-semibold mb-2">JSON редактор карточки</p>
+            <textarea id="jsonEditor" class="w-full min-h-[220px] rounded-xl border border-white/15 bg-black/30 p-3 font-mono text-xs"></textarea>
+          </div>
+
+          <p id="status" class="mt-4 text-sm text-white/70"></p>
+        </section>
+
+        <aside class="rounded-3xl border border-white/10 bg-brand-card/80 backdrop-blur-xl p-4 space-y-4">
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-3 space-y-2">
+            <p class="font-semibold">Безопасность</p>
+            <p id="securityInfo" class="text-sm text-white/70">Загрузка…</p>
+            <div class="space-y-2">
+              <input id="newAccessCode" class="field" placeholder="Новый код доступа" />
+              <input id="newAccessCodeLabel" class="field" placeholder="Метка (например: manager)" />
+              <button id="addAccessCodeBtn" class="w-full rounded-xl bg-violet-600 py-2">Добавить код</button>
+            </div>
+            <div id="accessCodes" class="space-y-2 max-h-40 overflow-auto pr-1"></div>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-3 space-y-2">
+            <p class="font-semibold">Сменить пароль</p>
+            <input id="currentPassword" type="password" class="field" placeholder="Текущий пароль" />
+            <input id="nextPassword" type="password" class="field" placeholder="Новый пароль (мин. 8)" />
+            <button id="changePasswordBtn" class="w-full rounded-xl bg-fuchsia-600 py-2">Обновить пароль</button>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-3">
+            <div class="flex justify-between items-center mb-2">
+              <p class="font-semibold">Журнал действий</p>
+              <button id="refreshLogsBtn" class="rounded-lg bg-white/10 px-3 py-1 text-xs">Обновить</button>
+            </div>
+            <div id="logs" class="space-y-2 max-h-[280px] overflow-auto pr-1 text-xs text-white/75"></div>
+          </div>
+        </aside>
+      </div>
+
+      <section id="homeContentPanel" class="hidden rounded-3xl border border-white/10 bg-brand-card/80 backdrop-blur-xl p-4 md:p-6 space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <h2 class="text-xl font-semibold">Текст сайта</h2>
+          <div id="homeLangSwitch" class="inline-flex rounded-xl border border-white/15 bg-white/5 p-1 text-sm">
+            <button id="homeLangRuBtn" class="rounded-lg px-3 py-2">RU</button>
+            <button id="homeLangEnBtn" class="rounded-lg px-3 py-2">EN</button>
+          </div>
+        </div>
+        <p id="homeLangHint" class="text-xs text-white/60">Сейчас редактируется: русская версия.</p>
+        <p class="text-xs text-white/60">Редактирование текстов всех страниц (кроме контента карточек товаров) в JSON-формате для точного контроля.</p>
+        <div id="homeSections" class="space-y-3"></div>
+        <div class="flex justify-end">
+          <button id="saveHomeContentBtn" class="rounded-xl bg-emerald-600 px-4 py-2 font-semibold">Опубликовать тексты главной</button>
+        </div>
+      </section>
+
+      <section id="designPanel" class="hidden rounded-3xl border border-white/10 bg-brand-card/80 backdrop-blur-xl p-4 md:p-6 space-y-5">
+        <div>
+          <h2 class="text-xl font-semibold">Гибкая настройка дизайна сайта</h2>
+          <p class="text-sm text-white/70 mt-1">Меняйте ключевые шрифты, базовые цвета и доступность без правки кода. Изменения применяются ко всему сайту.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="space-y-2"><span class="text-sm text-white/70">Основной шрифт (тело текста)</span><select id="designFontBody" class="field"><option value="Onest">Onest</option><option value="Inter">Inter</option><option value="Roboto">Roboto</option><option value="Arial">Arial</option><option value="Georgia">Georgia</option></select></label>
+          <label class="space-y-2"><span class="text-sm text-white/70">Акцентный шрифт (заголовки)</span><select id="designFontDisplay" class="field"><option value="Unbounded">Unbounded</option><option value="Montserrat">Montserrat</option><option value="Poppins">Poppins</option><option value="Oswald">Oswald</option><option value="Arial">Arial</option></select></label>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-black/20 p-4 space-y-4">
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p class="font-semibold">Цветовая схема</p>
+              <p class="text-xs text-white/60 mt-1">У каждого цвета есть пипетка и HEX-поле. Можно быстро вставить точный код, а изменения сразу отражаются в превью ниже.</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" id="applyBrandPaletteBtn" class="palette-chip inline-flex items-center gap-2">
+                <span class="swatch-dot" style="background:#4c019c"></span>
+                <span class="swatch-dot" style="background:#6523b1"></span>
+                <span class="swatch-dot" style="background:#bd9cf7"></span>
+                Брендовая палитра
+              </button>
+              <button type="button" id="syncDarkPaletteBtn" class="palette-chip">Подобрать dark автоматически</button>
+              <button type="button" id="buildGradientBtn" class="palette-chip">Собрать градиент из акцентов</button>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <label class="space-y-1"><span class="text-xs text-white/60">Основной акцент</span><div class="flex gap-2"><input id="designColorPrimary" type="color" class="field color-picker h-12" /><input id="designColorPrimaryHex" class="field uppercase tracking-[0.12em]" placeholder="#4C019C" maxlength="7" /></div></label>
+            <label class="space-y-1"><span class="text-xs text-white/60">Второй акцент</span><div class="flex gap-2"><input id="designColorSecondary" type="color" class="field color-picker h-12" /><input id="designColorSecondaryHex" class="field uppercase tracking-[0.12em]" placeholder="#6523B1" maxlength="7" /></div></label>
+            <label class="space-y-1"><span class="text-xs text-white/60">Третий акцент / подсветка</span><div class="flex gap-2"><input id="designColorTertiary" type="color" class="field color-picker h-12" /><input id="designColorTertiaryHex" class="field uppercase tracking-[0.12em]" placeholder="#BD9CF7" maxlength="7" /></div></label>
+            <label class="space-y-1"><span class="text-xs text-white/60">Фон страницы</span><div class="flex gap-2"><input id="designColorBackground" type="color" class="field color-picker h-12" /><input id="designColorBackgroundHex" class="field uppercase tracking-[0.12em]" placeholder="#F7F2FF" maxlength="7" /></div></label>
+            <label class="space-y-1"><span class="text-xs text-white/60">Основной текст</span><div class="flex gap-2"><input id="designColorText" type="color" class="field color-picker h-12" /><input id="designColorTextHex" class="field uppercase tracking-[0.12em]" placeholder="#201136" maxlength="7" /></div></label>
+            <label class="space-y-1 sm:col-span-2"><span class="text-xs text-white/60">Поверхности карточек</span><div class="flex gap-2"><input id="designColorSurface" type="color" class="field color-picker h-12" /><input id="designColorSurfaceHex" class="field uppercase tracking-[0.12em]" placeholder="#FFFFFF" maxlength="7" /></div></label>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-black/20 p-4 space-y-3">
+          <div>
+            <p class="font-semibold">Цвета тёмной темы</p>
+            <p class="text-xs text-white/60 mt-1">Если не хочется настраивать вручную — нажмите «Подобрать dark автоматически», и панель соберёт сбалансированные тёмные цвета сама.</p>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <label class="space-y-1"><span class="text-xs text-white/60">Акцент (dark)</span><div class="flex gap-2"><input id="designColorDarkPrimary" type="color" class="field color-picker h-12" /><input id="designColorDarkPrimaryHex" class="field uppercase tracking-[0.12em]" placeholder="#BD9CF7" maxlength="7" /></div></label>
+            <label class="space-y-1"><span class="text-xs text-white/60">Второй акцент (dark)</span><div class="flex gap-2"><input id="designColorDarkSecondary" type="color" class="field color-picker h-12" /><input id="designColorDarkSecondaryHex" class="field uppercase tracking-[0.12em]" placeholder="#6523B1" maxlength="7" /></div></label>
+            <label class="space-y-1"><span class="text-xs text-white/60">Третий акцент / глубина (dark)</span><div class="flex gap-2"><input id="designColorDarkTertiary" type="color" class="field color-picker h-12" /><input id="designColorDarkTertiaryHex" class="field uppercase tracking-[0.12em]" placeholder="#4C019C" maxlength="7" /></div></label>
+            <label class="space-y-1"><span class="text-xs text-white/60">Фон страницы (dark)</span><div class="flex gap-2"><input id="designColorDarkBackground" type="color" class="field color-picker h-12" /><input id="designColorDarkBackgroundHex" class="field uppercase tracking-[0.12em]" placeholder="#11071E" maxlength="7" /></div></label>
+            <label class="space-y-1"><span class="text-xs text-white/60">Основной текст (dark)</span><div class="flex gap-2"><input id="designColorDarkText" type="color" class="field color-picker h-12" /><input id="designColorDarkTextHex" class="field uppercase tracking-[0.12em]" placeholder="#F7F3FF" maxlength="7" /></div></label>
+            <label class="space-y-1 sm:col-span-2"><span class="text-xs text-white/60">Поверхности карточек (dark)</span><div class="flex gap-2"><input id="designColorDarkSurface" type="color" class="field color-picker h-12" /><input id="designColorDarkSurfaceHex" class="field uppercase tracking-[0.12em]" placeholder="#1D1233" maxlength="7" /></div></label>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-black/20 p-4 space-y-3">
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p class="font-semibold">Градиенты</p>
+              <p class="text-xs text-white/60 mt-1">Можно задать CSS вручную или быстро собрать трёхточечный градиент из основных акцентов кнопкой выше.</p>
+            </div>
+          </div>
+          <label class="space-y-1 block">
+            <span class="text-xs text-white/60">Главный градиент кнопок (CSS)</span>
+            <input id="designGradientMain" class="field" placeholder="linear-gradient(135deg, #4c019c 0%, #6523b1 72%, #bd9cf7 100%)" />
+          </label>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-black/20 p-4 space-y-3">
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p class="font-semibold">Производные semantic tokens</p>
+              <p class="text-xs text-white/60 mt-1">Базовые акценты, фон, текст и surface задаются вручную. Производные токены `backgroundElevated`, `textMuted`, `border`, `glow`, `overlay` и `meshIntensity` автогенерируются из палитры и используются shared-компонентами без raw hex.</p>
+            </div>
+            <span class="inline-flex items-center rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-emerald-200">Автогенерация включена</span>
+          </div>
+          <div class="grid lg:grid-cols-2 gap-3">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-3">
+              <p class="text-xs uppercase tracking-[0.14em] text-white/45 mb-2">Light derived tokens</p>
+              <div id="designDerivedPreviewLight" class="grid gap-2"></div>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-3">
+              <p class="text-xs uppercase tracking-[0.14em] text-white/45 mb-2">Dark derived tokens</p>
+              <div id="designDerivedPreviewDark" class="grid gap-2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-black/20 p-4 space-y-3">
+          <div class="flex items-center justify-between gap-3 flex-wrap">
+            <div>
+              <p class="font-semibold">Live preview</p>
+              <p class="text-xs text-white/60 mt-1">Показывает, как будут выглядеть кнопки, карточки и текст до публикации.</p>
+            </div>
+            <div class="text-xs text-white/50">Превью обновляется автоматически</div>
+          </div>
+          <div class="grid lg:grid-cols-2 gap-3">
+            <div id="designPreviewLight" class="preview-card"></div>
+            <div id="designPreviewDark" class="preview-card"></div>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-black/20 p-4 space-y-3">
+          <div class="flex items-center justify-between gap-3">
+            <div>
+              <p class="font-semibold">Контрастность (WCAG)</p>
+              <p class="text-xs text-white/60 mt-1">Проверка контрастности текста и фонов. Минимум 4.5:1 для текста, 3:1 для акцентов.</p>
+            </div>
+          </div>
+          <div id="contrastWarnings" class="grid gap-2"></div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-black/20 p-4 space-y-3">
+          <p class="font-semibold">Доступность</p>
+          <label class="space-y-1 block"><span class="text-xs text-white/60">Размер шрифта сайта: <span id="designFontScaleValue">100%</span></span><input id="designFontScale" type="range" min="90" max="130" step="1" value="100" class="w-full" /></label>
+          <div class="grid sm:grid-cols-2 gap-2 text-sm">
+            <label class="flex items-center gap-2"><input id="designHighContrast" type="checkbox" /> Высокий контраст по умолчанию</label>
+            <label class="flex items-center gap-2"><input id="designReduceMotion" type="checkbox" /> Сниженная анимация по умолчанию</label>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-black/20 p-4 space-y-3">
+          <p class="font-semibold">Порядок блоков на главной странице</p>
+          <p class="text-xs text-white/60">Переставляйте блоки вверх/вниз. Этот порядок применяется на всём сайте.</p>
+          <div id="homeOrderManager" class="space-y-2"></div>
+        </div>
+        <div class="flex flex-wrap justify-end gap-2">
+          <button id="resetDesignBtn" class="rounded-xl bg-white/10 px-4 py-2 font-semibold">Сбросить к стандарту</button>
+          <button id="saveDesignBtn" class="rounded-xl bg-emerald-600 px-4 py-2 font-semibold">Опубликовать дизайн</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+<!-- === Admin panel runtime ================================================== -->
+<script>
+const state = {
+  category: 'batteries',
+  items: [],
+  filtered: [],
+  selected: -1,
+  csrfToken: '',
+  editLang: 'ru',
+  listScrollTop: null,
+  translating: false,
+  adminTab: 'products',
+  homeEditLang: 'ru',
+  homeContent: { ru: {}, en: {} },
+  designSettings: null,
+};
+const PUBLIC_DESIGN_SETTINGS_CACHE_KEY = 'aplus_public_design_settings_v1';
+const PUBLIC_DESIGN_SETTINGS_EVENT = 'aplus:public-design-settings-changed';
+const DESIGN_COLOR_FIELDS = [
+  'Primary',
+  'Secondary',
+  'Tertiary',
+  'Background',
+  'Text',
+  'Surface',
+  'DarkPrimary',
+  'DarkSecondary',
+  'DarkTertiary',
+  'DarkBackground',
+  'DarkText',
+  'DarkSurface',
+];
+const DERIVED_TOKEN_KEYS = ['backgroundElevated', 'textMuted', 'border', 'glow', 'overlay', 'meshIntensity'];
+
+const defaultDesignSettings = {
+  fontBody: 'Onest',
+  fontDisplay: 'Unbounded',
+  fontScale: 100,
+  colors: { primary: '#4c019c', secondary: '#6523b1', tertiary: '#bd9cf7', background: '#f7f2ff', text: '#201136', surface: '#ffffff' },
+  colorsDark: { primary: '#bd9cf7', secondary: '#6523b1', tertiary: '#4c019c', background: '#11071e', text: '#f7f3ff', surface: '#1d1233' },
+  tokenMode: 'auto',
+  tokens: { backgroundElevated: '#efe6ff', textMuted: '#6b5a8c', border: 'rgb(76 1 156 / 0.12)', glow: 'rgb(76 1 156 / 0.24)', overlay: 'rgb(247 242 255 / 0.9)', meshIntensity: '0.08' },
+  tokensDark: { backgroundElevated: '#1b1031', textMuted: '#c8bae7', border: 'rgb(189 156 247 / 0.18)', glow: 'rgb(189 156 247 / 0.28)', overlay: 'rgb(17 7 30 / 0.9)', meshIntensity: '0.16' },
+  gradients: { main: 'linear-gradient(135deg, #4c019c 0%, #6523b1 72%, #bd9cf7 100%)' },
+  accessibility: { highContrast: false, reduceMotion: false },
+  layout: { homeSections: ['hero', 'stats', 'divider', 'about', 'workflow', 'products', 'principles', 'faq', 'cta'] },
+};
+
+const cloneDefaultDesignSettings = () => JSON.parse(JSON.stringify(defaultDesignSettings));
+
+const normalizeHex = (value, fallback = '#000000') => {
+  const normalized = String(value || '').trim().toLowerCase();
+  return /^#[0-9a-f]{6}$/.test(normalized) ? normalized : fallback;
+};
+
+const hexToRgb = (value) => {
+  const safe = normalizeHex(value, '#000000').slice(1);
+  return {
+    r: parseInt(safe.slice(0, 2), 16),
+    g: parseInt(safe.slice(2, 4), 16),
+    b: parseInt(safe.slice(4, 6), 16),
+  };
+};
+
+const mixColors = (base, target, ratio) => {
+  const from = hexToRgb(base);
+  const to = hexToRgb(target);
+  const blend = (start, end) => Math.round(start + (end - start) * ratio);
+  return `#${[blend(from.r, to.r), blend(from.g, to.g), blend(from.b, to.b)].map((part) => part.toString(16).padStart(2, '0')).join('')}`;
+};
+const rgbaFromHex = (hex, alpha) => {
+  const { r, g, b } = hexToRgb(hex);
+  const safeAlpha = Math.max(0, Math.min(1, Number(alpha) || 0));
+  return `rgb(${r} ${g} ${b} / ${safeAlpha})`;
+};
+const clampMeshIntensity = (value, fallback) => {
+  const numeric = Number(value);
+  if (!Number.isFinite(numeric)) return String(fallback);
+  return String(Math.max(0, Math.min(1, numeric)));
+};
+// IMPORTANT: This must stay in sync with deriveDesignTokens() in admin/api.php and deriveSemanticTokens() in /assets/common.js
+const deriveSemanticTokens = (palette, isDark = false) => ({
+  backgroundElevated: isDark
+    ? mixColors(palette.background, palette.secondary, 0.22)
+    : mixColors(palette.background, palette.secondary, 0.08),
+  textMuted: isDark
+    ? mixColors(palette.text, palette.background, 0.22)
+    : mixColors(palette.text, palette.background, 0.32),
+  border: rgbaFromHex(palette.primary, isDark ? 0.18 : 0.12),
+  glow: rgbaFromHex(palette.primary, isDark ? 0.28 : 0.24),
+  overlay: rgbaFromHex(palette.background, 0.9),
+  meshIntensity: clampMeshIntensity(isDark ? 0.16 : 0.08, isDark ? 0.16 : 0.08),
+});
+const mergeDesignSettingsWithDerived = (settings = {}) => {
+  const merged = {
+    ...cloneDefaultDesignSettings(),
+    ...settings,
+    colors: { ...defaultDesignSettings.colors, ...((settings || {}).colors || {}) },
+    colorsDark: { ...defaultDesignSettings.colorsDark, ...((settings || {}).colorsDark || {}) },
+    accessibility: { ...defaultDesignSettings.accessibility, ...((settings || {}).accessibility || {}) },
+    layout: { ...defaultDesignSettings.layout, ...((settings || {}).layout || {}) },
+    gradients: { ...defaultDesignSettings.gradients, ...((settings || {}).gradients || {}) },
+    tokenMode: 'auto',
+  };
+  merged.tokens = deriveSemanticTokens(merged.colors, false);
+  merged.tokensDark = deriveSemanticTokens(merged.colorsDark, true);
+  return merged;
+};
+
+const buildGradientFromAccentInputs = () => `linear-gradient(135deg, ${$('designColorPrimary').value} 0%, ${$('designColorSecondary').value} 52%, ${$('designColorTertiary').value} 100%)`;
+
+function syncColorControlPair(baseId, fallback) {
+  const picker = $(baseId);
+  const hex = $(`${baseId}Hex`);
+  const applyValue = (value) => {
+    const normalized = normalizeHex(value, fallback);
+    picker.value = normalized;
+    hex.value = normalized.toUpperCase();
+  };
+
+  picker.addEventListener('input', () => {
+    hex.value = picker.value.toUpperCase();
+    renderDesignPreview();
+  });
+
+  hex.addEventListener('input', () => {
+    const normalized = normalizeHex(hex.value, picker.value || fallback);
+    if (normalized === hex.value.trim().toLowerCase()) {
+      picker.value = normalized;
+      hex.value = normalized.toUpperCase();
+      renderDesignPreview();
+    }
+  });
+
+  hex.addEventListener('blur', () => {
+    applyValue(hex.value || picker.value || fallback);
+    renderDesignPreview();
+  });
+
+  applyValue(picker.value || fallback);
+}
+
+function applyBrandPalettePreset() {
+  const preset = cloneDefaultDesignSettings();
+  const current = readDesignForm();
+  preset.fontBody = current.fontBody;
+  preset.fontDisplay = current.fontDisplay;
+  preset.fontScale = current.fontScale;
+  preset.accessibility = { ...current.accessibility };
+  preset.layout = { homeSections: [...current.layout.homeSections] };
+  state.designSettings = mergeDesignSettingsWithDerived(preset);
+  fillDesignForm();
+  notify('Брендовая палитра применена локально. Проверьте превью и нажмите «Опубликовать дизайн».');
+}
+
+function syncDarkPaletteFromLight() {
+  $('designColorDarkPrimary').value = mixColors($('designColorTertiary').value, '#ffffff', 0.18);
+  $('designColorDarkSecondary').value = $('designColorSecondary').value;
+  $('designColorDarkTertiary').value = $('designColorPrimary').value;
+  $('designColorDarkBackground').value = mixColors($('designColorPrimary').value, '#05010b', 0.88);
+  $('designColorDarkSurface').value = mixColors($('designColorSecondary').value, '#10081d', 0.72);
+  $('designColorDarkText').value = '#f7f3ff';
+
+  ['designColorDarkPrimary', 'designColorDarkSecondary', 'designColorDarkTertiary', 'designColorDarkBackground', 'designColorDarkSurface', 'designColorDarkText'].forEach((id) => {
+    $(`${id}Hex`).value = $(id).value.toUpperCase();
+  });
+  renderDesignPreview();
+}
+
+function renderDerivedTokenPreview() {
+  const settings = readDesignForm();
+  const previewRows = (tokens) => DERIVED_TOKEN_KEYS.map((key) => {
+    const value = tokens[key];
+    const swatch = /^#[0-9a-f]{6}$/i.test(value || '') ? `<span class="swatch-dot" style="background:${value};border-color:${value};"></span>` : '';
+    return `
+      <div class="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-xs">
+        <div class="flex items-center gap-2 min-w-0">
+          ${swatch}
+          <span class="font-semibold text-white/75">${key}</span>
+        </div>
+        <code class="text-[11px] text-white/55 break-all text-right">${value}</code>
+      </div>
+    `;
+  }).join('');
+
+  $('designDerivedPreviewLight').innerHTML = previewRows(settings.tokens);
+  $('designDerivedPreviewDark').innerHTML = previewRows(settings.tokensDark);
+}
+
+function getRelativeLuminance(hex) {
+  const { r, g, b } = hexToRgb(hex);
+  const [rs, gs, bs] = [r, g, b].map(c => {
+    const s = c / 255;
+    return s <= 0.03928 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+}
+
+function getContrastRatio(hex1, hex2) {
+  const l1 = getRelativeLuminance(hex1);
+  const l2 = getRelativeLuminance(hex2);
+  const lighter = Math.max(l1, l2);
+  const darker = Math.min(l1, l2);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
+function renderContrastWarnings() {
+  const settings = readDesignForm();
+  const wrap = $('contrastWarnings');
+  if (!wrap) return;
+
+  const checks = [
+    { label: 'Текст / Фон (light)', fg: settings.colors.text, bg: settings.colors.background, min: 4.5 },
+    { label: 'Текст / Surface (light)', fg: settings.colors.text, bg: settings.colors.surface, min: 4.5 },
+    { label: 'Акцент / Фон (light)', fg: settings.colors.primary, bg: settings.colors.background, min: 3.0 },
+    { label: 'Текст / Фон (dark)', fg: settings.colorsDark.text, bg: settings.colorsDark.background, min: 4.5 },
+    { label: 'Текст / Surface (dark)', fg: settings.colorsDark.text, bg: settings.colorsDark.surface, min: 4.5 },
+    { label: 'Акцент / Фон (dark)', fg: settings.colorsDark.primary, bg: settings.colorsDark.background, min: 3.0 },
+  ];
+
+  wrap.replaceChildren();
+  let hasWarnings = false;
+
+  checks.forEach(({ label, fg, bg, min }) => {
+    const ratio = getContrastRatio(fg, bg);
+    const pass = ratio >= min;
+    if (!pass) hasWarnings = true;
+
+    const row = document.createElement('div');
+    row.className = `flex items-center justify-between gap-3 rounded-xl border px-3 py-2 text-xs ${pass ? 'border-white/10 bg-white/5' : 'border-rose-400/30 bg-rose-500/10'}`;
+
+    row.innerHTML = `
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="swatch-dot shrink-0" style="background:${fg};border-color:${fg};"></span>
+        <span class="swatch-dot shrink-0" style="background:${bg};border-color:rgba(255,255,255,.22);"></span>
+        <span class="font-semibold text-white/75 truncate">${label}</span>
+      </div>
+      <div class="flex items-center gap-2 shrink-0">
+        <code class="text-[11px] ${pass ? 'text-emerald-300' : 'text-rose-300'}">${ratio.toFixed(2)}:1</code>
+        <span class="text-[10px] font-bold ${pass ? 'text-emerald-400' : 'text-rose-400'}">${pass ? 'PASS' : 'FAIL'}</span>
+      </div>
+    `;
+    wrap.appendChild(row);
+  });
+
+  if (hasWarnings) {
+    const hint = document.createElement('p');
+    hint.className = 'text-[11px] text-rose-300/80 mt-2';
+    hint.textContent = 'Некоторые пары цветов не проходят проверку WCAG. Увеличьте разницу яркости между текстом и фоном.';
+    wrap.appendChild(hint);
+  }
+}
+
+function renderDesignPreview() {
+  const settings = readDesignForm();
+  const previewMarkup = (isDark) => {
+    const palette = isDark ? settings.colorsDark : settings.colors;
+    const tokens = isDark ? settings.tokensDark : settings.tokens;
+    const textColor = palette.text;
+    const background = palette.background;
+    const surface = palette.surface;
+    const accent = palette.primary;
+    const accentSecondary = palette.secondary;
+    const accentTertiary = palette.tertiary;
+    return `
+      <div class="h-full" style="background:${background};color:${textColor};font-family:${settings.fontBody};padding:1rem;border-radius:1rem;">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <div style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;opacity:.62;">${isDark ? 'Dark preview' : 'Light preview'}</div>
+            <div style="font-family:${settings.fontDisplay};font-weight:700;font-size:1.15rem;line-height:1.1;">A Plus palette</div>
+          </div>
+          <div style="display:flex;gap:.45rem;">
+            <span class="swatch-dot" style="background:${accent};border-color:${accent};"></span>
+            <span class="swatch-dot" style="background:${accentSecondary};border-color:${accentSecondary};"></span>
+            <span class="swatch-dot" style="background:${accentTertiary};border-color:${accentTertiary};"></span>
+            <span class="swatch-dot" style="background:${surface};border-color:rgba(0,0,0,.08);"></span>
+          </div>
+        </div>
+        <div style="background:${surface};border-radius:1rem;padding:1rem;border:1px solid ${tokens.border};box-shadow:0 12px 28px ${tokens.glow};">
+          <div style="font-size:.78rem;color:${tokens.textMuted};margin-bottom:.35rem;">Карточка / surface</div>
+          <div style="font-family:${settings.fontDisplay};font-weight:700;font-size:1rem;margin-bottom:.6rem;">Кнопки и акценты</div>
+          <div style="display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:.75rem;">
+            <span style="display:inline-flex;align-items:center;gap:.35rem;border-radius:999px;background:${tokens.overlay};padding:.35rem .7rem;color:${tokens.textMuted};border:1px solid ${tokens.border};">elevated: ${tokens.backgroundElevated}</span>
+            <span style="display:inline-flex;align-items:center;gap:.35rem;border-radius:999px;background:${tokens.overlay};padding:.35rem .7rem;color:${tokens.textMuted};border:1px solid ${tokens.border};">mesh: ${tokens.meshIntensity}</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:.65rem;align-items:center;">
+            <button type="button" style="border:none;border-radius:999px;padding:.72rem 1rem;background:${settings.gradients.main};color:#fff;font-weight:700;cursor:default;">Основное действие</button>
+            <button type="button" style="border-radius:999px;padding:.68rem 1rem;background:transparent;color:${accent};border:1px solid ${accent};font-weight:700;cursor:default;">Вторичное</button>
+          </div>
+        </div>
+      </div>
+    `;
+  };
+
+  $('designPreviewLight').innerHTML = previewMarkup(false);
+  $('designPreviewDark').innerHTML = previewMarkup(true);
+  renderDerivedTokenPreview();
+  renderContrastWarnings();
+}
+const homeSectionLabels = {
+  hero: 'Hero',
+  stats: 'Метрики',
+  divider: 'Разделитель',
+  about: 'О компании',
+  workflow: 'Как мы работаем',
+  products: 'Каталог решений',
+  principles: 'Принципы',
+  faq: 'FAQ',
+  cta: 'CTA блок',
+};
+const guide = { step: 0, overlay: null, tooltip: null, spotlight: null, currentTarget: null };
+const homeSectionSchema = [
+  { key: 'navItems', title: '01. Навигация' },
+  { key: 'contact', title: '02. Кнопка связи в шапке' },
+  { key: 'hero', title: '03. Hero-блок' },
+  { key: 'stats', title: '04. Блок метрик' },
+  { key: 'about', title: '05. О компании' },
+  { key: 'workflowTitle', title: '06. Заголовок «Как мы работаем»' },
+  { key: 'workflow', title: '07. Этапы работы' },
+  { key: 'infoTitle', title: '08. Общий заголовок инфо-блока' },
+  { key: 'faqTitle', title: '09. Заголовок FAQ' },
+  { key: 'faq', title: '10. Вопросы и ответы' },
+  { key: 'location', title: '11. Блок «Как нас найти»' },
+  { key: 'productsTitle', title: '12. Заголовок каталога решений' },
+  { key: 'productsSubtitle', title: '13. Подзаголовок каталога решений' },
+  { key: 'principlesTitle', title: '14. Заголовок принципов' },
+  { key: 'principles', title: '15. Карточки принципов' },
+  { key: 'cta', title: '16. CTA блок' },
+  { key: 'sectionBadges', title: '17. Подзаголовки секций' },
+  { key: 'ui', title: '18. UI-тексты интерфейса и форм' },
+  { key: 'requisites', title: '19. Реквизиты' },
+  { key: 'footer', title: '20. Нижняя панель (общая для всех страниц)' },
+  { key: 'cookies', title: '21. Cookie-баннер (общий для всех страниц)' },
+  { key: 'pages', title: '22. Тексты страниц каталога (без карточек товаров)' },
+];
+
+const $ = (id) => document.getElementById(id);
+
+const guideSteps = [
+  { id: 'categorySelect', title: 'Категории', text: 'Выбор раздела каталога. После смены категории подгружается отдельный список товаров.' },
+  { id: 'searchInput', title: 'Поиск', text: 'Фильтрует карточки товаров по всем полям, чтобы быстро находить нужную позицию.' },
+  { id: 'addBtn', title: '«+ Товар»', text: 'Создаёт новую карточку товара в начале списка.' },
+  { id: 'duplicateBtn', title: '«Дубль»', text: 'Делает копию текущего товара и добавляет её рядом.' },
+  { id: 'upBtn', title: '«Выше»', text: 'Поднимает выбранную карточку на одну позицию вверх в каталоге.' },
+  { id: 'downBtn', title: '«Ниже»', text: 'Опускает выбранную карточку на одну позицию вниз.' },
+  { id: 'deleteBtn', title: '«Удалить»', text: 'Удаляет выбранный товар после подтверждения.' },
+  { id: 'saveCardBtn', title: 'Сохранить карточку', text: 'Применяет изменения в форме к текущей карточке локально.' },
+  { id: 'langSwitch', title: 'Переключатель языка', text: 'Переключает режим редактирования между русской и английской версией карточки.' },
+  { id: 'autoTranslateBtn', title: 'Автоперевод в EN', text: 'Автоматически переводит русский контент карточки на английский через Google Translate.' },
+  { id: 'saveAllBtn', title: 'Опубликовать категорию', text: 'Сохраняет все товары категории в базу и JSON-файлы.' },
+  { id: 'exportBtn', title: 'Экспорт', text: 'Скачивает полный экспорт каталога в JSON-файл.' },
+  { id: 'uploadBtn', title: 'Загрузка изображения', text: 'Отправляет выбранное изображение на сервер и подставляет ссылку в карточку.' },
+  { id: 'jsonEditor', title: 'JSON редактор', text: 'Позволяет редактировать структуру карточки напрямую в JSON.' },
+  { id: 'addAccessCodeBtn', title: 'Добавить код', text: 'Создаёт новый код доступа для входа в админ-панель.' },
+  { id: 'changePasswordBtn', title: 'Сменить пароль', text: 'Обновляет пароль администратора после проверки текущего.' },
+  { id: 'refreshLogsBtn', title: 'Журнал действий', text: 'Обновляет историю операций: входы, публикации, изменения безопасности.' },
+  { id: 'logoutBtn', title: 'Выход', text: 'Завершает текущую сессию и возвращает к форме входа.' },
+];
+
+async function api(action, options = {}) {
+  const method = (options.method || 'GET').toUpperCase();
+  const baseHeaders = { 'Content-Type': 'application/json' };
+  if (state.csrfToken && method !== 'GET') {
+    baseHeaders['X-CSRF-Token'] = state.csrfToken;
+  }
+  const mergedHeaders = { ...baseHeaders, ...(options.headers || {}) };
+
+  const res = await fetch(`api.php?action=${action}`, {
+    credentials: 'same-origin',
+    ...options,
+    headers: mergedHeaders,
+  });
+  const data = await res.json();
+  if (data && data.csrfToken) {
+    state.csrfToken = data.csrfToken;
+  }
+  if (!res.ok) {
+    throw new Error(data.error || 'HTTP ' + res.status);
+  }
+  return data;
+}
+
+function notify(text, isError = false) {
+  const status = $('status');
+  status.textContent = text;
+  status.className = `mt-4 text-sm ${isError ? 'text-rose-300' : 'text-emerald-300'}`;
+}
+
+function setTranslationProgress(done, total, stage = '') {
+  const wrap = $('translateProgressWrap');
+  const bar = $('translateProgressBar');
+  const text = $('translateProgressText');
+  const safeTotal = Math.max(0, Number(total) || 0);
+  const safeDone = Math.min(Math.max(0, Number(done) || 0), safeTotal || Number(done) || 0);
+  const percent = safeTotal > 0 ? Math.round((safeDone / safeTotal) * 100) : 0;
+  wrap.classList.toggle('hidden', !state.translating);
+  bar.style.width = `${percent}%`;
+  text.textContent = safeTotal > 0
+    ? `Перевод: ${safeDone}/${safeTotal}${stage ? ` · ${stage}` : ''}`
+    : 'Перевод…';
+}
+
+function setTranslating(isTranslating) {
+  state.translating = Boolean(isTranslating);
+  ['autoTranslateBtn', 'categorySelect', 'addBtn', 'duplicateBtn', 'upBtn', 'downBtn', 'deleteBtn'].forEach((id) => {
+    const node = $(id);
+    if (node) node.disabled = state.translating;
+  });
+  $('list').classList.toggle('pointer-events-none', state.translating);
+  $('list').classList.toggle('opacity-60', state.translating);
+  if (!state.translating) {
+    $('translateProgressWrap').classList.add('hidden');
+    $('translateProgressBar').style.width = '0%';
+    $('translateProgressText').textContent = 'Перевод…';
+  }
+}
+
+function toLines(v) { return Array.isArray(v) ? v.join('\n') : ''; }
+function fromLines(v) { return v.split('\n').map(s => s.trim()).filter(Boolean); }
+
+function detailsToText(details) {
+  if (!Array.isArray(details)) return '';
+  return details.map(d => `${d.label || ''}: ${d.value || ''}`).join('\n');
+}
+
+function textToDetails(text) {
+  return text.split('\n').map(line => line.trim()).filter(Boolean).map(line => {
+    const [label, ...rest] = line.split(':');
+    return { label: (label || '').trim(), value: rest.join(':').trim() };
+  });
+}
+
+function displayName(item) {
+  return item.title || item.title_ru || item.subtitle || item.id || 'Без названия';
+}
+
+function localizedValue(item, field, lang) {
+  if (lang === 'en') {
+    return item[`${field}_en`] ?? '';
+  }
+  return item[field] ?? item[`${field}_ru`] ?? '';
+}
+
+function localizedLines(item, field, lang) {
+  if (lang === 'en') {
+    return Array.isArray(item[`${field}_en`]) ? item[`${field}_en`] : [];
+  }
+  if (Array.isArray(item[field])) return item[field];
+  return Array.isArray(item[`${field}_ru`]) ? item[`${field}_ru`] : [];
+}
+
+function localizedDetails(item, lang) {
+  if (lang === 'en') {
+    return Array.isArray(item.details_en) ? item.details_en : [];
+  }
+  if (Array.isArray(item.details)) return item.details;
+  return Array.isArray(item.details_ru) ? item.details_ru : [];
+}
+
+function setLocalizedValue(base, field, lang, value) {
+  if (lang === 'en') {
+    base[`${field}_en`] = value;
+    return;
+  }
+  base[field] = value;
+  base[`${field}_ru`] = value;
+}
+
+function setLocalizedLines(base, field, lang, value) {
+  if (lang === 'en') {
+    base[`${field}_en`] = value;
+    return;
+  }
+  base[field] = value;
+  base[`${field}_ru`] = value;
+}
+
+function setLocalizedDetails(base, lang, value) {
+  if (lang === 'en') {
+    base.details_en = value;
+    return;
+  }
+  base.details = value;
+  base.details_ru = value;
+}
+
+function renderLangSwitcher() {
+  const isRu = state.editLang === 'ru';
+  $('langRuBtn').className = `rounded-lg px-3 py-2 transition ${isRu ? 'bg-brand-purple text-white' : 'text-white/70 hover:bg-white/10'}`;
+  $('langEnBtn').className = `rounded-lg px-3 py-2 transition ${!isRu ? 'bg-brand-purple text-white' : 'text-white/70 hover:bg-white/10'}`;
+  $('langHint').textContent = `Сейчас редактируется: ${isRu ? 'русская версия' : 'английская версия'}.`;
+}
+
+function makeTextBlock(tag, className, text) {
+  const el = document.createElement(tag);
+  el.className = className;
+  el.textContent = text;
+  return el;
+}
+function renderAdminTabs() {
+  const productsActive = state.adminTab === 'products';
+  const homeActive = state.adminTab === 'home';
+  const designActive = state.adminTab === 'design';
+  $('tabProductsBtn').className = `rounded-xl px-4 py-2 font-semibold transition ${productsActive ? 'bg-brand-purple text-white' : 'text-white/70 hover:bg-white/10'}`;
+  $('tabHomeBtn').className = `rounded-xl px-4 py-2 font-semibold transition ${homeActive ? 'bg-brand-purple text-white' : 'text-white/70 hover:bg-white/10'}`;
+  $('tabDesignBtn').className = `rounded-xl px-4 py-2 font-semibold transition ${designActive ? 'bg-brand-purple text-white' : 'text-white/70 hover:bg-white/10'}`;
+  $('productsPanel').classList.toggle('hidden', !productsActive);
+  $('homeContentPanel').classList.toggle('hidden', !homeActive);
+  $('designPanel').classList.toggle('hidden', !designActive);
+}
+
+function syncDesignScaleLabel() {
+  $('designFontScaleValue').textContent = `${$('designFontScale').value}%`;
+}
+
+
+function moveHomeSection(sectionKey, direction) {
+  const current = [...(state.designSettings?.layout?.homeSections || defaultDesignSettings.layout.homeSections)];
+  const index = current.indexOf(sectionKey);
+  if (index < 0) return;
+  const target = index + direction;
+  if (target < 0 || target >= current.length) return;
+  const temp = current[target];
+  current[target] = current[index];
+  current[index] = temp;
+  state.designSettings.layout.homeSections = current;
+  renderHomeOrderManager();
+}
+
+function renderHomeOrderManager() {
+  const wrap = $('homeOrderManager');
+  if (!wrap) return;
+  wrap.replaceChildren();
+  const order = state.designSettings?.layout?.homeSections || defaultDesignSettings.layout.homeSections;
+  order.forEach((key, idx) => {
+    const row = document.createElement('div');
+    row.className = 'rounded-xl border border-white/10 bg-white/5 px-3 py-2 flex items-center justify-between gap-3';
+    const left = document.createElement('div');
+    left.className = 'text-sm';
+    left.textContent = `${idx + 1}. ${homeSectionLabels[key] || key}`;
+    const controls = document.createElement('div');
+    controls.className = 'flex gap-1';
+    const up = document.createElement('button');
+    up.type = 'button';
+    up.className = 'rounded-lg bg-white/10 px-2 py-1 text-xs';
+    up.textContent = '↑';
+    up.disabled = idx === 0;
+    up.onclick = () => moveHomeSection(key, -1);
+    const down = document.createElement('button');
+    down.type = 'button';
+    down.className = 'rounded-lg bg-white/10 px-2 py-1 text-xs';
+    down.textContent = '↓';
+    down.disabled = idx === order.length - 1;
+    down.onclick = () => moveHomeSection(key, 1);
+    controls.append(up, down);
+    row.append(left, controls);
+    wrap.appendChild(row);
+  });
+}
+
+function fillDesignForm() {
+  const settings = mergeDesignSettingsWithDerived(state.designSettings || cloneDefaultDesignSettings());
+  if (!settings.layout || !Array.isArray(settings.layout.homeSections)) {
+    settings.layout = JSON.parse(JSON.stringify(defaultDesignSettings.layout));
+  }
+  $('designFontBody').value = settings.fontBody;
+  $('designFontDisplay').value = settings.fontDisplay;
+  $('designColorPrimary').value = settings.colors.primary;
+  $('designColorSecondary').value = settings.colors.secondary;
+  $('designColorTertiary').value = settings.colors.tertiary;
+  $('designColorBackground').value = settings.colors.background;
+  $('designColorText').value = settings.colors.text;
+  $('designColorSurface').value = settings.colors.surface;
+  $('designColorDarkPrimary').value = settings.colorsDark.primary;
+  $('designColorDarkSecondary').value = settings.colorsDark.secondary;
+  $('designColorDarkTertiary').value = settings.colorsDark.tertiary;
+  $('designColorDarkBackground').value = settings.colorsDark.background;
+  $('designColorDarkText').value = settings.colorsDark.text;
+  $('designColorDarkSurface').value = settings.colorsDark.surface;
+  DESIGN_COLOR_FIELDS.forEach((field) => {
+    const baseId = `designColor${field}`;
+    if ($(baseId) && $(`${baseId}Hex`)) {
+      $(`${baseId}Hex`).value = $(baseId).value.toUpperCase();
+    }
+  });
+  $('designFontScale').value = settings.fontScale;
+  $('designGradientMain').value = settings.gradients?.main || defaultDesignSettings.gradients.main;
+  $('designHighContrast').checked = Boolean(settings.accessibility.highContrast);
+  $('designReduceMotion').checked = Boolean(settings.accessibility.reduceMotion);
+  syncDesignScaleLabel();
+  renderHomeOrderManager();
+  renderDesignPreview();
+}
+
+function readDesignForm() {
+  return mergeDesignSettingsWithDerived({
+    fontBody: $('designFontBody').value,
+    fontDisplay: $('designFontDisplay').value,
+    fontScale: Number($('designFontScale').value),
+    colors: {
+      primary: $('designColorPrimary').value,
+      secondary: $('designColorSecondary').value,
+      tertiary: $('designColorTertiary').value,
+      background: $('designColorBackground').value,
+      text: $('designColorText').value,
+      surface: $('designColorSurface').value,
+    },
+    colorsDark: {
+      primary: $('designColorDarkPrimary').value,
+      secondary: $('designColorDarkSecondary').value,
+      tertiary: $('designColorDarkTertiary').value,
+      background: $('designColorDarkBackground').value,
+      text: $('designColorDarkText').value,
+      surface: $('designColorDarkSurface').value,
+    },
+    accessibility: {
+      highContrast: $('designHighContrast').checked,
+      reduceMotion: $('designReduceMotion').checked,
+    },
+    gradients: {
+      main: $('designGradientMain').value.trim(),
+    },
+    layout: {
+      homeSections: [...(state.designSettings?.layout?.homeSections || defaultDesignSettings.layout.homeSections)],
+    },
+  });
+}
+
+async function loadDesignSettings() {
+  const res = await api('design-settings', { method: 'GET' });
+  state.designSettings = mergeDesignSettingsWithDerived(res.settings || {});
+  if (!state.designSettings.layout || !Array.isArray(state.designSettings.layout.homeSections)) {
+    state.designSettings.layout = JSON.parse(JSON.stringify(defaultDesignSettings.layout));
+  }
+  fillDesignForm();
+}
+
+function renderHomeLangSwitcher() {
+  const isRu = state.homeEditLang === 'ru';
+  $('homeLangRuBtn').className = `rounded-lg px-3 py-2 transition ${isRu ? 'bg-brand-purple text-white' : 'text-white/70 hover:bg-white/10'}`;
+  $('homeLangEnBtn').className = `rounded-lg px-3 py-2 transition ${!isRu ? 'bg-brand-purple text-white' : 'text-white/70 hover:bg-white/10'}`;
+  $('homeLangHint').textContent = `Сейчас редактируется: ${isRu ? 'русская версия' : 'английская версия'}.`;
+}
+
+function flattenLeafFields(value, path = [], out = []) {
+  if (value !== null && typeof value === 'object') {
+    if (Array.isArray(value)) {
+      if (value.length === 0) {
+        out.push({ path, value: '[]' });
+        return out;
+      }
+      value.forEach((item, index) => flattenLeafFields(item, path.concat(index), out));
+      return out;
+    }
+
+    const keys = Object.keys(value);
+    if (keys.length === 0) {
+      out.push({ path, value: '{}' });
+      return out;
+    }
+    keys.forEach((key) => flattenLeafFields(value[key], path.concat(key), out));
+    return out;
+  }
+
+  out.push({ path, value: value == null ? '' : String(value) });
+  return out;
+}
+
+function prettyPath(path) {
+  return path.map((part) => (typeof part === 'number' ? `[${part}]` : part)).join(' → ');
+}
+
+function setValueByPath(target, path, value) {
+  if (!path.length) return value;
+  let cursor = target;
+  for (let i = 0; i < path.length - 1; i += 1) {
+    cursor = cursor[path[i]];
+  }
+  cursor[path[path.length - 1]] = value;
+  return target;
+}
+
+function renderHomeSections() {
+  const wrap = $('homeSections');
+  const langData = state.homeContent[state.homeEditLang] || {};
+  wrap.replaceChildren();
+
+  homeSectionSchema.forEach((section) => {
+    const sectionValue = langData[section.key] ?? null;
+    const fields = flattenLeafFields(sectionValue);
+
+    const card = document.createElement('div');
+    card.className = 'rounded-2xl border border-white/10 bg-black/20 p-3 space-y-3';
+
+    const title = document.createElement('p');
+    title.className = 'text-sm font-semibold';
+    title.textContent = section.title;
+
+    const hint = document.createElement('p');
+    hint.className = 'text-xs text-white/55';
+    hint.textContent = `Ключ: ${section.key} · Полей: ${fields.length}`;
+
+    const grid = document.createElement('div');
+    grid.className = 'grid md:grid-cols-2 gap-2';
+
+    fields.forEach((field, index) => {
+      const fieldWrap = document.createElement('label');
+      fieldWrap.className = 'block rounded-xl border border-white/10 bg-white/5 p-2';
+
+      const cap = document.createElement('p');
+      cap.className = 'text-[11px] text-white/60 mb-1';
+      cap.textContent = prettyPath(field.path) || '(корень)';
+
+      const input = document.createElement('textarea');
+      input.id = `home_field_${section.key}_${index}`;
+      input.className = 'field min-h-[72px] text-xs';
+      input.value = field.value;
+
+      fieldWrap.appendChild(cap);
+      fieldWrap.appendChild(input);
+      grid.appendChild(fieldWrap);
+    });
+
+    card.appendChild(title);
+    card.appendChild(hint);
+    card.appendChild(grid);
+    wrap.appendChild(card);
+  });
+}
+
+function fillHomeForm() {
+  renderHomeSections();
+}
+
+function applyHomeForm() {
+  if (!state.homeContent[state.homeEditLang]) state.homeContent[state.homeEditLang] = {};
+  const langData = state.homeContent[state.homeEditLang];
+
+  for (const section of homeSectionSchema) {
+    const original = langData[section.key] ?? null;
+    const fields = flattenLeafFields(original);
+    const next = JSON.parse(JSON.stringify(original));
+
+    fields.forEach((field, index) => {
+      const node = $(`home_field_${section.key}_${index}`);
+      if (!node) return;
+      if (!field.path.length) {
+        langData[section.key] = node.value;
+        return;
+      }
+      if (next !== null && typeof next === 'object') {
+        setValueByPath(next, field.path, node.value);
+      }
+    });
+
+    if (next !== null && typeof next === 'object') {
+      langData[section.key] = next;
+    }
+  }
+}
+
+async function loadHomeContent() {
+  const res = await api('home-content', { method: 'GET' });
+  state.homeContent = res.content || { ru: {}, en: {} };
+  fillHomeForm();
+}
+
+
+function renderList() {
+  const list = $('list');
+  const q = $('searchInput').value.trim().toLowerCase();
+  state.filtered = state.items
+    .map((item, idx) => ({ item, idx }))
+    .filter(({ item }) => !q || JSON.stringify(item).toLowerCase().includes(q));
+
+  const preservedScrollTop = Number.isFinite(state.listScrollTop) ? state.listScrollTop : null;
+  list.replaceChildren();
+  state.filtered.forEach(({ item, idx }) => {
+    const el = document.createElement('button');
+    el.className = `w-full text-left rounded-xl border p-3 transition ${state.selected === idx ? 'border-brand-purple bg-brand-purple/20' : 'border-white/10 bg-white/5 hover:bg-white/10'}`;
+    el.appendChild(makeTextBlock('p', 'font-semibold text-sm', displayName(item)));
+    el.appendChild(makeTextBlock('p', 'text-xs text-white/55 mt-1', item.id || 'Без id'));
+    el.onclick = () => {
+      if (state.translating) {
+        notify('Дождитесь завершения перевода, затем переключайте товар.');
+        return;
+      }
+      state.listScrollTop = list.scrollTop;
+      state.selected = idx;
+      renderList();
+      fillForm();
+    };
+    list.appendChild(el);
+  });
+
+  if (preservedScrollTop !== null) {
+    list.scrollTop = preservedScrollTop;
+    state.listScrollTop = null;
+  }
+}
+
+async function translateSingleText(text, source, target, updateProgress, stage) {
+  const normalized = String(text || '').trim();
+  if (!normalized) {
+    updateProgress(stage);
+    return '';
+  }
+  const res = await api('translate-text', {
+    method: 'POST',
+    body: JSON.stringify({ source, target, texts: [normalized] }),
+  });
+  updateProgress(stage);
+  return Array.isArray(res.texts) ? (res.texts[0] || '') : '';
+}
+
+function fillForm() {
+  const item = state.items[state.selected];
+  if (!item) {
+    $('jsonEditor').value = '{}';
+    return;
+  }
+  $('f_id').value = item.id || '';
+  $('f_subcategory').value = item.subcategory || item.category || '';
+  $('f_title').value = localizedValue(item, 'title', state.editLang);
+  $('f_subtitle').value = localizedValue(item, 'subtitle', state.editLang);
+  $('f_imageUrl').value = item.imageUrl || item.img || '';
+  $('f_sketchfabId').value = item.sketchfabId || item.sf || '';
+  $('f_description').value = localizedValue(item, 'description', state.editLang);
+  $('f_fullDescription').value = localizedValue(item, 'fullDescription', state.editLang);
+  $('f_specs').value = toLines(localizedLines(item, 'specs', state.editLang));
+  $('f_features').value = toLines(localizedLines(item, 'features', state.editLang));
+  $('f_details').value = detailsToText(localizedDetails(item, state.editLang));
+  $('f_market_ozon').value = item.marketplaces?.ozon || '';
+  $('f_market_wb').value = item.marketplaces?.wb || '';
+  $('f_market_yandex').value = item.marketplaces?.yandex || '';
+  $('jsonEditor').value = JSON.stringify(item, null, 2);
+}
+
+function applyForm() {
+  if (state.selected < 0) return false;
+  let base;
+  try {
+    base = JSON.parse($('jsonEditor').value || '{}');
+  } catch (e) {
+    alert('Ошибка JSON: ' + e.message);
+    return false;
+  }
+
+  base.id = $('f_id').value.trim();
+  base.subcategory = $('f_subcategory').value.trim();
+  setLocalizedValue(base, 'title', state.editLang, $('f_title').value.trim());
+  setLocalizedValue(base, 'subtitle', state.editLang, $('f_subtitle').value.trim());
+  base.imageUrl = $('f_imageUrl').value.trim();
+  base.sketchfabId = $('f_sketchfabId').value.trim();
+  setLocalizedValue(base, 'description', state.editLang, $('f_description').value.trim());
+  setLocalizedValue(base, 'fullDescription', state.editLang, $('f_fullDescription').value.trim());
+  setLocalizedLines(base, 'specs', state.editLang, fromLines($('f_specs').value));
+  setLocalizedLines(base, 'features', state.editLang, fromLines($('f_features').value));
+  setLocalizedDetails(base, state.editLang, textToDetails($('f_details').value));
+  base.marketplaces = {
+    ozon: $('f_market_ozon').value.trim(),
+    wb: $('f_market_wb').value.trim(),
+    yandex: $('f_market_yandex').value.trim(),
+  };
+
+  state.items[state.selected] = base;
+  $('jsonEditor').value = JSON.stringify(base, null, 2);
+  return true;
+}
+
+async function translateCurrentItemToEnglish() {
+  if (state.translating) return;
+  if (!applyForm() || state.selected < 0) return;
+  const item = state.items[state.selected] || {};
+  const detailsRu = localizedDetails(item, 'ru');
+  const specsRu = localizedLines(item, 'specs', 'ru');
+  const featuresRu = localizedLines(item, 'features', 'ru');
+  const totalSteps = 4 + specsRu.length + featuresRu.length + detailsRu.length;
+  let done = 0;
+  const advance = (stage) => setTranslationProgress(++done, totalSteps, stage);
+
+  try {
+    setTranslating(true);
+    setTranslationProgress(0, totalSteps, 'Подготовка');
+    const nextItem = JSON.parse(JSON.stringify(item));
+
+    nextItem.title_en = await translateSingleText(localizedValue(item, 'title', 'ru'), 'ru', 'en', advance, 'Название');
+    nextItem.subtitle_en = await translateSingleText(localizedValue(item, 'subtitle', 'ru'), 'ru', 'en', advance, 'Подзаголовок');
+    nextItem.description_en = await translateSingleText(localizedValue(item, 'description', 'ru'), 'ru', 'en', advance, 'Краткое описание');
+    nextItem.fullDescription_en = await translateSingleText(localizedValue(item, 'fullDescription', 'ru'), 'ru', 'en', advance, 'Полное описание');
+
+    nextItem.specs_en = [];
+    for (const spec of specsRu) {
+      nextItem.specs_en.push(await translateSingleText(spec, 'ru', 'en', advance, 'Характеристики'));
+    }
+
+    nextItem.features_en = [];
+    for (const feature of featuresRu) {
+      nextItem.features_en.push(await translateSingleText(feature, 'ru', 'en', advance, 'Преимущества'));
+    }
+
+    nextItem.details_en = [];
+    for (const detail of detailsRu) {
+      const block = `${detail?.label || ''}: ${detail?.value || ''}`;
+      const translatedBlock = await translateSingleText(block, 'ru', 'en', advance, 'Детали');
+      const [label, ...valueParts] = String(translatedBlock || '').split(':');
+      nextItem.details_en.push({
+        label: (label || '').trim() || (detail?.label || ''),
+        value: valueParts.join(':').trim() || (detail?.value || ''),
+      });
+    }
+
+    state.items[state.selected] = nextItem;
+    if (state.editLang === 'en') {
+      fillForm();
+    } else {
+      $('jsonEditor').value = JSON.stringify(nextItem, null, 2);
+    }
+    notify('Английская версия заполнена автоматически через Google Translate. Перевод выполнен по блокам.');
+  } catch (e) {
+    notify(`Не удалось выполнить перевод: ${e.message}`, true);
+  } finally {
+    setTranslating(false);
+  }
+}
+
+async function loadCategory() {
+  const r = await api(`list&category=${state.category}`, { method: 'GET' });
+  state.items = Array.isArray(r.items) ? r.items : [];
+  state.selected = state.items.length ? 0 : -1;
+  renderList();
+  fillForm();
+  notify(`Загружено товаров: ${state.items.length}`);
+}
+
+async function refreshLogs() {
+  const res = await api('logs', { method: 'GET' });
+  const wrap = $('logs');
+  wrap.replaceChildren();
+  res.items.forEach((log) => {
+    const row = document.createElement('div');
+    row.className = 'rounded-lg border border-white/10 bg-white/5 p-2';
+    row.textContent = `[${new Date(log.created_at).toLocaleString('ru-RU')}] ${log.action}${log.category ? ` (${log.category})` : ''}`;
+    wrap.appendChild(row);
+  });
+}
+
+async function refreshSecurity() {
+  const settings = await api('security-settings', { method: 'GET' });
+  $('securityInfo').textContent = `Активных кодов доступа: ${settings.activeAccessCodes}`;
+  const list = await api('list-access-codes', { method: 'GET' });
+  const container = $('accessCodes');
+  container.replaceChildren();
+  list.items.forEach((item) => {
+    const div = document.createElement('div');
+    div.className = 'rounded-lg border border-white/10 bg-white/5 p-2 flex items-center justify-between gap-2';
+    const left = document.createElement('div');
+    left.appendChild(makeTextBlock('p', 'text-xs', `#${item.id} · ${item.label || 'без метки'}`));
+    left.appendChild(makeTextBlock('p', 'text-[11px] text-white/60', item.isActive ? 'Активен' : 'Отключен'));
+    div.appendChild(left);
+
+    if (item.isActive) {
+      const btn = document.createElement('button');
+      btn.textContent = 'Отключить';
+      btn.className = 'text-xs rounded bg-rose-500/80 px-2 py-1';
+      btn.onclick = async () => {
+        if (!confirm('Отключить этот код доступа?')) return;
+        try {
+          await api('deactivate-access-code', { method: 'POST', body: JSON.stringify({ id: item.id }) });
+          await refreshSecurity();
+          notify('Код доступа отключен');
+        } catch (e) {
+          notify(e.message, true);
+        }
+      };
+      div.appendChild(btn);
+    }
+
+    container.appendChild(div);
+  });
+}
+
+function swapItems(a, b) {
+  const tmp = state.items[a];
+  state.items[a] = state.items[b];
+  state.items[b] = tmp;
+  state.selected = b;
+  renderList();
+  fillForm();
+}
+
+async function ensureAuth() {
+  const r = await api('status', { method: 'GET' });
+  if (r.csrfToken) {
+    state.csrfToken = r.csrfToken;
+  }
+  if (!r.authenticated) return;
+  await enterApp();
+}
+
+async function enterApp() {
+  $('login').classList.add('hidden');
+  $('app').classList.remove('hidden');
+  $('guideBtn').classList.remove('hidden');
+  await loadCategory();
+  await loadHomeContent();
+  await loadDesignSettings();
+  renderLangSwitcher();
+  renderHomeLangSwitcher();
+  renderAdminTabs();
+  await refreshSecurity();
+  await refreshLogs();
+}
+
+function clearGuideHighlight() {
+  if (guide.currentTarget) {
+    guide.currentTarget.classList.remove('guide-highlight');
+    guide.currentTarget = null;
+  }
+}
+
+function closeGuide() {
+  clearGuideHighlight();
+  if (guide.tooltip) {
+    guide.tooltip.remove();
+    guide.tooltip = null;
+  }
+  if (guide.overlay) {
+    guide.overlay.remove();
+    guide.overlay = null;
+  }
+  if (guide.spotlight) {
+    guide.spotlight.remove();
+    guide.spotlight = null;
+  }
+  window.removeEventListener('resize', updateGuideLayout);
+  window.removeEventListener('scroll', updateGuideLayout, true);
+}
+
+function positionTooltip(target, tooltip) {
+  const rect = target.getBoundingClientRect();
+  const margin = 12;
+  let top = rect.bottom + margin;
+  let left = rect.left;
+
+  if (left + tooltip.offsetWidth > window.innerWidth - margin) {
+    left = window.innerWidth - tooltip.offsetWidth - margin;
+  }
+  if (left < margin) left = margin;
+
+  if (top + tooltip.offsetHeight > window.innerHeight - margin) {
+    top = rect.top - tooltip.offsetHeight - margin;
+  }
+  if (top < margin) top = margin;
+
+  tooltip.style.top = `${top}px`;
+  tooltip.style.left = `${left}px`;
+}
+
+function positionSpotlight(target, spotlight) {
+  const rect = target.getBoundingClientRect();
+  const pad = 8;
+  spotlight.style.top = `${Math.max(8, rect.top - pad)}px`;
+  spotlight.style.left = `${Math.max(8, rect.left - pad)}px`;
+  spotlight.style.width = `${Math.min(window.innerWidth - 16, rect.width + pad * 2)}px`;
+  spotlight.style.height = `${Math.min(window.innerHeight - 16, rect.height + pad * 2)}px`;
+}
+
+function updateGuideLayout() {
+  if (!guide.currentTarget || !guide.tooltip || !guide.spotlight) return;
+  positionSpotlight(guide.currentTarget, guide.spotlight);
+  positionTooltip(guide.currentTarget, guide.tooltip);
+}
+
+function renderGuideStep() {
+  clearGuideHighlight();
+  const step = guideSteps[guide.step];
+  if (!step) {
+    closeGuide();
+    return;
+  }
+
+  const target = $(step.id);
+  if (!target) {
+    guide.step += 1;
+    renderGuideStep();
+    return;
+  }
+
+  target.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+  target.classList.add('guide-highlight');
+  guide.currentTarget = target;
+
+  const isLast = guide.step === guideSteps.length - 1;
+  guide.tooltip.replaceChildren();
+  guide.tooltip.appendChild(makeTextBlock('p', 'text-xs uppercase tracking-[0.14em] text-violet-300 mb-2', `Шаг ${guide.step + 1} из ${guideSteps.length}`));
+  guide.tooltip.appendChild(makeTextBlock('h3', 'font-semibold text-lg mb-2', step.title));
+  guide.tooltip.appendChild(makeTextBlock('p', 'text-sm text-white/80 mb-4', step.text));
+
+  const controls = document.createElement('div');
+  controls.className = 'flex justify-between items-center gap-3 text-sm';
+
+  const prevBtn = document.createElement('button');
+  prevBtn.className = `rounded-lg bg-white/10 px-3 py-2 ${guide.step === 0 ? 'opacity-40 pointer-events-none' : ''}`;
+  prevBtn.textContent = 'Назад';
+  controls.appendChild(prevBtn);
+
+  const rightControls = document.createElement('div');
+  rightControls.className = 'flex gap-2';
+
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'rounded-lg bg-white/10 px-3 py-2';
+  closeBtn.textContent = 'Закрыть';
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'rounded-lg bg-brand-purple px-4 py-2 font-semibold';
+  nextBtn.textContent = isLast ? 'Готово' : 'Далее';
+
+  rightControls.appendChild(closeBtn);
+  rightControls.appendChild(nextBtn);
+  controls.appendChild(rightControls);
+  guide.tooltip.appendChild(controls);
+
+  updateGuideLayout();
+  prevBtn.onclick = () => {
+    if (guide.step > 0) {
+      guide.step -= 1;
+      renderGuideStep();
+    }
+  };
+  nextBtn.onclick = () => {
+    if (isLast) {
+      closeGuide();
+      return;
+    }
+    guide.step += 1;
+    renderGuideStep();
+  };
+  closeBtn.onclick = closeGuide;
+}
+
+function startGuide() {
+  closeGuide();
+  guide.step = 0;
+  guide.overlay = document.createElement('div');
+  guide.overlay.className = 'guide-overlay';
+  guide.overlay.onclick = closeGuide;
+  document.body.appendChild(guide.overlay);
+
+  guide.spotlight = document.createElement('div');
+  guide.spotlight.className = 'guide-spotlight';
+  document.body.appendChild(guide.spotlight);
+
+  guide.tooltip = document.createElement('div');
+  guide.tooltip.className = 'guide-tooltip';
+  document.body.appendChild(guide.tooltip);
+  window.addEventListener('resize', updateGuideLayout);
+  window.addEventListener('scroll', updateGuideLayout, true);
+  renderGuideStep();
+}
+
+$('loginBtn').onclick = async () => {
+  try {
+    const accessCode = $('accessCode').value.trim();
+    const password = $('password').value;
+    const loginResult = await api('login', { method: 'POST', body: JSON.stringify({ accessCode, password }) });
+    if (loginResult.csrfToken) {
+      state.csrfToken = loginResult.csrfToken;
+    }
+    await enterApp();
+  } catch (e) {
+    $('loginError').textContent = e.message;
+  }
+};
+
+$('tabProductsBtn').onclick = () => {
+  if (state.adminTab === 'products') return;
+  try { applyHomeForm(); } catch (e) { notify(e.message, true); return; }
+  state.adminTab = 'products';
+  renderAdminTabs();
+};
+
+$('tabHomeBtn').onclick = () => {
+  if (state.adminTab === 'home') return;
+  if (!applyForm() && state.selected >= 0) return;
+  state.adminTab = 'home';
+  fillHomeForm();
+  renderAdminTabs();
+};
+
+$('tabDesignBtn').onclick = () => {
+  if (state.adminTab === 'design') return;
+  if (!applyForm() && state.selected >= 0) return;
+  try { applyHomeForm(); } catch (e) { notify(e.message, true); return; }
+  state.adminTab = 'design';
+  fillDesignForm();
+  renderAdminTabs();
+};
+
+$('homeLangRuBtn').onclick = () => {
+  if (state.homeEditLang === 'ru') return;
+  try { applyHomeForm(); } catch (e) { notify(e.message, true); return; }
+  state.homeEditLang = 'ru';
+  renderHomeLangSwitcher();
+  fillHomeForm();
+};
+
+$('homeLangEnBtn').onclick = () => {
+  if (state.homeEditLang === 'en') return;
+  try { applyHomeForm(); } catch (e) { notify(e.message, true); return; }
+  state.homeEditLang = 'en';
+  renderHomeLangSwitcher();
+  fillHomeForm();
+};
+
+$('saveHomeContentBtn').onclick = async () => {
+  try {
+    applyHomeForm();
+    await api('save-home-content', { method: 'POST', body: JSON.stringify({ content: state.homeContent }) });
+    notify('Тексты сайта опубликованы.');
+    await refreshLogs();
+  } catch (e) {
+    notify(e.message, true);
+  }
+};
+
+
+$('designFontScale').oninput = () => {
+  syncDesignScaleLabel();
+  renderDesignPreview();
+};
+
+DESIGN_COLOR_FIELDS.forEach((field) => {
+  const baseId = `designColor${field}`;
+  if ($(baseId) && $(`${baseId}Hex`)) {
+    syncColorControlPair(baseId, cloneDefaultDesignSettings().colors?.[field.toLowerCase()] || cloneDefaultDesignSettings().colorsDark?.[field.replace('Dark', '').toLowerCase()] || '#4c019c');
+  }
+});
+
+$('designGradientMain').addEventListener('input', renderDesignPreview);
+$('designFontBody').addEventListener('change', renderDesignPreview);
+$('designFontDisplay').addEventListener('change', renderDesignPreview);
+$('applyBrandPaletteBtn').onclick = applyBrandPalettePreset;
+$('syncDarkPaletteBtn').onclick = () => {
+  syncDarkPaletteFromLight();
+  notify('Тёмная палитра пересчитана на основе текущих светлых цветов.');
+};
+$('buildGradientBtn').onclick = () => {
+  $('designGradientMain').value = buildGradientFromAccentInputs();
+  renderDesignPreview();
+  notify('Градиент собран из текущих акцентных цветов.');
+};
+
+$('resetDesignBtn').onclick = () => {
+  state.designSettings = cloneDefaultDesignSettings();
+  fillDesignForm();
+  notify('Стандартные настройки дизайна восстановлены локально. Нажмите «Опубликовать дизайн».');
+};
+
+$('saveDesignBtn').onclick = async () => {
+  try {
+    state.designSettings = readDesignForm();
+    await api('save-design-settings', { method: 'POST', body: JSON.stringify({ settings: state.designSettings }) });
+    await api('save-home-layout', { method: 'POST', body: JSON.stringify({ layout: state.designSettings.layout }) });
+
+    const publicDesignPayload = { cachedAt: Date.now(), settings: state.designSettings };
+    try {
+      localStorage.setItem(PUBLIC_DESIGN_SETTINGS_CACHE_KEY, JSON.stringify(publicDesignPayload));
+      window.dispatchEvent(new CustomEvent(PUBLIC_DESIGN_SETTINGS_EVENT, { detail: publicDesignPayload }));
+    } catch (storageError) {
+      console.warn('Не удалось обновить локальный кэш дизайна:', storageError);
+    }
+
+    notify('Дизайн и параметры доступности опубликованы.');
+    await refreshLogs();
+  } catch (e) {
+    notify(e.message, true);
+  }
+};
+
+$('guideBtn').onclick = startGuide;
+
+$('langRuBtn').onclick = () => {
+  if (state.editLang === 'ru') return;
+  if (!applyForm() && state.selected >= 0) return;
+  state.editLang = 'ru';
+  renderLangSwitcher();
+  fillForm();
+};
+
+$('langEnBtn').onclick = () => {
+  if (state.editLang === 'en') return;
+  if (!applyForm() && state.selected >= 0) return;
+  state.editLang = 'en';
+  renderLangSwitcher();
+  fillForm();
+};
+
+$('autoTranslateBtn').onclick = translateCurrentItemToEnglish;
+
+$('categorySelect').onchange = async (e) => {
+  if (!applyForm() && state.selected >= 0) return;
+  state.category = e.target.value;
+  await loadCategory();
+};
+
+$('searchInput').oninput = () => renderList();
+
+$('addBtn').onclick = () => {
+  const id = `item-${Date.now()}`;
+  state.items.unshift({
+    id,
+    title: 'Новый товар',
+    title_ru: 'Новый товар',
+    title_en: '',
+    subtitle: '',
+    subtitle_ru: '',
+    subtitle_en: '',
+    description: '',
+    description_ru: '',
+    description_en: '',
+    fullDescription: '',
+    fullDescription_ru: '',
+    fullDescription_en: '',
+    imageUrl: '',
+    specs: [],
+    specs_ru: [],
+    specs_en: [],
+    details: [],
+    details_ru: [],
+    details_en: [],
+    features: [],
+    features_ru: [],
+    features_en: [],
+    marketplaces: { ozon: '', wb: '', yandex: '' },
+    sketchfabId: ''
+  });
+  state.selected = 0;
+  renderList();
+  fillForm();
+};
+
+$('duplicateBtn').onclick = () => {
+  if (!applyForm() || state.selected < 0) return;
+  const source = state.items[state.selected];
+  const copy = JSON.parse(JSON.stringify(source));
+  copy.id = `${copy.id || 'item'}-copy-${Date.now().toString().slice(-4)}`;
+  copy.title = (copy.title || 'Товар') + ' (копия)';
+  state.items.splice(state.selected + 1, 0, copy);
+  state.selected += 1;
+  renderList();
+  fillForm();
+  notify('Товар продублирован');
+};
+
+$('upBtn').onclick = () => {
+  if (!applyForm() || state.selected <= 0) return;
+  swapItems(state.selected, state.selected - 1);
+};
+
+$('downBtn').onclick = () => {
+  if (!applyForm() || state.selected < 0 || state.selected >= state.items.length - 1) return;
+  swapItems(state.selected, state.selected + 1);
+};
+
+$('deleteBtn').onclick = () => {
+  if (state.selected < 0) return;
+  if (!confirm('Удалить товар?')) return;
+  state.items.splice(state.selected, 1);
+  state.selected = Math.min(state.selected, state.items.length - 1);
+  renderList();
+  fillForm();
+};
+
+$('saveCardBtn').onclick = () => {
+  if (!applyForm()) return;
+  renderList();
+  notify('Карточка обновлена локально. Нажмите «Опубликовать категорию».');
+};
+
+$('saveAllBtn').onclick = async () => {
+  try {
+    if (!applyForm() && state.selected >= 0) return;
+    await api('save', { method: 'POST', body: JSON.stringify({ category: state.category, items: state.items }) });
+    notify('Категория опубликована и синхронизирована с JSON файлами.');
+    await refreshLogs();
+  } catch (e) {
+    notify(e.message, true);
+  }
+};
+
+$('exportBtn').onclick = async () => {
+  const r = await api('export', { method: 'GET' });
+  const blob = new Blob([JSON.stringify(r.data || {}, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'catalog-export.json';
+  a.click();
+};
+
+$('logoutBtn').onclick = async () => {
+  closeGuide();
+  await api('logout', { method: 'POST' });
+  location.reload();
+};
+
+$('uploadBtn').onclick = async () => {
+  const f = $('imageInput').files[0];
+  if (!f) return;
+  const fd = new FormData();
+  fd.append('image', f);
+  const res = await fetch('api.php?action=upload-image', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: state.csrfToken ? { 'X-CSRF-Token': state.csrfToken } : {},
+    body: fd
+  });
+  const data = await res.json();
+  if (data.ok) {
+    $('uploadResult').textContent = `Готово: ${data.url}`;
+    $('f_imageUrl').value = data.url;
+    applyForm();
+    notify('Изображение загружено');
+  } else {
+    $('uploadResult').textContent = `Ошибка: ${data.error}`;
+    notify(data.error || 'Ошибка загрузки', true);
+  }
+};
+
+$('changePasswordBtn').onclick = async () => {
+  try {
+    await api('change-password', {
+      method: 'POST',
+      body: JSON.stringify({
+        currentPassword: $('currentPassword').value,
+        newPassword: $('nextPassword').value,
+      }),
+    });
+    $('currentPassword').value = '';
+    $('nextPassword').value = '';
+    notify('Пароль обновлён');
+    await refreshLogs();
+  } catch (e) {
+    notify(e.message, true);
+  }
+};
+
+$('addAccessCodeBtn').onclick = async () => {
+  const code = $('newAccessCode').value.trim();
+  const label = $('newAccessCodeLabel').value.trim() || 'manual';
+  try {
+    await api('add-access-code', { method: 'POST', body: JSON.stringify({ code, label }) });
+    $('newAccessCode').value = '';
+    $('newAccessCodeLabel').value = '';
+    await refreshSecurity();
+    await refreshLogs();
+    notify('Новый код доступа добавлен');
+  } catch (e) {
+    notify(e.message, true);
+  }
+};
+
+$('refreshLogsBtn').onclick = refreshLogs;
+
+document.addEventListener('keydown', (e) => {
+  const ctrlOrCmd = e.ctrlKey || e.metaKey;
+  if (ctrlOrCmd && e.key.toLowerCase() === 's') {
+    e.preventDefault();
+    $('saveAllBtn').click();
+  }
+});
+
+ensureAuth().catch((e) => {
+  $('loginError').textContent = e.message;
+});
+</script>
+</body>
+</html>

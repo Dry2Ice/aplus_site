@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+<!-- === SEO meta and page identity ========================================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Промышленные БПЛА — А Плюс</title>
+<link rel="canonical" href="https://aplus-charisma.ru/copters/" />
+<link rel="alternate" hreflang="ru-RU" href="https://aplus-charisma.ru/copters/" />
+<link rel="alternate" hreflang="x-default" href="https://aplus-charisma.ru/copters/" />
+<meta name="description" content="Промышленные БПЛА А Плюс: проектирование, производство, интеграция и сервис для мониторинга, безопасности и логистики." />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+<meta name="theme-color" content="#6523b1" />
+<meta name="format-detection" content="telephone=no" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:title" content="Промышленные БПЛА — А Плюс" />
+<meta property="og:description" content="Беспилотные комплексы А Плюс для промышленности: от разработки до внедрения и поддержки." />
+<meta property="og:url" content="https://aplus-charisma.ru/copters/" />
+<meta property="og:image" content="https://aplus-charisma.ru/aplus_logo.svg" />
+<meta property="og:image:alt" content="Промышленные БПЛА А Плюс" />
+<meta property="og:site_name" content="А Плюс" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Промышленные БПЛА — А Плюс" />
+<meta name="twitter:description" content="Решения БПЛА для мониторинга, безопасности и транспортных задач." />
+<meta name="twitter:image" content="https://aplus-charisma.ru/aplus_logo.svg" />
+<meta name="twitter:image:alt" content="Промышленные БПЛА А Плюс" />
+<!-- === Structured data ====================================================== -->
+<script id="page-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","name":"БПЛА — А Плюс","url":"https://aplus-charisma.ru/copters/","inLanguage":"ru-RU"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://aplus-charisma.ru/"},{"@type":"ListItem","position":2,"name":"БПЛА","item":"https://aplus-charisma.ru/copters/"}]}]}</script>
+<!-- === External UI dependencies ============================================ -->
+<link rel="icon" type="image/svg+xml" href="/aplus_logo.svg" />
+<link rel="apple-touch-icon" href="/aplus_logo.svg" />
+<link rel="dns-prefetch" href="https://unpkg.com" />
+<link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+<link rel="preconnect" href="https://unpkg.com" crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Onest:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Shared public-page contract: tokens/components live in /assets/common.css and runtime theme + Tailwind sync live in /assets/common.js. Keep local page files free of duplicated base styles. -->
+<link rel="stylesheet" href="/assets/common.css" />
+<script defer src="/assets/common.js"></script>
+
+</head>
+<body class="bg-brand-base text-brand-dark dark:bg-brand-dark-base dark:text-brand-dark-text site-theme">
+<!-- === Static fallback for crawlers/no-js ================================== -->
+<noscript>
+  <div style="max-width:800px;margin:2rem auto;padding:1.5rem;font-family:sans-serif;">
+    <nav><a href="/">Главная</a> / <strong>БПЛА</strong></nav>
+    <h1>Промышленные БПЛА — А Плюс</h1>
+    <p>Беспилотные летательные аппараты для мониторинга, безопасности и логистики. Проектирование, производство, интеграция.</p>
+    <p>Свяжитесь с нами: <a href="tel:+74957307070">+7 495 730 70 70</a></p>
+  </div>
+</noscript>
+    <!-- === React mount point ==================================================== -->
+<div id="root"></div>
+
+    <script>
+const { useState, useEffect, useRef, useMemo } = React;
+const trackEvent = window.AplusCommon?.trackEvent || (() => {});
+// --- Shared constants -------------------------------------------------------
+const MARKETPLACE_LINKS = { ozon: '', wb: '', yandex: '' };
+const COMPANY_PHONE = "+7 495 730 70 70";
+const TG_LINK = "https://t.me/+z7exQh4cb_s4NWRi";
+const FOOTER_LOGO_URL = "/aplus_logo.svg";
+const COMMON_PRODUCTS = [];
+const generateCommonProducts = (lang) => {
+    const isRu = lang === 'ru';
+    return COMMON_PRODUCTS.map(p => ({
+        id: p.id,
+        category: isRu ? 'БПЛА' : 'UAV',
+        title: isRu ? p.title_ru : p.title_en,
+        subtitle: isRu ? p.subtitle_ru : p.subtitle_en,
+        description: isRu ? p.description_ru : p.description_en,
+        specs: isRu ? p.specs_ru : p.specs_en,
+        fullDescription: isRu ? p.fullDescription_ru : p.fullDescription_en,
+        details: isRu ? p.details_ru : p.details_en,
+        features: isRu ? p.features_ru : p.features_en,
+        imageUrl: p.imageUrl,
+        marketplaces: p.marketplaces
+    }));
+};
+const localizedText = (item, field, lang) => {
+    if (lang === 'en') return item?.[`${field}_en`] || item?.[field] || '';
+    return item?.[field] || item?.[`${field}_ru`] || '';
+};
+const localizedLines = (item, field, lang) => {
+    const primary = lang === 'en' ? item?.[`${field}_en`] : item?.[field] || item?.[`${field}_ru`];
+    return Array.isArray(primary) ? primary : [];
+};
+const localizedDetails = (item, lang) => {
+    const primary = lang === 'en' ? item?.details_en : item?.details || item?.details_ru;
+    return Array.isArray(primary) ? primary : [];
+};
+const localizeRemoteCopter = (item, lang) => ({
+    ...item,
+    category: lang === 'en' ? (item?.category_en || 'UAV') : (item?.category || 'БПЛА'),
+    title: localizedText(item, 'title', lang),
+    subtitle: localizedText(item, 'subtitle', lang),
+    description: localizedText(item, 'description', lang),
+    fullDescription: localizedText(item, 'fullDescription', lang),
+    specs: localizedLines(item, 'specs', lang),
+    details: localizedDetails(item, lang),
+    features: localizedLines(item, 'features', lang),
+});
+const DATA = {
+    ru: {
+        navItems: [
+            { label: "БПЛА", href: "/copters/", active: true },
+            { label: "Аккумуляторы", href: "/batteries/" },
+            { label: "Очистка воды", href: "/water/" },
+            { label: "Принципы", href: "/#principles" }
+        ],
+        contact: "Связаться",
+        catalogTitle: "Беспилотные Системы",
+        catalogSubtitle: "Российское производство полного цикла",
+        products: [],
+        footer: {
+            copyright: "© 2025 ООО «А ПЛЮС».",
+            details: "ИНН 7704462149 / ОГРН 1187746859190",
+            address: "г. Москва, Очаковское шоссе, 28, 5 этаж",
+            addressLink: "https://yandex.com/maps/213/moscow/house/ochakovskoye_shosse_28/Z04YcgNhTkMEQFtvfXp5dHRmbA==/?ll=37.442309%2C55.685771&z=18.1",
+            policy: "Политика конфиденциальности",
+        },
+        ui: {
+            catalog_badge: "Каталог", more: "Подробнее", order: "Заказать / Опт", back: "Вернуться в каталог",
+            specs: "Характеристики", consultation: "Консультация", no_stock: "нет в наличие на этой площадке",
+            form_title: "Свяжитесь с нами", form_name: "Ваше имя", form_phone: "Телефон",
+            form_email: "Email", form_submit: "Отправить", form_sending: "Отправка...",
+            form_success: "Спасибо! Мы скоро свяжемся с вами.",
+            form_error: "Ошибка отправки. Пожалуйста, свяжитесь с нами по телефону.",
+            empty: "В данной категории пока нет товаров.",
+            features_title: "Преимущества"
+        },
+        cookies: { text: "Мы используем cookie. Это помогает нам понимать, как улучшить сайт.", button: "Хорошо" }
+    },
+    en: {
+        navItems: [
+            { label: "UAV", href: "/copters/", active: true },
+            { label: "Batteries", href: "/batteries/" },
+            { label: "Water", href: "/water/" },
+            { label: "Principles", href: "/#principles" }
+        ],
+        contact: "Contact Us",
+        catalogTitle: "Unmanned Systems",
+        catalogSubtitle: "Full-cycle Russian production",
+        products: [],
+        footer: {
+            copyright: "© 2025 A PLUS LLC.",
+            details: "INN 7704462149 / OGRN 1187746859190",
+            address: "Moscow, Ochakovskoye Shosse, 28, 5th floor",
+            addressLink: "https://www.google.com/maps/place/%D0%9E%D1%87%D0%B0%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88.,+28,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,+119530/@55.6856162,37.4410733,18.25z/data=!4m10!1m2!2m1!1zaHR0cHM6Ly9zaGFyZS5nb29nbGUvWDhwVjRReTZ0dUNGVkFGbzTQsy4g0JzQvtGB0LrQstCwLCDQntGH0LDQutC-0LLRgdC60L7QtSDRiNC-0YHRgdC1LCAyOCwgNSDRjdGC0LDQtg!3m6!1s0x46b54ddac51fee07:0xf4322ab7fe8840f9!8m2!3d55.685635!4d37.4415203!15sCmdodHRwczovL3NoYXJlLmdvb2dsZS9YOHBWNFF5NnR1Q0ZWQUZvNNCzLiDQnNC-0YHQutCy0LAsINCe0YfQsNC60L7QstGB0LrQvtC1INGI0L7RgdGB0LUsIDI4LCA1INGN0YLQsNC2IgOIAQGSAQpzdWJwcmVtaXNl4AEA!16s%2Fg%2F11nnschb8h?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D",
+            policy: "Privacy Policy",
+        },
+        ui: {
+            catalog_badge: "Catalog", more: "Learn More", order: "Order / Wholesale", back: "Back to Catalog",
+            specs: "Specifications", consultation: "Consultation", no_stock: "Not available on this marketplace",
+            form_title: "Contact Us", form_name: "Your Name", form_phone: "Phone",
+            form_email: "Email", form_submit: "Send", form_sending: "Sending...",
+            form_success: "Thank you! We will contact you soon.",
+            form_error: "Sending error. Please contact us via phone.",
+            empty: "No products in this category yet.",
+            features_title: "Advantages"
+        },
+        cookies: { text: "We use cookies to improve your experience.", button: "Okay" }
+    }
+};
+// ─── SpecTable ─────────────────────────────────────────────────────────
+const SpecTable = ({ details }) => (React.createElement("div", { className: "rounded-2xl overflow-hidden border border-gray-100 dark:border-white/5" }, details.map((item, i) => (React.createElement("div", { key: i, className: "spec-row flex justify-between items-center px-5 py-3.5 gap-4" },
+    React.createElement("span", { className: "text-sm text-gray-500 dark:text-gray-400 font-medium shrink-0" }, item.label),
+    React.createElement("span", { className: "text-sm font-semibold text-brand-dark dark:text-white text-right" }, item.value))))));
+// ─── ProductCard ───────────────────────────────────────────────────────
+const ProductCard = ({ product, ui, onSelect, index }) => (React.createElement("div", { className: "group bg-brand-milky dark:bg-brand-dark-card rounded-2xl overflow-hidden flex flex-col card-hover border border-gray-100/80 dark:border-white/5 h-full", style: { animationDelay: `${index * 0.1}s` } },
+    React.createElement("div", { className: "relative flex items-center justify-center overflow-hidden product-img-bg bg-brand-base dark:bg-brand-dark-surface", style: { height: '320px' } },
+        React.createElement("div", { className: "w-full h-full p-8 flex items-center justify-center" },
+            React.createElement("img", { src: product.imageUrl, alt: product.title, className: "w-full h-full object-contain drop-shadow-2xl", style: { transform: 'scale(1)', transition: 'transform 0.6s cubic-bezier(0.16,1,0.3,1)' }, onMouseOver: e => e.currentTarget.style.transform = 'scale(1.06)', onMouseOut: e => e.currentTarget.style.transform = 'scale(1)' })),
+        React.createElement("div", { className: "absolute top-4 left-4" },
+            React.createElement("span", { className: "badge-purple text-brand-purple dark:text-brand-purple-light text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-sm" }, product.category))),
+    React.createElement("div", { className: "p-7 flex flex-col flex-grow" },
+        React.createElement("div", { className: "mb-1" },
+            product.subtitle && (React.createElement("p", { className: "text-xs font-bold text-gray-400 uppercase tracking-wider mb-2" }, product.subtitle)),
+            React.createElement("h3", { className: "font-display text-xl font-black text-brand-dark dark:text-white leading-tight mb-3" }, product.title)),
+        product.specs && (React.createElement("div", { className: "flex flex-wrap gap-1.5 mb-4" }, product.specs.slice(0, 3).map((spec, i) => (React.createElement("span", { key: i, className: "text-[10px] font-semibold text-gray-500 dark:text-gray-400 bg-brand-base dark:bg-brand-dark-surface px-2.5 py-1 rounded-full border border-gray-200/60 dark:border-white/6" }, spec))))),
+        React.createElement("p", { className: "text-sm text-gray-500 dark:text-gray-400 mb-5 flex-grow leading-relaxed line-clamp-2" }, product.description),
+        React.createElement("button", { onClick: () => onSelect(product), className: "w-full py-3 px-5 rounded-xl text-sm font-bold transition-all duration-300 border border-gray-200 dark:border-white/10 text-brand-dark dark:text-white hover:bg-brand-purple hover:text-white hover:border-brand-purple group-hover:bg-brand-dark group-hover:text-white group-hover:border-brand-dark dark:group-hover:bg-brand-purple dark:group-hover:border-brand-purple" }, ui.more))));
+// ─── Catalog ───────────────────────────────────────────────────────────
+const Catalog = ({ title, subtitle, products, onSelectProduct, ui }) => {
+    useEffect(() => { window.scrollTo(0, 0); }, []);
+    return (React.createElement("div", { className: "animate-[fadeIn_0.5s_ease-out] min-h-screen" },
+        React.createElement("div", { className: "relative pt-32 pb-16 px-4 md:px-8 overflow-hidden hero-mesh" },
+            React.createElement("div", { className: "absolute inset-0 opacity-[0.015] dark:opacity-[0.03] pointer-events-none", style: { backgroundImage: 'linear-gradient(rgb(var(--purple-rgb) / 0.45) 1px, transparent 1px), linear-gradient(90deg, rgb(var(--purple-rgb) / 0.45) 1px, transparent 1px)', backgroundSize: '60px 60px' } }),
+            React.createElement("div", { className: "max-w-6xl mx-auto" },
+                React.createElement("div", { className: "max-w-2xl" },
+                    React.createElement("div", { className: "inline-flex items-center gap-1.5 badge-purple px-3 py-1.5 rounded-full mb-5" },
+                        React.createElement("div", { className: "w-1.5 h-1.5 rounded-full bg-brand-purple" }),
+                        React.createElement("span", { className: "text-[10px] font-bold text-brand-purple uppercase tracking-[0.18em]" }, ui.catalog_badge || "Catalog")),
+                    React.createElement("h1", { className: "font-display text-5xl md:text-7xl font-black text-brand-dark dark:text-white tracking-tight leading-none mb-4" }, title),
+                    subtitle && (React.createElement("p", { className: "text-lg text-gray-500 dark:text-gray-400 font-medium" }, subtitle))))),
+        React.createElement("div", { className: "px-4 md:px-8 pb-24 max-w-6xl mx-auto" }, products.length > 0 ? (React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-6" }, products.map((product, i) => (React.createElement(ProductCard, { key: product.id, product: product, ui: ui, onSelect: onSelectProduct, index: i }))))) : (React.createElement("div", { className: "text-center py-20 border-2 border-dashed border-gray-200 dark:border-white/8 rounded-2xl" },
+            React.createElement("svg", { className: "w-10 h-10 mx-auto mb-4 text-gray-300 dark:text-gray-600", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
+                React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.5, d: "M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" })),
+            React.createElement("p", { className: "text-base text-gray-400 font-medium" }, ui.empty))))));
+};
+// ─── ProductPage ───────────────────────────────────────────────────────
+const ProductPage = ({ product, onBack, ui, openContact }) => {
+    useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, []);
+    const openMarketplace = (link) => {
+        if (link) {
+            window.open(link, '_blank', 'noopener,noreferrer');
+            return;
+        }
+        alert(ui.no_stock);
+    };
+    const marketplaceBtn = (label, link, activeClass) => (React.createElement("button", { type: "button", onClick: () => openMarketplace(link), className: `w-11 h-11 rounded-full flex items-center justify-center text-[9px] font-black shadow-lg transition-transform ${link ? `${activeClass} text-white hover:scale-110` : 'bg-gray-200 text-gray-500 grayscale cursor-not-allowed dark:bg-white/10 dark:text-gray-400'}` }, label));
+    return (React.createElement("div", { className: "min-h-screen animate-[fadeIn_0.5s_ease-out]" },
+        React.createElement("div", { className: "pt-28 pb-16 px-4 md:px-8 max-w-6xl mx-auto" },
+            React.createElement("button", { onClick: onBack, className: "flex items-center gap-2 text-xs font-bold text-gray-400 hover:text-brand-purple uppercase tracking-wider transition-colors mb-10 group" },
+                React.createElement("div", { className: "w-8 h-8 rounded-full border border-current flex items-center justify-center group-hover:bg-brand-purple group-hover:border-brand-purple group-hover:text-white transition-all duration-300" },
+                    React.createElement("svg", { className: "w-3.5 h-3.5", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
+                        React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2.5, d: "M10 19l-7-7m0 0l7-7m-7 7h18" }))),
+                ui.back),
+            React.createElement("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-12 items-start" },
+                React.createElement("div", { className: "rounded-3xl overflow-hidden product-img-bg bg-brand-base dark:bg-brand-dark-surface border border-gray-100 dark:border-white/5 shadow-lg relative", style: { minHeight: '480px' } }, product.sketchfabId ? (React.createElement("iframe", { className: "w-full h-full absolute inset-0", title: product.title, frameBorder: "0", allowFullScreen: true, mozallowfullscreen: "true", webkitallowfullscreen: "true", allow: "autoplay; fullscreen; xr-spatial-tracking", src: `https://sketchfab.com/models/${product.sketchfabId}/embed?autostart=1&ui_controls=1&ui_infos=0&ui_inspector=0&ui_stop=0&ui_watermark=0&ui_hint=2` })) : (React.createElement("div", { className: "w-full h-full flex items-center justify-center p-12 min-h-[480px]" },
+                    React.createElement("div", { className: "absolute inset-0 bg-brand-purple/4 rounded-3xl" }),
+                    React.createElement("img", { src: product.imageUrl, alt: product.title, className: "relative z-10 w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-600 animate-[float_8s_ease-in-out_infinite]" })))),
+                React.createElement("div", { className: "flex flex-col gap-5 pt-2" },
+                    React.createElement("div", { className: "flex flex-wrap gap-2" },
+                        React.createElement("span", { className: "badge-purple text-brand-purple text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full" }, product.category)),
+                    React.createElement("div", null,
+                        product.subtitle && (React.createElement("p", { className: "text-sm font-bold text-gray-400 uppercase tracking-wider mb-2" }, product.subtitle)),
+                        React.createElement("h1", { className: "font-display text-3xl md:text-5xl font-black text-brand-dark dark:text-white leading-tight tracking-tight" }, product.title)),
+                    React.createElement("p", { className: "text-base text-gray-600 dark:text-gray-300 leading-relaxed" }, product.description),
+                    product.fullDescription && product.fullDescription !== product.description && (React.createElement("p", { className: "text-sm text-gray-500 dark:text-gray-400 leading-relaxed whitespace-pre-line" }, product.fullDescription)),
+                    product.details && product.details.length > 0 && (React.createElement("div", null,
+                        React.createElement("p", { className: "text-[10px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3" }, ui.specs),
+                        React.createElement(SpecTable, { details: product.details }))),
+                    product.features && product.features.length > 0 && (React.createElement("div", null,
+                        React.createElement("p", { className: "text-[10px] font-black text-gray-400 uppercase tracking-[0.15em] mb-3" }, ui.features_title),
+                        React.createElement("div", { className: "flex flex-wrap gap-2" }, product.features.map((f, i) => (React.createElement("span", { key: i, className: "text-xs font-semibold text-gray-500 dark:text-gray-400 bg-brand-base dark:bg-brand-dark-surface px-3 py-1.5 rounded-full border border-gray-200 dark:border-white/8" },
+                            "\u2713 ",
+                            f)))))),
+                    React.createElement("div", { className: "flex flex-wrap items-center gap-3 pt-2" },
+                        React.createElement("button", { onClick: () => openContact(`${ui.order}: ${product.title}`), className: "btn-primary flex-1 min-w-0 text-white px-8 py-4 rounded-2xl font-bold text-sm text-center whitespace-nowrap" }, ui.order),
+                        React.createElement("div", { className: "flex gap-2" },
+                            marketplaceBtn("OZON", product.marketplaces === null || product.marketplaces === void 0 ? void 0 : product.marketplaces.ozon, "bg-[#005bff]"),
+                            marketplaceBtn("WB", product.marketplaces === null || product.marketplaces === void 0 ? void 0 : product.marketplaces.wb, "bg-[#cb11ab]"),
+                            marketplaceBtn("\u042F.\u041C", product.marketplaces === null || product.marketplaces === void 0 ? void 0 : product.marketplaces.yandex, "bg-[#fc3f1d]"))))))));
+};
+// ─── ContactModal ──────────────────────────────────────────────────────
+const ContactModal = ({ isOpen, onClose, productContext, ui }) => {
+    const initialForm = { name: '', phone: '', email: '', industry: '', volume: '', timeline: '', budget: '', website: '' };
+    const [form, setForm] = useState(initialForm);
+    const [submitting, setSubmitting] = useState(false);
+    const [started, setStarted] = useState(false);
+    if (!isOpen)
+        return null;
+    const formType = productContext ? 'product_contact' : 'contact';
+    const handleFieldChange = (key, value) => {
+        setForm(prev => {
+            const next = { ...prev, [key]: value };
+            if (!started && (value === null || value === void 0 ? void 0 : value.toString().trim())) {
+                setStarted(true);
+                trackEvent('form_start', { form: formType, context: productContext || 'site_contact' });
+            }
+            const qualifiedNow = Boolean(next.industry && next.timeline && next.budget);
+            const wasQualified = Boolean(prev.industry && prev.timeline && prev.budget);
+            if (qualifiedNow && !wasQualified) {
+                trackEvent('form_qualified', { form: formType });
+            }
+            return next;
+        });
+    };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        trackEvent('form_submit', { form: formType, context: productContext || 'site_contact', qualified: Boolean(form.industry && form.timeline && form.budget) });
+        setSubmitting(true);
+        try {
+            const res = await fetch('/send-mail.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...form, context: productContext || 'Заявка' }) });
+            const r = await res.json();
+            if (r.success) {
+                trackEvent('form_success', { form: formType });
+                alert(ui.form_success);
+                onClose();
+                setForm(initialForm);
+                setStarted(false);
+            }
+            else {
+                trackEvent('form_error', { form: formType, reason: 'backend' });
+                alert(ui.form_error);
+            }
+        }
+        catch (e) {
+            trackEvent('form_error', { form: formType, reason: 'network' });
+            alert(ui.form_error);
+        }
+        finally {
+            setSubmitting(false);
+        }
+    };
+    const inputClass = "w-full px-5 py-3.5 rounded-xl border border-gray-200 dark:border-white/8 bg-white dark:bg-brand-dark-surface text-brand-dark dark:text-white text-sm font-medium focus:border-brand-purple focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all placeholder:text-gray-400";
+    return (React.createElement("div", { className: "fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4" },
+        React.createElement("div", { className: "absolute inset-0 bg-black/50 backdrop-blur-md", onClick: onClose }),
+        React.createElement("div", { className: "relative bg-brand-milky dark:bg-brand-dark-card w-full sm:max-w-md rounded-t-3xl sm:rounded-3xl shadow-2xl border border-white/10 dark:border-white/5 animate-[slideUp_0.4s_cubic-bezier(0.16,1,0.3,1)]" },
+            React.createElement("div", { className: "flex justify-center pt-3 pb-1 sm:hidden" },
+                React.createElement("div", { className: "w-10 h-1 bg-gray-300 dark:bg-gray-700 rounded-full" })),
+            React.createElement("div", { className: "p-6 md:p-8" },
+                React.createElement("button", { onClick: onClose, className: "absolute top-5 right-5 w-8 h-8 rounded-full bg-gray-100 dark:bg-white/8 flex items-center justify-center text-gray-400 hover:text-brand-purple transition-all" },
+                    React.createElement("svg", { className: "w-4 h-4", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
+                        React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2.5, d: "M6 18L18 6M6 6l12 12" }))),
+                React.createElement("h3", { className: "font-display text-2xl font-black text-brand-dark dark:text-white mb-1" }, ui.form_title),
+                productContext && React.createElement("p", { className: "text-sm text-gray-400 mb-6 truncate" }, productContext),
+                !productContext && React.createElement("div", { className: "mb-6" }),
+                React.createElement("form", { onSubmit: handleSubmit, className: "flex flex-col gap-3" },
+                    [
+                        { type: 'text', key: 'name', placeholder: ui.form_name, required: true, auto: 'name' },
+                        { type: 'tel', key: 'phone', placeholder: ui.form_phone, required: true, auto: 'tel' },
+                        { type: 'email', key: 'email', placeholder: ui.form_email, required: true, auto: 'email' },
+                    ].map(f => (React.createElement("input", { key: f.key, type: f.type, autoComplete: f.auto, placeholder: f.placeholder, required: f.required, className: inputClass, value: form[f.key], pattern: f.key === 'phone' ? '[-0-9+() ]{6,20}' : undefined, onChange: e => handleFieldChange(f.key, e.target.value) }))),
+                    React.createElement("input", { type: "text", className: inputClass, placeholder: "\u0421\u0444\u0435\u0440\u0430 / Industry", value: form.industry, onChange: e => handleFieldChange('industry', e.target.value) }),
+                    React.createElement("input", { type: "text", className: inputClass, placeholder: "\u041E\u0431\u044A\u0451\u043C / Volume", value: form.volume, onChange: e => handleFieldChange('volume', e.target.value) }),
+                    React.createElement("input", { type: "text", className: inputClass, placeholder: "\u0421\u0440\u043E\u043A / Timeline", value: form.timeline, onChange: e => handleFieldChange('timeline', e.target.value) }),
+                    React.createElement("input", { type: "text", className: inputClass, placeholder: "\u0411\u044E\u0434\u0436\u0435\u0442 / Budget", value: form.budget, onChange: e => handleFieldChange('budget', e.target.value) }),
+                    React.createElement("input", { type: "text", name: "website", tabIndex: "-1", autoComplete: "off", className: "hidden", "aria-hidden": "true", value: form.website, onChange: e => handleFieldChange('website', e.target.value) }),
+                    React.createElement("button", { type: "submit", disabled: submitting, className: `btn-primary w-full text-white font-bold py-3.5 rounded-xl mt-1 text-sm ${submitting ? 'opacity-60 cursor-wait' : ''}` }, submitting ? ui.form_sending : ui.form_submit))))));
+};
+// ─── FloatingActions ───────────────────────────────────────────────────
+const FloatingActions = ({ onOpenModal, ui, scrolled }) => {
+    const [open, setOpen] = useState(false);
+    const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    return (React.createElement("div", { className: "fixed bottom-6 right-6 z-40 flex flex-col-reverse items-end gap-3" },
+        React.createElement("button", { onClick: () => setOpen(!open), className: `w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-white transition-all duration-300 ${open ? 'bg-gray-900 dark:bg-white dark:text-brand-dark rotate-45' : 'btn-primary hover:scale-110'}`, "aria-label": "\u0421\u0432\u044F\u0437\u0430\u0442\u044C\u0441\u044F" },
+            React.createElement("svg", { className: "w-6 h-6", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
+                React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M12 6v6m0 0v6m0-6h6m-6 0H6" }))),
+        React.createElement("div", { className: `flex flex-col items-end gap-2.5 transition-all duration-300 origin-bottom ${open ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-75 translate-y-4 pointer-events-none'}` },
+            React.createElement("a", { href: TG_LINK, target: "_blank", rel: "noreferrer", className: "w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform", style: { background: '#2AABEE' } },
+                React.createElement("svg", { className: "w-6 h-6", viewBox: "0 0 24 24", fill: "currentColor" },
+                    React.createElement("path", { d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-2.02-1.23-2.61-1.63-.6-.4.1-1.08.67-1.63.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.4-1.08.39-.35-.01-1.03-.2-1.54-.37-.62-.21-1.12-.32-1.07-.67.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z" }))),
+            React.createElement("a", { href: `tel:${COMPANY_PHONE.replace(/\s/g, '')}`, className: "w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform", style: { background: '#25D366' } },
+                React.createElement("svg", { className: "w-5 h-5", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
+                    React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" }))),
+            React.createElement("button", { onClick: () => { trackEvent('cta_click', { target: 'contact_modal', source: 'floating_action' }); onOpenModal(); setOpen(false); }, className: "w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform bg-brand-dark dark:bg-brand-dark-surface border border-white/10" },
+                React.createElement("svg", { className: "w-5 h-5", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
+                    React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" })))),
+        scrolled && !open && (React.createElement("button", { onClick: scrollToTop, className: "w-12 h-12 mb-2 rounded-full bg-white dark:bg-brand-dark-surface border border-gray-200 dark:border-white/10 shadow-lg flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-brand-purple hover:border-brand-purple transition-all animate-[slideUp_0.3s_ease-out]", "aria-label": "\u041D\u0430\u0432\u0435\u0440\u0445" },
+            React.createElement("svg", { className: "w-5 h-5", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
+                React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2.5, d: "M5 15l7-7 7 7" }))))));
+};
+// ─── CookiesBanner ─────────────────────────────────────────────────────
+const CookiesBanner = ({ ui }) => {
+    const [visible, setVisible] = useState(false);
+    useEffect(() => { if (!localStorage.getItem('cookie-consent'))
+        setTimeout(() => setVisible(true), 2500); }, []);
+    if (!visible)
+        return null;
+    return (React.createElement("div", { className: "fixed bottom-0 left-0 right-0 z-50 p-4 animate-[slideUp_0.5s_cubic-bezier(0.16,1,0.3,1)]" },
+        React.createElement("div", { className: "max-w-2xl mx-auto bg-brand-dark dark:bg-brand-dark-card text-white rounded-2xl px-6 py-4 flex items-center justify-between gap-4 shadow-2xl border border-white/8" },
+            React.createElement("p", { className: "text-sm text-gray-300 leading-relaxed" }, ui.text),
+            React.createElement("button", { onClick: () => { localStorage.setItem('cookie-consent', 'true'); setVisible(false); }, className: "btn-primary shrink-0 text-white text-sm font-bold px-5 py-2 rounded-xl" }, ui.button))));
+};
+// ─── App ───────────────────────────────────────────────────────────────
+
+// --- SEO + deep-link routing constants -------------------------------------
+const CATEGORY_BASE_PATH = '/copters/';
+const slugify = (value) => String(value || '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'item';
+const productSlug = (product) => slugify(product.slug || product.id || product.title);
+const productPath = (product) => `${CATEGORY_BASE_PATH}${productSlug(product)}/`;
+const normalizeProductForRouting = (product) => {
+    if (!product || typeof product !== 'object') return product;
+    const slug = productSlug(product);
+    return { ...product, slug, urlPath: `${CATEGORY_BASE_PATH}${slug}/` };
+};
+const routeSlugFromPath = (pathname) => {
+    if (!pathname || !pathname.startsWith(CATEGORY_BASE_PATH)) return null;
+    const trimmed = pathname.replace(/\/+$/, '');
+    const parts = trimmed.split('/').filter(Boolean);
+    if (parts.length < 2 || parts[0] !== CATEGORY_BASE_PATH.replaceAll('/', '')) return null;
+    return parts[1];
+};
+const SEO_DEFAULTS = {
+    title: 'БПЛА - А Плюс',
+    description: 'Промышленные БПЛА А Плюс: производство, интеграция и поддержка. Решения для мониторинга, безопасности и транспортных задач.',
+    canonical: 'https://aplus-charisma.ru/copters/',
+    ogTitle: 'БПЛА — А Плюс',
+    ogDescription: 'Промышленные БПЛА А Плюс: производство, интеграция и поддержка. Решения для мониторинга, безопасности и транспортных задач.'
+};
+const setMeta = (selector, attr, value) => {
+    const node = document.querySelector(selector);
+    if (node && value) node.setAttribute(attr, value);
+};
+const setSchemaJson = (payload) => {
+    const schemaNode = document.getElementById('page-schema');
+    if (schemaNode) schemaNode.textContent = JSON.stringify(payload);
+};
+const updateSeoForProduct = (product) => {
+    if (!product) {
+        document.title = SEO_DEFAULTS.title;
+        setMeta('meta[name="description"]', 'content', SEO_DEFAULTS.description);
+        setMeta('meta[property="og:title"]', 'content', SEO_DEFAULTS.ogTitle);
+        setMeta('meta[property="og:description"]', 'content', SEO_DEFAULTS.ogDescription);
+        setMeta('meta[property="og:url"]', 'content', SEO_DEFAULTS.canonical);
+        setMeta('meta[name="twitter:title"]', 'content', SEO_DEFAULTS.ogTitle);
+        setMeta('meta[name="twitter:description"]', 'content', SEO_DEFAULTS.ogDescription);
+        setSchemaJson({'@context':'https://schema.org','@type':'CollectionPage','name':'БПЛА — А Плюс','url':SEO_DEFAULTS.canonical});
+        return;
+    }
+    const canonical = `https://aplus-charisma.ru${productPath(product)}`;
+    const productTitle = `${product.title} — А Плюс`;
+    const productDescription = product.description || SEO_DEFAULTS.description;
+    document.title = productTitle;
+    setMeta('meta[name="description"]', 'content', productDescription);
+    setMeta('meta[property="og:title"]', 'content', productTitle);
+    setMeta('meta[property="og:description"]', 'content', productDescription);
+    setMeta('meta[property="og:url"]', 'content', canonical);
+    setMeta('meta[name="twitter:title"]', 'content', productTitle);
+    setMeta('meta[name="twitter:description"]', 'content', productDescription);
+    setSchemaJson({'@context':'https://schema.org','@type':'Product','name':product.title,'description':productDescription,'image':product.imageUrl,'category':'БПЛА','sku':product.subtitle || product.id,'brand':{'@type':'Brand','name':'А Плюс'},'url':canonical});
+};
+
+// --- Root application component --------------------------------------------
+const App = () => {
+    // ─── LOCALSTORAGE KEY ──────────────────────────────────────────────
+    const defaultSiteSettings = { lang: 'ru', isDark: false, isAccessibility: false };
+const loadInitialSiteSettings = () => {
+    try {
+        const stored = localStorage.getItem('aplus_site_settings');
+        if (!stored) return { ...defaultSiteSettings };
+        const parsed = JSON.parse(stored);
+        return { ...defaultSiteSettings, ...(parsed && typeof parsed === 'object' ? parsed : {}) };
+    } catch (e) {
+        return { ...defaultSiteSettings };
+    }
+};
+const initialSettings = loadInitialSiteSettings();
+    // ─── STATE ─────────────────────────────────────────────────────────
+    const [selectedProductId, setSelectedProductId] = useState(() => routeSlugFromPath(window.location.pathname));
+    const [contactOpen, setContactOpen] = useState(false);
+    const [contactContext, setContactContext] = useState(undefined);
+    const [lang, setLang] = useState(initialSettings.lang);
+    const [isDark, setIsDark] = useState(initialSettings.isDark);
+    const [isAccessibility, setIsAccessibility] = useState(initialSettings.isAccessibility);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const [sharedCopy, setSharedCopy] = useState(null);
+    const [remoteProducts, setRemoteProducts] = useState(null);
+    const content = useMemo(() => {
+        const base = DATA[lang] || {};
+        const sharedLang = (sharedCopy && sharedCopy[lang]) || {};
+        const pageOverrides = (sharedLang.pages && sharedLang.pages.copters ) || {};
+        return ({
+        ...base,
+        ...pageOverrides,
+        navItems: pageOverrides.navItems || sharedLang.navItems || base.navItems,
+        contact: pageOverrides.contact || sharedLang.contact || base.contact,
+        catalogTitle: pageOverrides.catalogTitle || base.catalogTitle,
+        catalogSubtitle: pageOverrides.catalogSubtitle || base.catalogSubtitle,
+        footer: { ...(base.footer || {}), ...(sharedLang.footer || {}), ...(pageOverrides.footer || {}) },
+        ui: { ...(base.ui || {}), ...(sharedLang.ui || {}), ...(pageOverrides.ui || {}) },
+        cookies: { ...(base.cookies || {}), ...(sharedLang.cookies || {}), ...(pageOverrides.cookies || {}) },
+        products: (remoteProducts
+            ? remoteProducts.map(item => localizeRemoteCopter(item, lang))
+            : DATA[lang].products).map(normalizeProductForRouting),
+    });
+    }, [lang, remoteProducts, sharedCopy]);
+    const selectedProduct = useMemo(() => {
+        if (!selectedProductId)
+            return null;
+        return content.products.find(p => p.id === selectedProductId || p.slug === selectedProductId);
+    }, [selectedProductId, content]);
+    // ─── SCROLL HANDLER ────────────────────────────────────────────────
+    useEffect(() => {
+        const cacheKey = 'aplus_catalog_copters_v1';
+        const cacheTtlMs = 5 * 60 * 1000;
+        const fromCache = localStorage.getItem(cacheKey);
+        if (fromCache) {
+            try {
+                const parsed = JSON.parse(fromCache);
+                if (Date.now() - parsed.at < cacheTtlMs && Array.isArray(parsed.items))
+                    setRemoteProducts(parsed.items);
+            }
+            catch (e) {
+                console.warn('Cache parse failed', e);
+            }
+        }
+        fetch('/api/products.php?category=copters', { cache: 'no-store' })
+            .then(r => r.ok ? r.json() : null)
+            .then(payload => {
+            if (payload && payload.success && Array.isArray(payload.items))
+                return payload.items;
+            return null;
+        })
+            .then(items => items || fetch('/data/copters.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null))
+            .then(items => {
+            if (!Array.isArray(items))
+                return;
+            setRemoteProducts(items);
+            localStorage.setItem(cacheKey, JSON.stringify({ at: Date.now(), items }));
+        })
+            .catch(() => null);
+    }, []);
+    useEffect(() => {
+        let active = true;
+        fetch('/admin/api.php?action=public-home-content', { cache: 'no-store' })
+            .then(r => r.ok ? r.json() : null)
+            .then(res => {
+            if (active && res && res.ok && res.content) {
+                setSharedCopy(res.content);
+            }
+        })
+            .catch(() => null);
+        return () => {
+            active = false;
+        };
+    }, []);
+    useEffect(() => {
+        const handle = () => setScrolled(window.scrollY > 20);
+        window.addEventListener('scroll', handle);
+        return () => window.removeEventListener('scroll', handle);
+    }, []);
+    useEffect(() => {
+        const handleRouteChange = () => setSelectedProductId(routeSlugFromPath(window.location.pathname));
+        window.addEventListener('popstate', handleRouteChange);
+        return () => window.removeEventListener('popstate', handleRouteChange);
+    }, []);
+    useEffect(() => {
+        if (!selectedProduct) {
+            if (window.location.pathname !== CATEGORY_BASE_PATH) {
+                window.history.replaceState({}, '', CATEGORY_BASE_PATH);
+            }
+            const canonical = document.querySelector('link[rel="canonical"]');
+            if (canonical) canonical.setAttribute('href', SEO_DEFAULTS.canonical);
+            updateSeoForProduct(null);
+            return;
+        }
+        const targetPath = productPath(selectedProduct);
+        if (window.location.pathname !== targetPath) {
+            window.history.replaceState({}, '', targetPath);
+        }
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute('href', `https://aplus-charisma.ru${targetPath}`);
+        updateSeoForProduct(selectedProduct);
+    }, [selectedProduct]);
+    // ─── SAVE SETTINGS TO LOCALSTORAGE ─────────────────────────────────
+    useEffect(() => {
+        const settings = { lang, isDark, isAccessibility };
+        if (window.AplusCommon?.saveSiteSettings) {
+            window.AplusCommon.saveSiteSettings(settings);
+            return;
+        }
+        try {
+            localStorage.setItem('aplus_site_settings', JSON.stringify({ ...defaultSiteSettings, ...settings }));
+        } catch (e) {}
+    }, [lang, isDark, isAccessibility]);
+    // ─── APPLY CLASSES ─────────────────────────────────────────────────
+    useEffect(() => {
+        isDark
+            ? document.documentElement.classList.add('dark')
+            : document.documentElement.classList.remove('dark');
+    }, [isDark]);
+    useEffect(() => {
+        isAccessibility
+            ? document.documentElement.classList.add('accessibility-mode')
+            : document.documentElement.classList.remove('accessibility-mode');
+    }, [isAccessibility]);
+    useEffect(() => {
+        document.documentElement.lang = lang === 'en' ? 'en' : 'ru';
+    }, [lang]);
+    // ─── MOBILE MENU BODY SCROLL ───────────────────────────────────────
+    useEffect(() => {
+        document.body.style.overflow = mobileMenuOpen ? 'hidden' : 'unset';
+    }, [mobileMenuOpen]);
+    useEffect(() => {
+        const applyIncomingSettings = (incoming) => {
+            if (!incoming || typeof incoming !== 'object') return;
+            if (incoming.lang === 'ru' || incoming.lang === 'en') setLang((prev) => prev === incoming.lang ? prev : incoming.lang);
+            if (typeof incoming.isDark === 'boolean') setIsDark((prev) => prev === incoming.isDark ? prev : incoming.isDark);
+            if (typeof incoming.isAccessibility === 'boolean') setIsAccessibility((prev) => prev === incoming.isAccessibility ? prev : incoming.isAccessibility);
+        };
+
+        const handleSettingsChanged = (event) => applyIncomingSettings(event?.detail);
+        const handleStorage = (event) => {
+            if (event.key !== 'aplus_site_settings' || !event.newValue) return;
+            try {
+                applyIncomingSettings(JSON.parse(event.newValue));
+            } catch (e) {}
+        };
+
+        window.addEventListener('aplus:settings-changed', handleSettingsChanged);
+        window.addEventListener('storage', handleStorage);
+        return () => {
+            window.removeEventListener('aplus:settings-changed', handleSettingsChanged);
+            window.removeEventListener('storage', handleStorage);
+        };
+    }, []);
+    // ─── HANDLERS ──────────────────────────────────────────────────────
+    const openContact = (ctx) => { setContactContext(ctx); setContactOpen(true); };
+    const toggleLang = () => setLang(l => l === 'ru' ? 'en' : 'ru');
+    const toggleTheme = () => setIsDark(d => !d);
+    const toggleAccessibility = () => setIsAccessibility(a => !a);
+    const normalizePath = (path = '/') => path.endsWith('/') ? path : `${path}/`;
+    const isNavItemActive = (item) => {
+        if (item?.active) return true;
+        const itemPath = normalizePath(item?.href || '/');
+        const currentPath = normalizePath(window.location.pathname || '/');
+        if (itemPath === '/') return currentPath === '/';
+        return currentPath === itemPath || currentPath.startsWith(itemPath);
+    };
+    return (React.createElement("div", { className: "min-h-screen font-sans" },
+        React.createElement("header", { className: `fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${scrolled ? 'py-3 nav-glass shadow-sm shadow-black/5' : 'py-5 bg-transparent'}` },
+            React.createElement("div", { className: "max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center" },
+                React.createElement("a", { href: "/", className: "font-display font-black text-2xl tracking-tighter text-brand-purple hover:opacity-80 transition-opacity shrink-0" }, lang === 'ru' ? 'А Плюс' : 'A Plus'),
+                React.createElement("nav", { className: "hidden md:flex items-center gap-8" }, content.navItems.map((item, i) => (React.createElement("a", { key: i, href: item.href, className: `text-sm font-bold uppercase tracking-wider transition-colors relative group ${isNavItemActive(item) ? 'text-brand-purple' : 'text-gray-600 dark:text-gray-300 hover:text-brand-purple dark:hover:text-brand-purple-light'}` },
+                    item.label,
+                    React.createElement("span", { className: `absolute -bottom-0.5 left-0 h-0.5 rounded-full bg-brand-purple transition-all duration-300 group-hover:w-full ${isNavItemActive(item) ? 'w-full' : 'w-0'}` }))))),
+                React.createElement("div", { className: "flex items-center gap-2" },
+                    React.createElement("button", { onClick: toggleAccessibility, className: `w-9 h-9 rounded-full flex items-center justify-center transition-all ${isAccessibility ? 'bg-brand-dark text-white' : 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/10'}`, title: "\u0412\u0435\u0440\u0441\u0438\u044F \u0434\u043B\u044F \u0441\u043B\u0430\u0431\u043E\u0432\u0438\u0434\u044F\u0449\u0438\u0445", "aria-label": "\u0412\u0435\u0440\u0441\u0438\u044F \u0434\u043B\u044F \u0441\u043B\u0430\u0431\u043E\u0432\u0438\u0434\u044F\u0449\u0438\u0445" },
+                        React.createElement("svg", { className: "w-4 h-4", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
+                            React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M15 12a3 3 0 11-6 0 3 3 0 016 0z" }),
+                            React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" }))),
+                    React.createElement("button", { onClick: toggleTheme, className: "w-9 h-9 rounded-full flex items-center justify-center text-gray-500 dark:text-yellow-400 hover:bg-gray-100 dark:hover:bg-white/10 transition-all", "aria-label": "\u041F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u0442\u0435\u043C\u0443" }, isDark
+                        ? React.createElement("svg", { className: "w-4 h-4", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
+                            React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" }))
+                        : React.createElement("svg", { className: "w-4 h-4", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
+                            React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" }))),
+                    React.createElement("button", { onClick: toggleLang, className: "w-9 h-9 rounded-full flex items-center justify-center text-xs font-black text-brand-purple hover:bg-brand-purple/10 transition-all uppercase", "aria-label": "\u041F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u044F\u0437\u044B\u043A" }, lang),
+                    React.createElement("button", { onClick: () => openContact(content.contact), className: "btn-primary text-white px-5 py-2.5 rounded-full text-sm font-bold hidden sm:flex items-center whitespace-nowrap" }, content.contact),
+                    React.createElement("button", { onClick: () => setMobileMenuOpen(!mobileMenuOpen), className: "md:hidden w-9 h-9 flex flex-col items-center justify-center gap-1.5", "aria-label": "\u041C\u0435\u043D\u044E" },
+                        React.createElement("span", { className: `w-5 h-0.5 bg-brand-dark dark:bg-white rounded-full transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}` }),
+                        React.createElement("span", { className: `w-5 h-0.5 bg-brand-dark dark:bg-white rounded-full transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}` }),
+                        React.createElement("span", { className: `w-5 h-0.5 bg-brand-dark dark:bg-white rounded-full transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}` }))))),
+        React.createElement("div", { className: `mobile-menu mobile-menu-bg fixed inset-0 z-30 flex flex-col items-center justify-center gap-8 md:hidden ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}` },
+            content.navItems.map((item, i) => (React.createElement("a", { key: i, href: item.href, onClick: () => setMobileMenuOpen(false), className: `font-display text-3xl font-black uppercase tracking-tight transition-colors ${isNavItemActive(item) ? 'text-brand-purple' : 'text-brand-dark dark:text-white hover:text-brand-purple dark:hover:text-brand-purple-light'}` }, item.label))),
+            React.createElement("button", { onClick: () => { openContact(content.contact); setMobileMenuOpen(false); }, className: "btn-primary text-white px-10 py-4 rounded-2xl font-bold text-lg mt-4" }, content.contact)),
+        React.createElement("main", null, selectedProduct ? (React.createElement(ProductPage, { product: selectedProduct, onBack: () => { setSelectedProductId(null); if (window.location.pathname !== CATEGORY_BASE_PATH) { window.history.pushState({}, '', CATEGORY_BASE_PATH); } }, ui: content.ui, openContact: openContact })) : (React.createElement(Catalog, { title: content.catalogTitle, subtitle: content.catalogSubtitle, products: content.products, onSelectProduct: p => { setSelectedProductId(p.id); window.history.pushState({}, '', productPath(p)); }, ui: content.ui }))),
+        React.createElement("footer", { className: "bg-brand-base dark:bg-brand-dark-base border-t border-gray-200/60 dark:border-white/5 py-10 px-4 md:px-8" },
+            React.createElement("div", { className: "max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6" },
+                React.createElement("div", null,
+                    React.createElement("img", { src: FOOTER_LOGO_URL, alt: "A-Plus", className: "h-7 w-auto mb-4 opacity-40 hover:opacity-80 transition-opacity duration-300", style: { filter: 'grayscale(100%)' }, onMouseOver: e => { e.currentTarget.style.filter = 'none'; e.currentTarget.style.opacity = '1'; }, onMouseOut: e => { e.currentTarget.style.filter = 'grayscale(100%)'; e.currentTarget.style.opacity = '0.4'; } }),
+                    React.createElement("p", { className: "text-sm text-gray-400 leading-relaxed whitespace-pre-line" },
+                        content.footer.copyright,
+                        React.createElement("br", null),
+                        content.footer.details,
+                        React.createElement("br", null),
+                        React.createElement("a", { href: content.footer.addressLink, target: "_blank", rel: "noopener noreferrer", className: "hover:text-brand-purple transition-colors inline-flex items-center gap-1" },
+                            content.footer.address,
+                            React.createElement("svg", { className: "w-3 h-3 opacity-60", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
+                                React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" }))))),
+                React.createElement("div", { className: "flex flex-col items-start md:items-end gap-2" },
+                    React.createElement("a", { href: `tel:${COMPANY_PHONE}`, className: "font-display text-xl font-bold text-brand-dark dark:text-white hover:text-brand-purple dark:hover:text-brand-purple-light transition-colors tracking-tight" }, COMPANY_PHONE),
+                    React.createElement("div", { className: "flex flex-wrap gap-4 text-sm text-gray-400 font-medium" },
+                        React.createElement("button", { onClick: () => openContact(content.footer.policy), className: "hover:text-brand-purple transition-colors" }, content.footer.policy),
+                        React.createElement("a", { href: "mailto:info@aplus.org.ru", className: "hover:text-brand-purple transition-colors" }, "info@aplus.org.ru"))))),
+        React.createElement(FloatingActions, { onOpenModal: () => openContact(content.ui.consultation), ui: content.ui, scrolled: scrolled }),
+        React.createElement(ContactModal, { isOpen: contactOpen, onClose: () => setContactOpen(false), productContext: contactContext, ui: content.ui }),
+        React.createElement(CookiesBanner, { ui: content.cookies })));
+};
+// --- Application bootstrap --------------------------------------------------
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(App, null));
+</script>
+</body>
+</html>
