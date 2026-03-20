@@ -1108,17 +1108,14 @@ trackEvent('form_error', { form: formType, reason: 'backend' });
 throw new Error('Server error');
 }
 } else {
-// Если сервер недоступен (демо режим)
-console.warn('send-mail.php not found, showing success message for demo');
-alert(`${ui.form_error}\n(${isRu ? 'Проверьте серверную настройку send-mail.php' : 'Check send-mail.php server configuration'})`);
+trackEvent('form_error', { form: formType, reason: 'backend' });
+alert(`${ui.form_error}\n${isRu ? 'Свяжитесь с нами по телефону' : 'Please contact us via phone'} ${COMPANY_PHONE}`);
 onClose();
 setFormData({ name: '', phone: '', email: '', industry: '', volume: '', timeline: '', budget: '', website: '' });
 setIsStarted(false);
 }
 } catch (error) { 
-// Если ошибка сети или сервера - показываем демо-сообщение
 trackEvent('form_error', { form: formType, reason: 'network' });
-console.warn('Form submission error:', error);
 alert(`${ui.form_error}\n${isRu ? 'Свяжитесь с нами по телефону' : 'Please contact us via phone'} ${COMPANY_PHONE}`);
 onClose();
 setFormData({ name: '', phone: '', email: '', industry: '', volume: '', timeline: '', budget: '', website: '' });

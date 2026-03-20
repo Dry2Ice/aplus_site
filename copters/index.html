@@ -483,7 +483,6 @@ const initialSettings = loadInitialSiteSettings();
                     setRemoteProducts(parsed.items);
             }
             catch (e) {
-                console.warn('Cache parse failed', e);
             }
         }
         fetch('/api/products.php?category=copters', { cache: 'no-store' })

@@ -22,6 +22,7 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
+User-agent: *
 Crawl-delay: 10
 
 Host: https://aplus-charisma.ru

@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A Plus - Admin</title>
+  <meta name="robots" content="noindex,nofollow" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1597,7 +1598,6 @@ $('saveDesignBtn').onclick = async () => {
       localStorage.setItem(PUBLIC_DESIGN_SETTINGS_CACHE_KEY, JSON.stringify(publicDesignPayload));
       window.dispatchEvent(new CustomEvent(PUBLIC_DESIGN_SETTINGS_EVENT, { detail: publicDesignPayload }));
     } catch (storageError) {
-      console.warn('Не удалось обновить локальный кэш дизайна:', storageError);
     }
 
     notify('Дизайн и параметры доступности опубликованы.');

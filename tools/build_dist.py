@@ -16,7 +16,6 @@ INCLUDE_ITEMS = [
     "sitemap.xml",
     "map.webp",
     "aplus_logo.svg",
-    ".htaccess",
     "send-mail.php",
     "csrf-token.php",
     "api/",
