@@ -257,8 +257,8 @@ body::after { opacity: 0.01; }
 
   /* Mobile menu */
   .mobile-menu { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-  .mobile-menu-bg { background: var(--mobile-menu-bg); backdrop-filter: blur(24px); }
-  .dark .mobile-menu-bg { background: var(--mobile-menu-bg-dark); }
+  .mobile-menu-bg { background: rgb(240 237 230 / 0.98); background: var(--mobile-menu-bg); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); }
+  .dark .mobile-menu-bg { background: rgb(10 10 15 / 0.98); background: var(--mobile-menu-bg-dark); }
 
   /* Spec table */
   .spec-row { background: var(--site-surface); }
