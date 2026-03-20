@@ -901,8 +901,8 @@ return (
 
 const Principles = ({ content }) => (
 <section id="principles" className="py-20 px-4 md:px-8 mx-3 md:mx-6 lg:mx-8 my-6 rounded-3xl overflow-hidden relative" style={{background: 'var(--gradient-section-dark)'}}>
-<div className="absolute top-0 right-0 w-96 h-96 bg-brand-purple/8 rounded-full blur-3xl pointer-events-none" />
-<div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-purple/5 rounded-full blur-3xl pointer-events-none" />
+<div className="absolute top-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-brand-purple/8 rounded-full blur-3xl pointer-events-none" />
+<div className="absolute bottom-0 left-0 w-32 md:w-64 h-32 md:h-64 bg-brand-purple/5 rounded-full blur-3xl pointer-events-none" />
 <div className="max-w-6xl mx-auto relative z-10">
 <div className="mb-14 text-center">
 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-5" style={{background: 'rgb(var(--purple-rgb) / 0.16)', border: '1px solid rgb(var(--purple-rgb) / 0.24)'}}>
@@ -1073,7 +1073,7 @@ return (
 </div>
 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
 <div className="max-w-xl">
-<h2 className="font-display text-4xl md:text-5xl font-black text-brand-dark dark:text-white tracking-tight leading-tight mb-4">{content.productsTitle}</h2>
+<h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-brand-dark dark:text-white tracking-tight leading-tight mb-4">{content.productsTitle}</h2>
 <p className="text-lg text-gray-500 dark:text-gray-400 font-sans">{content.productsSubtitle}</p>
 </div>
 <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
@@ -1306,7 +1306,7 @@ write: 'Write to us',
 top: 'Back to top'
 };
 return (
-<div className="fixed bottom-6 right-6 z-40 flex flex-col-reverse items-end gap-3">
+<div className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 flex flex-col-reverse items-end gap-3">
 <button onClick={() => setIsOpen(!isOpen)} className={`w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-white transition-all duration-300 ${isOpen ? 'bg-gray-900 dark:bg-white dark:text-brand-dark rotate-45' : 'btn-primary hover:scale-110'}`} aria-label={labels.contact}>
 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
 </button>
@@ -1948,7 +1948,7 @@ return (
 </div>
 </header>
 
-<div className={`mobile-menu fixed inset-0 z-30 flex flex-col items-center justify-center gap-8 md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} style={{background: isDark ? 'rgba(10, 10, 15, 0.98)' : 'rgba(240, 237, 230, 0.98)', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)'}}>
+<div className={`mobile-menu mobile-menu-bg fixed inset-0 z-30 flex flex-col items-center justify-center gap-8 md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} style={{background: `var(${isDark ? '--mobile-menu-bg-dark' : '--mobile-menu-bg'}) !important`, backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)'}}>
 {content.navItems && content.navItems.map((item, i) => (
 <a key={i} href={item.href} onClick={() => { setIsMobileMenuOpen(false); setSelectedProductId(null); setCurrentView(item.view); }} className="font-display text-3xl font-black text-brand-dark dark:text-white uppercase tracking-tight hover:text-brand-purple dark:hover:text-brand-purple-light transition-colors" style={{animationDelay: `${i * 0.05}s`}}>{item.label}</a>
 ))}
@@ -1969,14 +1969,14 @@ const ctaSection = (
 <div className="w-1.5 h-1.5 rounded-full bg-brand-purple animate-pulse" />
 <span className="text-xs font-bold text-brand-purple uppercase tracking-widest">{content.sectionBadges?.cta || 'Сотрудничество'}</span>
 </div>
-<h2 className="font-display text-4xl md:text-6xl font-black mb-5 text-brand-dark dark:text-white tracking-tight leading-tight">{content.cta.title}</h2>
+<h2 className="font-display text-3xl sm:text-4xl md:text-6xl font-black mb-5 text-brand-dark dark:text-white tracking-tight leading-tight">{content.cta.title}</h2>
 <p className="text-gray-500 dark:text-gray-400 mb-10 text-lg md:text-xl font-medium leading-relaxed">{content.cta.text}</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-  <button onClick={() => openContactModal(content.ui.consultation)} className="btn-primary text-white px-12 py-5 rounded-2xl text-lg font-bold inline-flex items-center gap-3">
+  <button onClick={() => openContactModal(content.ui.consultation)} className="btn-primary text-white px-8 sm:px-12 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-bold inline-flex items-center gap-3">
     {content.cta.button}
     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
   </button>
-  <button onClick={() => openCustomOrderModal()} className="btn-primary text-white px-12 py-5 rounded-2xl text-lg font-bold inline-flex items-center gap-3">
+  <button onClick={() => openCustomOrderModal()} className="btn-primary text-white px-8 sm:px-12 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-bold inline-flex items-center gap-3">
     {lang === 'ru' ? 'Аккумулятор на заказ' : 'Custom Battery'}
     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
   </button>
@@ -1988,7 +1988,7 @@ const ctaSection = (
 const sectionRegistry = {
   hero: <Hero content={content} onScrollToBottom={scrollToBottom} lang={lang} isAccessibility={isAccessibility} />,
   stats: <Stats content={content} />,
-  divider: <div className="section-divider mx-8 md:mx-16" />,
+  divider: <div className="section-divider mx-4 md:mx-8 lg:mx-16" />,
   about: <About content={content} />,
   workflow: <Workflow content={content} />,
   products: <ProductGrid content={content} onSelectProduct={handleProductSelect} />,
