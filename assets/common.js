@@ -17,7 +17,7 @@
       const stored = localStorage.getItem(SETTINGS_KEY);
       if (stored) return normalizeSettings(JSON.parse(stored));
     } catch (e) {
-      console.warn('Failed to load settings:', e);
+      // settings load failed — fallback to defaults
     }
     return { ...defaultSettings };
   };
@@ -29,7 +29,6 @@
       window.dispatchEvent(new CustomEvent('aplus:settings-changed', { detail: normalized }));
       return normalized;
     } catch (e) {
-      console.warn('Failed to save settings:', e);
       return normalizeSettings(settings);
     }
   };
@@ -44,7 +43,7 @@
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: eventName, page: window.location.pathname, ...payload, timestamp: Date.now() });
     } catch (e) {
-      console.warn('Analytics event failed:', e);
+      // analytics push failed — silently continue
     }
   };
 
@@ -124,7 +123,7 @@
       if (settings.isAccessibility) document.documentElement.classList.add('accessibility-mode');
       document.documentElement.lang = settings.lang === 'en' ? 'en' : 'ru';
     } catch (e) {
-      console.warn('Failed to apply settings:', e);
+      // settings apply failed — continue with defaults
     }
   })();
 
