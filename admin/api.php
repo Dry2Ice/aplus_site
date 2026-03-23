@@ -578,6 +578,8 @@ function defaultHomeContent(): array {
       'location' => [
         'title' => 'Как нас найти',
         'address' => 'Очаковское, д. 28, стр. 2, помещ. 1Н/5',
+        'phone' => '+7 926 845 02 41',
+        'mapImage' => '/map.webp',
         'imageAlt' => 'Карта с расположением компании А Плюс на Очаковском шоссе',
       ],
       'ui' => [
@@ -680,6 +682,8 @@ creating connections.", 'desc1' => 'A-Plus is a developer and manufacturer of hi
       'location' => [
         'title' => 'How to find us',
         'address' => 'Ochakovskoe, 28 bld. 2, premises 1N/5',
+        'phone' => '+7 926 845 02 41',
+        'mapImage' => '/map_eng.webp',
         'imageAlt' => 'Map showing the A Plus company location on Ochakovskoye Shosse',
       ],
       'cta' => ['title' => 'Ready to discuss tasks?', 'text' => 'We are open to dialogue and ready to develop an individual solution for your needs.', 'button' => 'Start Project'],
