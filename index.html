@@ -413,6 +413,8 @@ policy: "Политика конфиденциальности",
 location: {
 title: "Как нас найти?",
 address: "Очаковское, д. 28, стр. 2, помещ. 1Н/5",
+phone: "+7 926 845 02 41",
+mapImage: "/map.webp",
 imageAlt: "Карта с расположением компании А Плюс на Очаковском шоссе",
 zoomHint: "Нажмите, чтобы увеличить",
 closeLabel: "Закрыть увеличенное изображение"
@@ -586,6 +588,8 @@ policy: "Privacy Policy",
 location: {
 title: "How to find us",
 address: "Ochakovskoe, 28 bld. 2, premises 1N/5",
+phone: "+7 926 845 02 41",
+mapImage: "/map_eng.webp",
 imageAlt: "Map showing the A Plus company location on Ochakovskoye Shosse",
 zoomHint: "Click to enlarge",
 closeLabel: "Close enlarged image"
@@ -936,6 +940,8 @@ people: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 
 };
 const faqCardClass = "rounded-3xl border border-gray-100 dark:border-white/5 bg-white/95 dark:bg-brand-dark-surface/95 backdrop-blur-sm p-6 md:p-8 shadow-xl dark:shadow-2xl";
 const location = content.location;
+const locationPhoneHref = `tel:${String(location.phone || COMPANY_PHONE).replace(/\s/g, "")}`;
+const locationMapImage = location.mapImage || "/map.webp";
 return (
 <section className="py-20 px-4 md:px-8 bg-brand-milky dark:bg-brand-dark-base">
 <div className="max-w-7xl xl:max-w-[88rem] mx-auto">
@@ -1002,20 +1008,21 @@ return (
   className="group relative flex-1 overflow-hidden rounded-2xl border border-white/10 bg-white/10 min-h-[260px] md:min-h-[320px] lg:min-h-[360px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
   aria-label={location.imageAlt}
 >
-<img src="/map.webp" alt={location.imageAlt} loading="lazy" decoding="async" className="absolute inset-0 m-auto h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-[1.02]" />
+<img src={locationMapImage} alt={location.imageAlt} loading="lazy" decoding="async" className="absolute inset-0 m-auto h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-[1.02]" />
 <div className="pointer-events-none absolute inset-x-3 bottom-3 rounded-full bg-black/35 px-3 py-2 text-xs font-semibold tracking-wide text-white/90 backdrop-blur-sm">{location.zoomHint}</div>
 </button>
 <a href={content.footer.addressLink} target="_blank" rel="noopener noreferrer" className="font-display text-lg md:text-xl font-bold leading-snug text-white/92 transition-colors hover:text-white inline-flex items-start gap-2">
 <span>{location.address}</span>
 <svg className="mt-1 h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 3h7m0 0v7m0-7L10 14" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5h5M5 5v14h14v-5" /></svg>
 </a>
+<a href={locationPhoneHref} className="inline-flex items-center text-sm md:text-base font-semibold text-white/85 hover:text-white transition-colors">{location.phone || COMPANY_PHONE}</a>
 </div>
 {isMapZoomed && (
 <div className="fixed inset-0 z-[120] flex items-center justify-center bg-black/85 p-4" onClick={() => setIsMapZoomed(false)} role="dialog" aria-modal="true" aria-label={location.imageAlt}>
 <button type="button" className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-white/20" onClick={() => setIsMapZoomed(false)} aria-label={location.closeLabel}>
 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
 </button>
-<img src="/map.webp" alt={location.imageAlt} className="max-h-[90vh] w-auto max-w-full rounded-3xl object-contain shadow-2xl" onClick={(e) => e.stopPropagation()} />
+<img src={locationMapImage} alt={location.imageAlt} className="max-h-[90vh] w-auto max-w-full rounded-3xl object-contain shadow-2xl" onClick={(e) => e.stopPropagation()} />
 </div>
 )}
 </div>
